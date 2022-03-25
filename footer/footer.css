@@ -190,31 +190,6 @@ img, svg{
   font-size:12px !important;
 }
 
-/* @media screen and (max-width: 1200px) {
-  .footer-col .company ul {
-    padding: 0 10px;
-    margin: 0;
-  }
-  .footer-col ul li,
-  .footer-col ul li a,
-  .footer-col h4,
-  .footer-col .left-align {
-    text-align: left !important;
-  }
-
-  .left-align {
-    padding-left: 10px !important;
-  }
-  .footer-col {
-    width: 30%;
-    margin-bottom: 30px;
-    padding-left: 10px;
-  }
-}
-
- */
-
-
 
 
 @media screen and (max-width: 1200px) {
