@@ -47,7 +47,7 @@ ul {
 }
 
 .footer-col div img {
-  width: 100%;
+  width: 100px;
   height: auto;
 }
 
@@ -109,9 +109,6 @@ ul {
     .footer-col ul li{
         text-align: left;
     }
-    .news ul{
-        /* padding: 0 !important; */
-    }
 }
 
 .footer-col .social-links a {
@@ -137,11 +134,6 @@ ul {
 
 .email a {
   text-align: left !important;
-}
-
-.footer-col ul li a img {
-  font-size: 20px;
-  width: 100px;
 }
 
 .news ul{
@@ -250,7 +242,7 @@ img, svg{
     text-align: center !important;
   }
   .footer-col div img {
-    width: 60%;
+    width: 130px;
   }
 
   .footer-col {
