@@ -1,0 +1,27 @@
+html{
+    display: block;
+    /* text-align: center; */
+}
+
+.card p h3{
+    text-align: center;
+}
+
+#card {
+    border: 1px solid grey;
+    max-width: 300rem;
+    max-height: 80rem;
+}
+
+#card img {
+    height: 20%;
+    width: 20%;
+}
+
+.card-body{
+    text-align: center;
+}
+
+#footer{
+    margin-top: 8%;
+}
