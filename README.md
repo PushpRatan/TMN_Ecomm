@@ -6,4 +6,4 @@
 
 2. Atmagyan Singh - Cart, Login Page.
 
-3. Chukka Keerthi- Home page (slider)
+3. Chukka Keerthi and Ananya - Home page
