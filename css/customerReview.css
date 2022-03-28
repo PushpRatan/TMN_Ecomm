@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s linear;
+}
+body{
+    background-color: whitesmoke;
+}
+.productsMain{
+    overflow: hidden;
+    position: relative;
+    width: 93%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.productsMain .cReviewModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    display: none;
+}
+.productsMain .cReviewModal.activeModal{
+    display: block;
+}
+.productsMain .cReviewModal .cRMInner{
+    position: absolute;
+    /* display: flex;
+    justify-content:center;
+    align-items: center; */
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%); 
+    width: 32%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: .8rem 1.3rem;
+}
+.productsMain .cReviewModal .cRMInner .crTi{
+    font-size: 1.24rem;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: .4rem 0;
+    margin-bottom: .5rem;
+    color:hotpink
+}
+.productsMain .cReviewModal .cRMInner .formFields{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.productsMain .cReviewModal .cRMInner .formFields .crTitl{
+    font-size: .95rem;
+    font-weight: bold;
+}
+.productsMain .cReviewModal .cRMInner .formFields .reContner{
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    margin-top: .3rem;
+    /* padding: 0 0 .4rem 0; */
+    /* border-bottom: 1px solid rgba(0,0,0,0.1); */
+}
+.productsMain .cReviewModal .cRMInner .formFields .rcView{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.25);
+}
+.productsMain .cReviewModal .cRMInner .formFields .rcView:focus{
+    border: 1px solid black;
+}
+.productsMain .cReviewModal .cRMInner .crRat{
+    font-size: .93rem;
+    font-weight: bold;
+    margin-top: 1.2rem;
+    margin-bottom: .4rem;
+}
+.productsMain .cReviewModal .cRMInner .crRatingss{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* margin-top: 1.3rem; */
+}
+.productsMain .cReviewModal .cRMInner .crRatingss .crRateByNumbes{
+    background-color: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.35);
+    margin-right: .7rem;
+    font-size: 1.3rem;
+    padding: .2rem .6rem;
+    cursor: pointer;
+    color: black;
+}
+.productsMain .cReviewModal .cRMInner .crRatingss .crRateByNumbes:hover{
+    background-color: darkviolet;
+    color: white;
+}
+.productsMain .cReviewModal .cRMInner .crRatingss .crRateByNumbes.act{
+    background-color:darkslategray;
+    color: white;
+}
+
+.productsMain .cReviewModal .cRMInner .rbn{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.productsMain .cReviewModal .cRMInner .sbBtun{
+    width: 48.6%;
+    height: 5vh;
+    background-color: darkorange;
+    color: white;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .99rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.productsMain .cReviewModal .cRMInner .sbBtun:hover{
+    background-color:darkgreen;
+
+}
+.productsMain .cReviewModal .cRMInner .sbBtunn{
+    width: 48.6%;
+    height: 5vh;
+    background-color:crimson;
+    color: white;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .99rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.productsMain .cReviewModal .cRMInner .sbBtunn:hover{
+    background-color: red;
+}

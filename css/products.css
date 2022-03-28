@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s linear;
+}
+body{
+    background-color: whitesmoke;
+}
+.productsMain{
+    overflow: hidden;
+    position: relative;
+    width: 93%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.productsMain .psHeroSection{
+    height: auto;
+    /* position: relative; */
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 0 .94rem;
+    /* overflow: hidden; */
+    margin-bottom: .8rem;
+}
+.productsMain .psHeroSection .psLeft{
+    width: 39%;
+    height: 80vh;
+    padding: .33rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* overflow: hidden; */
+}
+.productsMain .psHeroSection .psLeft .pslTop{
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+
+}
+.productsMain .psHeroSection .psLeft .pslTop .psltLeft{
+    position: relative;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.productsMain .psHeroSection .psLeft .pslTop .psltLeft .psltlSlideImg{
+    width: 75px;
+    height: 75px;
+    position: relative;
+    padding: .2rem;
+    cursor: pointer;
+    transform: scale(1);
+
+}
+.productsMain .psHeroSection .psLeft .pslTop .psltLeft .psltlSlideImg:hover{
+    border: 1px solid #094074;
+    transform: scale(1.03);
+}
+.productsMain .psHeroSection .psLeft .pslTop .psltLeft .psltlSlideImg .pslImages{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+.productsMain .psHeroSection .psLeft .pslTop .psltRight{
+    width: 85%;
+    height: 70vh;
+    margin-left: 1.5rem;
+    position: relative;
+}
+.productsMain .psHeroSection .psLeft .pslTop .psltRight .pslrImage{
+    position: relative;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.productsMain .psHeroSection .psLeft .pslBottom{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.productsMain .psHeroSection .psLeft .pslBottom .bttns{
+    width: 49%;
+    padding: .5rem .5rem;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.productsMain .psHeroSection .psLeft .pslBottom .bttns .btnImg{
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    margin-trim: .8rem;
+}
+.productsMain .psHeroSection .psRight{
+    
+    width: 60%;
+    margin-left: auto;
+    padding: .33rem 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.productsMain .psHeroSection .psRight .pageIndication{
+    font-size: .87rem;
+    color: #878787;
+    
+    align-items: center;
+}
+.productsMain .psHeroSection .psRight .pageIndication .pageNarrow{
+    font-size: .7rem;
+    margin: 0 .7rem;
+}
+.productsMain .psHeroSection .psRight .productRightInformation{
+    display: flex;
+    flex-direction: column;
+}
+.productsMain .psHeroSection .psRight .productRightInformation .prTitle{
+    font-size: 1rem;
+    color: #878787;
+}
+.productsMain .psHeroSection .psRight .productRightInformation .prdescription{
+    font-size: 1.1rem;
+    font-weight: 850px;
+    color: #212121;
+    margin-bottom: .8rem;
+
+}
+.productsMain .psHeroSection .psRight .productRightInformation  .prPrices{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.productsMain .psHeroSection .psRight .productRightInformation  .prPrices .prPrice{
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-right: .5rem;
+}
+.productsMain .psHeroSection .psRight .productRightInformation  .prPrices .prDuplicate{
+    font-size: .91rem;
+    color: #878787;
+    margin-right: .5rem;
+}
+.productsMain .psHeroSection .psRight .productRightInformation  .prPrices .prDiscount{
+    font-size: 1.01rem;
+    color: #388E3C;
+    font-weight: bold;
+}
+.productsMain .psHeroSection .psRight .productRightInformation .prRatingsReviews{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.productsMain .psHeroSection .psRight .productRightInformation .prRatingsReviews .prRatingsContainer{
+    display: flex;
+    background-color: #388E3C;
+    padding: .14rem .8rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.productsMain .psHeroSection .psRight .productRightInformation .prRatingsReviews .prRatingsContainer .prRating{
+    color: white;
+    font-size: 1.02ren;
+    font-weight: bold;
+}
+.productsMain .psHeroSection .psRight .productRightInformation .prRatingsReviews .prRatingsContainer .prStar{
+    color: white;
+    font-size: 1.01rem;
+    font-weight: bold;
+}
+.productsMain .psHeroSection .psRight .productRightInformation .prRatingsReviews .prReviews{
+    margin-left: .7rem;
+    font-size: .98rem;
+    color: #878787;
+    
+}
+.productsMain .psHeroSection .psRight .productAvalbleOffers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 89%;
+    margin-right: auto;
+    position: relative;
+    margin: 1.4rem 0;
+}
+.productsMain .psHeroSection .psRight .productAvalbleOffers .offferTitle{
+    font-size: 1rem;
+    color: black;
+    margin-bottom: .8rem;
+}
+.productsMain .psHeroSection .psRight .productAvalbleOffers .productOffersContainer{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.productsMain .psHeroSection .psRight .productAvalbleOffers .productOffersContainer .productOffer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: .44rem;
+}
+.productsMain .psHeroSection .psRight .productAvalbleOffers .productOffersContainer .productOffer .pOfferImageContainer {
+    width:18px ;
+    height: 18px;
+    margin-right: .6rem;
+}
+.productsMain .psHeroSection .psRight .productAvalbleOffers .productOffersContainer .productOffer .pOfferImageContainer .pOfferImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.productsMain .psHeroSection .psRight .productAvalbleOffers .productOffersContainer .productOffer .pOfferDescription{
+    font-size: .9rem;
+}
+.productsMain .psHeroSection .psRight .productAvalbleOffers .productOffersContainer .productOffer .pOfferDescription .pOfferTitle{
+    font-weight: bold;
+    color: #212121;
+    font-size: .92rem;
+}
+.productsMain .psHeroSection .psRight .productAvalbleOffers .productOffersContainer .productOffer .pOfferDescription .pOfferLink{
+    text-decoration: none;
+    font-weight: bold;
+    color: #2874F0;
+    font-size: .91rem;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer .pinCodeLocationContainerWrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: .7rem;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer .pinCodeLocationContainerWrap .pinCodeLocationImgContainer{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    margin-right: .8rem;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer .pinCodeLocationContainerWrap .pinCodeLocationImgContainer .pinCodeLocationImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer .pinCodeLocationContainerWrap .pinCodeDeliverTitle{
+    font-size: .91rem;
+    color: #878787;
+    font-weight: bold;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer .pinCodeCheckerContainer{
+    position: relative;
+    width: 85%;
+    display: flex;
+    padding: 1.3rem 0 .4rem 0;
+    border-bottom: 1px solid rgba(0,0,0,.09);
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer .pinCodeCheckerContainer .pinCodeCheckerField{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer .pinCodeCheckerContainer .pinCodeCheckerButton{
+    position: absolute;
+    width: 20%;
+    right: 0;
+    bottom: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer .pinCodeDeliverDetails{
+    font-size: .88rem;
+    font-weight: bold;
+    margin-top: .3rem;
+
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer .pinCodeDeliverDetails .freegreen{
+    color: #388E3C;
+    font-weight: bold;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer .pinCodeDeliverDetails .freegreen .pri{
+    text-decoration: line-through;
+    color: #878787;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .productColors{
+    display: flex;
+    width: 45%;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    justify-content: flex-start;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .productColors .pcTitle{
+    font-size: .91rem;
+    color: black;
+    margin-right: .9rem;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .productColors .colorImage{
+    display: flex;
+    gap: .2rem;
+    align-items: center;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .productColors .colorImage .cIContainer{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.productsMain .psHeroSection .psRight .pinCodeChecker .productColors .colorImage .cIContainer .ciImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.productsMain .psHeroSection .psRight .productDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: .9rem 0;
+    padding: 1.4rem .5rem;
+    position: relative;
+    border-top: 1px solid rgba(0,0,0,.16);
+    border-bottom: 1px solid rgba(0,0,0,.16);
+}
+.productsMain .psHeroSection .psRight .productDetailsContainer .productDetailsHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: .8rem 0;
+    margin-bottom: .9rem;
+}
+.productsMain .psHeroSection .psRight .productDetailsContainer .productDetailsHeader .pdhTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+    columns: black;
+
+}
+.productsMain .psHeroSection .psRight .productDetailsContainer .productDetailsHeader .pdhPlus{
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.productsMain .psHeroSection .psRight .productDetailsContainer .productDetailsInformation{
+    display: flex;
+    flex-direction: column;
+    width: 29%;
+    display: none;
+}
+.productsMain .psHeroSection .psRight .productDetailsContainer .productDetailsInformation.active{
+    display: block;
+}
+.productsMain .psHeroSection .psRight .productDetailsContainer .productDetailsInformation .pColorConer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: .5rem 0;
+
+}
+.productsMain .psHeroSection .psRight .productDetailsContainer .productDetailsInformation .pColorConer .pColor{
+    font-size: .93rem;
+    color: #878787;
+    font-weight: 550px;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    position: relative;
+    align-items: center;
+    padding: .6rem .3rem;
+    border-top: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .ratingsContainer{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+} 
+.productsMain .psHeroSection .psRight .raReviwContainer .ratingsContainer .ratingContaner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .ratingsContainer .ratingContaner .rcTitle{
+    font-size: 1.03rem;
+    font-weight: bold;
+
+} 
+.productsMain .psHeroSection .psRight .raReviwContainer .ratingsContainer .ratingContaner .rcImgContainer{
+    width: 48px;
+    height: 48px;
+    position: relative;
+} 
+.productsMain .psHeroSection .psRight .raReviwContainer .ratingsContainer .ratingContaner .rcImgContainer .rcImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .ratingsContainer .ratingStarContner{
+    display: flex;
+    margin-top: .5rem;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .ratingsContainer .ratingStarContner .rsTitle{
+    font-size: 3rem;
+    opacity: 0.8;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .ratingsContainer .ratingStarContner .rsSub .rsSubConer{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-top: 1.6rem;
+    margin-left: .5rem;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .ratingsContainer .ratingStarContner .rsSub .rsSubConer .rsSubStar{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .ratingsContainer .rcVerifedUsers{
+    font-size: .93rem;
+    opacity: 0.93;
+    margin-top: .4rem;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-grow: 1;
+    justify-content: flex-start;
+    height: 250px;
+    overflow-y: scroll;
+    margin-left: .6rem;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews::-webkit-scrollbar{
+    width: 6px;
+    height: 2px;
+    border: 1px solid rgba(0,0,0,0.2);
+    
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0,0.3);
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews .crTitle{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews .crReviewContainer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: .6rem 0;
+}   
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews .crReviewContainer .crReviewTitle{
+    display: flex;
+    position: relative;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews .crReviewContainer .crReviewTitle .crRatngStar{
+    background-color:#14958F;
+    color: white;
+    font-size: .81rem;
+    padding: 0;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews .crReviewContainer .crReviewTitle .crRatngReviw{
+    font-size: .95rem;
+    margin-left: .5rem;
+    opacity: 0.93;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews .crReviewContainer .crlikesDisklikes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: .23rem;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews .crReviewContainer .crlikesDisklikes .crlikeDislkeTitle{
+    font-size: .85rem;
+    opacity: 0.8;
+    padding-left: 2.6rem;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews .crReviewContainer .crlikesDisklikes .crlkdkContainer{
+    display: flex;
+}
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews .crReviewContainer .crlikesDisklikes .crlkdkLeft{
+    display: flex;
+    justify-content: center;
+    width: 60px;
+}
+
+.productsMain .psHeroSection .psRight .raReviwContainer .customerReviews .crReviewContainer .crlikesDisklikes .crlkdkLeft .ttt{
+    padding: 0 .4rem;
+}
+.iconnnnLike{
+    cursor: pointer;
+    color: darkgreen;
+    opacity: 0.6;
+}
+.iconnnnLike:hover{
+    opacity: 1;
+}
+.iconnnnDislike{
+    color: crimson;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.iconnnnDislike{
+    opacity: 1;
+}
+
+@media (min-width:250px) and (max-width: 600px){
+    .productsMain{
+        width: 96%;
+    }
+    .productsMain .psHeroSection{
+        flex-direction: column;
+    }
+    .productsMain .psHeroSection .psLeft{
+        display: none;
+    }
+    .productsMain .psHeroSection .psRight{
+        width: 100%;
+    }
+    .productsMain .psHeroSection .psRight .productAvalbleOffers{
+        width: 100%;
+    }
+    .productsMain .psHeroSection .psRight .productAvalbleOffers .productOffersContainer .productOffer .pOfferImageContainer{
+        width: 22px;
+        height: 22px;
+    }
+    .productsMain .psHeroSection .psRight .productAvalbleOffers .productOffersContainer .productOffer .pOfferDescription .pOfferTitle {
+        font-size: .834rem;
+    }
+    .productsMain .psHeroSection .psRight .productAvalbleOffers .productOffersContainer .productOffer .pOfferDescription{
+        font-size: .788rem;
+    }
+    .productsMain .psHeroSection .psRight .pinCodeChecker{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer{
+        min-width: 74%;
+    }
+    .productsMain .psHeroSection .psRight .productDetailsContainer .productDetailsInformation{
+        min-width: 100%;
+    }
+    .productsMain .psHeroSection .psRight .pinCodeChecker .productColors{
+        margin-top: .9rem;
+    }
+    .productsMain .psHeroSection .psRight .raReviwContainer{
+        flex-direction: column;
+    }
+    .productsMain .psHeroSection .psRight .raReviwContainer .customerReviews{
+        width: 100%;
+        margin-top: .5rem;
+    }
+    .change{
+        justify-self: flex-end;
+    }
+    .productsMain .cReviewModal .cRMInner{
+        min-width: 82%;
+    }
+}
+@media (min-width: 600px) and (max-width:1000px){
+    .productsMain{
+        width: 96%;
+    }
+    .productsMain .psHeroSection{
+        flex-direction: column;
+    }
+    .productsMain .psHeroSection .psLeft{
+        display: none;
+    }
+    .productsMain .psHeroSection .psRight{
+        width: 100%;
+    }
+    .productsMain .psHeroSection .psRight .productAvalbleOffers{
+        width: 100%;
+    }
+    .productsMain .psHeroSection .psRight .productDetailsContainer .productDetailsInformation{
+        min-width: 340px;
+    }
+    .productsMain .cReviewModal .cRMInner{
+        min-width: 450px;
+    }
+}
+@media (min-width:1000px) and (max-width:1200px){
+    .productsMain{
+        min-width: 99%;
+    }
+    .productsMain .psHeroSection{
+        padding: 0 .02rem;
+    }
+    .productsMain .psHeroSection .psLeft .pslTop .psltLeft .psltlSlideImg .pslImages{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .productsMain .psHeroSection .psLeft .pslTop {
+        justify-content: space-between;
+        padding: 0 .3rem;
+    }
+    .productsMain .psHeroSection .psLeft .pslTop .psltLeft{
+        width: 0px;
+    }
+    .productsMain .psHeroSection .psLeft .pslTop .psltRight{
+        width: 80%;
+        height: 500px;
+        margin-left: .4rem;
+    }
+}

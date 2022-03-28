@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products by category</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/imageSlider.css"  />
+    <link rel="stylesheet" href="./css/products.css" />
+    <link rel="stylesheet" href="./css/similarProductts.css" />
+    <link rel="stylesheet" href="./css/customerReview.css" />
+</head>
+<body>
+    <main class="productsMain">
+        <section class="imageSlider">
+            <div class="imgCont">
+                <div class="imgeSliderContner ">
+                    <img class="imggggg " id="cccc" src="./images/fila.jpeg" alt="fila" />
+                </div>
+            </div>
+            <div class="controls">
+                <div class="prev"><</div>
+                <div class="next">></div>
+            </div>
+        </section>
+        <section class="psHeroSection" >
+            <div class="psLeft" id="exzoom" style="position: sticky; top:0px;">
+                <div class="pslTop" >
+                    <div class="psltLeft" id="zoomImages">
+                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" id="leftImgMain" src="./images/fila.jpeg" alt="wrognActive" /></div>
+                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" src="./images/slideShowOne.jpeg" alt="wrognActive" /></div>
+                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" src="./images/slideShowTwo.jpeg" alt="wrognActive" /></div>
+                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" src="./images/slideShowThree.jpeg"  alt="wrognActive" /></div>
+                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" src="./images/slideToShowFive.jpeg"  alt="wrognActive" /></div>
+                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" src="./images/slideToShowSix.jpeg"  alt="wrognActive" /></div>
+                        
+                    </div>
+                    <div class="psltRight" id="img-container">
+                        <img  id="zoom" class="pslrImage" src="./images/fila.jpeg" data-zoom-image="./images/fila.jpeg" alt="WROGN ACTIVE" />
+                    </div>
+                </div>
+
+                <div class="pslBottom">
+                    <button class="bttns" style="background-color: #FE9000;" type="button"><img class="btnImg" src="./images/cart.jpg" alt="cart" />ADD TO CART</button>
+                    <button class="bttns" style="background-color: #FFDD4A;" type="button"><img class="btnImg" src="./images/chrgeFull.jpg" alt="full" />ORDER IT</button>
+                </div>
+            </div>
+            <div class="psRight">
+                <p class="pageIndication">Home <span class="pageNarrow">></span> Footwear <span class="pageNarrow">></span> Men's Footwear <span class="pageNarrow">></span> <span id="productTitle">FILA Shoes</span></p>
+                <div class="productRightInformation" style="margin-top:.9rem;" >
+                    <h4 class="prTitle" id="pTitle">FILA</h4>
+                    <p class="prdescription" id="pDescription">IZUNA Running Shoes For Men (Grey)</p>
+                    <div class="prPrices">
+                        <h4 class="prPrice" >₹<span id="pDicPrice">1,295</span></h4>
+                        <p class="prDuplicate" >₹<span id="pOrgPrice" style="text-decoration: line-through;">2,699</span></p>
+                        <h6 class="prDiscount" id="pDiscnt">52% off</h6>
+                    </div>
+                    <div class="prRatingsReviews">
+                        <div class="prRatingsContainer">
+                            <p class="prRating" id="pRatte">4.2</p>
+                            <p class="prStar" >*</p>
+                        </div>
+                        <h5 class="prReviews"><span id="pRating">329</span> ratings and <span id="pReviews" >56</span> reviews</h5>
+                    </div>
+                </div>
+                <!-- Product Offers -->
+                <div class="productAvalbleOffers">
+                    <h6 class="offferTitle">Available Offers</h6>
+                    <div class="productOffersContainer">
+                        <div class="productOffer">
+                            <div class="pOfferImageContainer">
+                                <img class="pOfferImage" src="./images/couponTag.png" alt="coupon" />
+                            </div>
+                            <p class="pOfferDescription"><span class="pOfferTitle">Combo Offer</span> Buy 2 items save 5%, Buy 3 or more save 10% <a class="pOfferLink" href="#">See all products T&C</a></p>
+                        </div>
+                        <div class="productOffer">
+                            <div class="pOfferImageContainer">
+                                <img class="pOfferImage" src="./images/couponTag.png" alt="coupon" />
+                            </div>
+                            <p class="pOfferDescription"><span class="pOfferTitle">Bank Offer</span> 5% Unlimited Cashback on Flipkart Axis Bank Credit Card <a class="pOfferLink" href="#"> T&C</a></p>
+                        </div>
+                        <div class="productOffer">
+                            <div class="pOfferImageContainer">
+                                <img class="pOfferImage" src="./images/couponTag.png" alt="coupon" />
+                            </div>
+                            <p class="pOfferDescription"><span class="pOfferTitle">Partner Offer</span> Sign up for Flipkart Pay Later and get Flipkart Gift Card worth ₹100* <a class="pOfferLink" href="#"> Know More</a></p>
+                        </div>
+                        <div class="productOffer">
+                            <div class="pOfferImageContainer">
+                                <img class="pOfferImage" src="./images/couponTag.png" alt="coupon" />
+                            </div>
+                            <p class="pOfferDescription"><span class="pOfferTitle">Partner Offer</span> Order More, Win More: Chance to win an iPad and EGVs worth ₹5000 on Flipkart Pay Later 
+                                transaction <a class="pOfferLink" href="#">Know More</a></p>
+                        </div>
+                        <div class="productOffer">
+                            <div class="pOfferImageContainer">
+                                <img class="pOfferImage" src="./images/costEmi.png" alt="coupon" />
+                            </div>
+                            <p class="pOfferDescription"> No Cost EMI on Bajaj Finserv EMI Card on cart value about ₹2999<a class="pOfferLink" href="#">T&C</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pin Code Checker -->
+                <div class="pinCodeChecker">
+                    <div class="pinCodeLocationContainer">
+                        <div class="pinCodeLocationContainerWrap">
+                            <div class="pinCodeLocationImgContainer">
+                                <img class="pinCodeLocationImg" src="./images/location.png" alt="deliver location" />
+                            </div>
+                            <p class="pinCodeDeliverTitle">Deliver to</p>
+                        </div>
+                        <div class="pinCodeCheckerContainer">
+                            <input class="pinCodeCheckerField" type="name" name="search" placeholder="Enter Pin" />
+                            <button class="pinCodeCheckerButton" type="button">Check</button>
+                        </div>
+                        <p class="pinCodeDeliverDetails">Delivery by 31 Mar, Thursday | <span class="freegreen">Free <span class="pri">₹40</span></span></p>
+                    </div>
+                    <div class="productColors">
+                        <h6 class="pcTitle">Color</h6>
+                        <div class="colorImage">
+                            <div class="cIContainer" style="cursor: pointer;"><img class="ciImage" id="settImage" onmouseover="mouserHover(this)" style="object-fit: contain;" src="./images/color.jpeg" alt="Color" /></div>
+                            <div class="cIContainer" style="cursor: pointer;"><img class="ciImage" id="settImage" onmouseover="mouserHover(this)" src="./images/fila.jpeg" alt="fila" /></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Product Details  -->
+                <div class="productDetailsContainer">
+                    <div class="productDetailsHeader">
+                        <h3 class="pdhTitle">Product Details</h3>
+                        <p class="pdhPlus" id="plsBtn" onclick="displayProductDetails()">+</p>
+                    </div>
+                    <div class="productDetailsInformation " id="productBtn">
+                        <div class="pColorConer">
+                            <p class="pColor">Color</p>
+                            <p class="pGrey" id="prColor">Grey</p>
+                        </div>
+                        <div class="pColorConer"><p class="pColor">Outer material</p><p class="pGrey" id="prOM">PU</p></div>
+                        <div class="pColorConer"><p class="pColor">Model name</p><p class="pGrey" id="prMN">IZUNA</p></div>
+                        <div class="pColorConer"><p class="pColor">Ideal for</p><p class="pGrey" id="prIF">Men</p></div>
+                        <div class="pColorConer"><p class="pColor">Occasion</p><p class="pGrey" id="prO">Sports</p></div>
+                        <div class="pColorConer"><p class="pColor">Sole material</p><p class="pGrey" id="prSM">IM EVA</p></div>
+                        <div class="pColorConer"><p class="pColor">Pack of</p><p class="pGrey" id="prPO">1</p></div>
+
+                    </div>
+                </div>
+
+                <!-- Ratings and Reviews -->
+                <div class="raReviwContainer">
+                    <div class="ratingsContainer">
+                        <div class="ratingContaner">
+                            <p class="rcTitle">RATINGS</p>
+                            <div class="rcImgContainer"><img class="rcImg" src="./images/reviewStar.png" alt="reviewStar" /></div>
+                        </div>
+                        <div class="ratingStarContner">
+                            <h3 class="rsTitle">4.2</h3>
+                            <sub class="rsSub">
+                                <div class="rsSubConer"><img class="rsSubStar" src="./images/brownStar.png" alt="star" /></div>
+                            </sub>
+                        </div>
+                        <p class="rcVerifedUsers"><span>56</span> Verified Buyers</p>
+                    </div>
+                    <div class="customerReviews" >
+                        <p class="crTitle" style=" display:flex;align-items:center;position: sticky;top: 0;background-color:white;z-index: 1;">Customer Reviews (<sapn>26</sapn>) <smal class="change" style="font-size: .91rem;color: dodgerblue;cursor: pointer;" onclick="displayReviewModal()">Add Review</smal></p>
+                        <div class="crReviewContainer" id="gg">
+                            <div class="crReviewTitle">
+                                <p class="crRatngStar">4*</p>
+                                <p class="crRatngReviw">Very lightweight and beautiful color loved it</p>
+                            </div>
+                            <div class="crlikesDisklikes">
+                                <p class="crlikeDislkeTitle">Tulika Agarwal | 24 Mar 2022</p>
+                                <div class="crlkdkContainer">
+                                    <div class="crlkdkLeft">
+                                        <i class="fa fa-thumbs-up iconnnnLike" onclick="incremnt(this)"><span class="ttt">7</span></i>
+                                    </div>
+                                    <div class="crlkdkLeft">
+                                        <i class="fa fa-thumbs-down iconnnnDislike" onclick="increment2(this)"><span class="ttt">2</span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crReviewContainer">
+                            <div class="crReviewTitle">
+                                <p class="crRatngStar">4*</p>
+                                <p class="crRatngReviw">This is very faboulour shoes I like it</p>
+                            </div>
+                            <div class="crlikesDisklikes">
+                                <p class="crlikeDislkeTitle">Priyanka Sharma | 22 Mar 2022 </p>
+                                <div class="crlkdkContainer">
+                                    <div class="crlkdkLeft">
+                                        <i class="fa fa-thumbs-up iconnnnLike " onclick="incremnt(this)"><span class="ttt">11</span></i>
+                                    </div>
+                                    <div class="crlkdkLeft">
+                                        <i class="fa fa-thumbs-down  iconnnnDislike" onclick="increment2(this)"><span class="ttt">4</span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crReviewContainer">
+                            <div class="crReviewTitle">
+                                <p class="crRatngStar">3*</p>
+                                <p class="crRatngReviw">Superrr 😍😍😍</p>
+                            </div>
+                            <div class="crlikesDisklikes">
+                                <p class="crlikeDislkeTitle">Jamini Nagesh | 21 Mar 2022</p>
+                                <div class="crlkdkContainer">
+                                    <div class="crlkdkLeft">
+                                        <i class="fa fa-thumbs-up iconnnnLike" onclick="incremnt()"><span class="ttt">3</span></i>
+                                    </div>
+                                    <div class="crlkdkLeft">
+                                        <i class="fa fa-thumbs-down iconnnnDislike" onclick="increment2()"><span class="ttt">1</span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crReviewContainer">
+                            <div class="crReviewTitle">
+                                <p class="crRatngStar">4*</p>
+                                <p class="crRatngReviw">Superrr and Loved it 😍😍</p>
+                            </div>
+                            <div class="crlikesDisklikes">
+                                <p class="crlikeDislkeTitle">Meghana Sheety | 20 Mar 2022</p>
+                                <div class="crlkdkContainer">
+                                    <div class="crlkdkLeft">
+                                        <i class="fa fa-thumbs-up iconnnnLike" onclick="incremnt()"><span  class="ttt">4</span></i>
+                                    </div>
+                                    <div class="crlkdkLeft">
+                                        <i class="fa fa-thumbs-down iconnnnDislike" onclick="increment2()"><span class="ttt">3</span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" style="cursor: pointer;text-decoration: none;" >View More Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Similar Products Cards -->
+        <section class="similarProducts" >
+            <h3 class="spTitle">Similar Products</h3>
+            <div class=" owl-carousel owl-theme">
+                <div class=" item" onclick="updateProductDetails(1)" id="1">
+                    <div class="productImgContainer">
+                        <img class="productImage" id="CDD" onclick="changeImage(this)"  src="./images/adidas.jpeg" alt="adidas""/>
+                    </div>
+                    <div class="productDetails">
+                        <h4 class="productTitle">ADIDAS</h4>
+                        <p class="productDescription">Glarus M Running Sports Shoes For Men  (Blue)</p>
+                        <div class="productPrices">
+                            <h5 class="pPrice">₹1,374</h5>
+                            <p class="pDup" style="text-decoration: line-through;">₹2,499</p>
+                            <small class="pDiscount">45% off</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" onclick="updateProductDetails(2)" id="2">
+                    <div class="productImgContainer">
+                        <img class="productImage"  onclick="changeImage(this)" src="./images/ciffraStumper.jpeg" alt="adidas" />
+                    </div>
+                    <div class="productDetails">
+                        <h4 class="productTitle">Ciffra</h4>
+                        <p class="productDescription">STUMPER Rnning Shoes For Men (Blue)</p>
+                        <div class="productPrices">
+                            <h5 class="pPrice">₹299</h5>
+                            <p class="pDup" style="text-decoration: line-through;">₹999</p>
+                            <small class="pDiscount">70% off</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" onclick="updateProductDetails(3)" id="3">
+                    <div class="productImgContainer">
+                        <img class="productImage"  onclick="changeImage(this)" src="./images/filaTwo.jpeg" alt="adidas" />
+                    </div>
+                    <div class="productDetails">
+                        <h4 class="productTitle">FILA</h4>
+                        <p class="productDescription">KARTO Sports Running Shoes For Men  (Red)</p>
+                        <div class="productPrices">
+                            <h5 class="pPrice">₹1,047</h5>
+                            <p class="pDup" style="text-decoration: line-through;">₹2,499</p>
+                            <small class="pDiscount">58% off</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" onclick="updateProductDetails(4)" id="4">
+                    <div class="productImgContainer">
+                        <img class="productImage"  onclick="changeImage(this)" src="./images/puma.jpeg" alt="adidas" />
+                    </div>
+                    <div class="productDetails">
+                        <h4 class="productTitle">PUMA</h4>
+                        <p class="productDescription">Softride Enzo NXT Running Shoes For Men  (Black)</p>
+                        <div class="productPrices">
+                            <h5 class="pPrice">₹3,189</h5>
+                            <p class="pDup" style="text-decoration: line-through;">₹5,499</p>
+                            <small class="pDiscount">42% off</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" item" onclick="updateProductDetails(5)" id="5">
+                    <div class="productImgContainer">
+                        <img class="productImage"  onclick="changeImage(this)"  src="./images/wrognactivetwo.jpeg" alt="adidas" />
+                    </div>
+                    <div class="productDetails">
+                        <h4 class="productTitle">WROGN ACTIVE</h4>
+                        <p class="productDescription">Running Sports Shoes For Men  (Maroon)</p>
+                        <div class="productPrices">
+                            <h5 class="pPrice">₹1,047</h5>
+                            <p class="pDup" style="text-decoration: line-through;">₹2,499</p>
+                            <small class="pDiscount">58% off</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" item" onclick="updateProductDetails(6)" id="6">
+                    <div class="productImgContainer">
+                        <img class="productImage"  onclick="changeImage(this)" src="./images/sketchers.jpeg" alt="adidas" />
+                    </div>
+                    <div class="productDetails">
+                        <h4 class="productTitle">SKETCHERS</h4>
+                        <p class="productDescription">EQUALIZER 4.0 - GENERATION Casuals For Men  (Navy)</p>
+                        <div class="productPrices">
+                            <h5 class="pPrice">₹3,299</h5>
+                            <p class="pDup" style="text-decoration:line-through">₹5,499</p>
+                            <small class="pDiscount">40% off</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class=" item" onclick="updateProductDetails(7)" id="7">
+                    <div class="productImgContainer">
+                        <img class="productImage"  onclick="changeImage(this)" src="./images/pumaThree.jpeg" alt="puma tree" />
+                    </div>
+                    <div class="productDetails">
+                        <h4 class="productTitle">PUMA</h4>
+                        <p class="productDescription">Supertec Zero Running Shoes For Men (Green)</p>
+                        <div class="productPrices">
+                            <h5 class="pPrice">₹3,599</h5>
+                            <p class="pDup" style="text-decoration:line-through">₹5,999</p>
+                            <small class="pDiscount">40% off</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" item" onclick="updateProductDetails(8)" id="8">
+                    <div class="productImgContainer">
+                        <img class="productImage"  onclick="changeImage(this)" src="./images/pumaTwo.jpeg" alt="puma Two" />
+                    </div>
+                    <div class="productDetails">
+                        <h4 class="productTitle">PUMA</h4>
+                        <p class="productDescription">Zod Runner NM Running Shoes For Men (Blue)</p>
+                        <div class="productPrices">
+                            <h5 class="pPrice">₹2,399</h5>
+                            <p class="pDup" style="text-decoration:line-through">₹3,999</p>
+                            <small class="pDiscount">40% off</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recently Viewed Products -->
+        <section class="similarProducts" style="margin-top: .8rem; margin-bottom: .2rem;padding-bottom: .5rem;">
+            <h3 class="spTitle">Recently Viewed</h3>
+            <div class="spp" id="recentt"  >
+                <div class="it" >
+                    <div class="productImgContainer">
+                        <img class="productImage" id="CDD" onclick="changeImage(this)"  src="./images/adidas.jpeg" alt="adidas""/>
+                    </div>
+                    <div class="productDetails">
+                        <h4 class="productTitle">ADIDAS</h4>
+                        <p class="productDescription">Glarus M Running Sports Shoes For Men  (Blue)</p>
+                        <div class="productPrices">
+                            <h5 class="pPrice">₹1,374</h5>
+                            <p class="pDup" style="text-decoration: line-through;">₹2,499</p>
+                            <small class="pDiscount">45% off</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Customer Review Modal -->
+        <section class="cReviewModal" id="cRModl">
+            <form class="cRMInner">
+                <h3 class="crTi">Add Review and Ratings</h3>
+                <div class="formFields">
+                    <label class="crTitl">You're Review </label>
+                    <div class="reContner">
+                        <input class="rcView" id="review" type="text" name="review" placeholder=""  required/>
+                    </div>
+                </div>
+                <p class="crRat">Rating</p>
+                <div class="crRatingss">
+                    <p class="crRateByNumbes"  onclick="removeColor(this)">1</p>
+                    <p class="crRateByNumbes"  onclick="removeColor(this)">2</p>
+                    <p class="crRateByNumbes"  onclick="removeColor(this)">3</p>
+                    <p class="crRateByNumbes"  onclick="removeColor(this)">4</p>
+                    <p class="crRateByNumbes"  onclick="removeColor(this)">5</p>
+                </div>
+                <div class="formFields" style="margin-top: 1.2rem;">
+                    <label class="crTitl">You're Name :</label>
+                    <div class="reContner">
+                        <input class="rcView" id="usn" type="text" name="userName" placeholder="" required />
+                    </div>
+                </div>
+                <div class="rbn">
+                    <button class="sbBtun" type="button" id="shareData" onclick="addNewRate()">Sumbit Review</button>
+                    <button class="sbBtunn"  type="button" onclick="displayReviewModal()">Close</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="./js/prdScript.js" ></script>
+
+    <!-- zoomjs image maginifier plugin -->
+    <script src="./js/zoomsl.js" ></script>
+    <script src="./js/zoomsl.min.js" ></script>
+    <script >
+        $(document).ready(function(){
+            $(".pslImages").hover(function(){
+                $(".pslrImage").attr('src',$(this).attr('src'));
+            });
+        });
+        </script>
+        <script >
+        $(document).ready(function(){
+            $(".pslrImage").imagezoomsl({
+                zoomrange:[3,3]
+            });
+        });
+    </script>
+
+    <!-- product cards sliding using owl-carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+         $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        // autoplay:true,
+        // autoplayTimeout:1000,
+        nav:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:2,
+                nav:false
+            },
+            769:{
+                items:3,
+                nav:true,
+            },
+            1000:{
+                items:4,
+                nav:true,
+                loop:false
+            },
+            1200:{
+                items:5,
+                nav:true,
+            }
+        }
+    })
+    </script>
+</body>
+</html>
+

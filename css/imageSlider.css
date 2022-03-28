@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s linear;
+}
+body{
+    background-color: whitesmoke;
+}
+.productsMain{
+    overflow: hidden;
+    position: relative;
+    width: 93%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.productsMain .imageSlider{
+    display: none;
+}
+.productsMain .imageSlider .controls{
+    align-items: center;
+    width: 100%;
+}
+.productsMain .imageSlider .controls .prev,
+.productsMain .imageSlider .controls .next{
+    position: absolute;
+    z-index:2;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    color: #ffffff;
+    background-color: #FF5722;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.productsMain .imageSlider .controls .prev{
+    left: 0;
+}
+.productsMain .imageSlider .controls .next{
+    right: 0;
+}
+@media (min-width: 250px) and (max-width:600px) {
+    .productsMain .imageSlider {
+        display: block;
+        width: 98%;
+        height: 80vh;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .productsMain .imageSlider .imgCont{ 
+        min-width: 100%;
+        display: flex;
+        min-height: 100%;
+        overflow: hidden;
+    } 
+    .productsMain .imageSlider .imgCont .imgeSliderContner{
+        min-width: 100%;
+        min-height: 100%;
+    }
+   
+    .productsMain .imageSlider .imgCont .imgeSliderContner .imggggg{
+        max-width: 100%;
+        height: 100%;
+        object-fit: conver;
+    }
+    
+}
+
+@media (min-width: 600px) and (max-width:1000px) {
+    .productsMain .imageSlider {
+        display: block;
+        min-height: 500px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .productsMain .imageSlider .imgCont{
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+    }
+    /* .productsMain .imageSlider .imgCont{
+        display: flex;
+    } */
+    .productsMain .imageSlider .imgCont .imgeSliderContner{
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+    }
+    .productsMain .imageSlider .imgCont .imgeSliderContner .imggggg{
+        width: 100%;
+        min-height: 100%;
+        object-fit: contain;
+    }
+}
