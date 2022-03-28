@@ -183,6 +183,8 @@ svg {
 
 .footer-image {
     text-align: center;
+    height: 50%;
+    width: 50%;
 }
 
 .footer-image img {
