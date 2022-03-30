@@ -19,7 +19,11 @@
 }
 
 html{
+<<<<<<< HEAD:footer/footer.css
     /* font-size: 62.5%; */
+=======
+    font-size: 62.5%;
+>>>>>>> 5a8a7ef3eab50e0acef1be0e4da19d5767b67aa4:footer/style.css
     overflow-x: hidden;
 }
 
