@@ -86,13 +86,14 @@ header .header-1 .logo i{
 
 header .header-1 .form-container{
     width: 50%;
+    max-width: 530px;
 }
 
-header .header-1 .form-container form{
+header .header-1 .form-container form, .sec form{
     display: flex;
 }
 
-header .header-1 .form-container form #search{
+header .header-1 .form-container form #search, .sec #search{
     height: 4rem;
     width: 100%;
     max-width: 50rem;
@@ -102,11 +103,11 @@ header .header-1 .form-container form #search{
     padding:0 1rem;
 }
 
-header .header-1 .form-container form #search:focus{
+header .header-1 .form-container form #search:focus, .sec #search:focus{
     border-color: var(--blue);;
 }
 
-header .header-1 .form-container form label{
+header .header-1 .form-container form label, .sec label{
     height: 4rem;
     width: 5rem;
     text-align: center;
@@ -117,9 +118,33 @@ header .header-1 .form-container form label{
     color:#fff;
 }
 
+
+
+.sec form{
+    width: 70%;
+    margin: auto;
+    display: none;
+    margin-top: 10px;
+}
+
+@media screen and (max-width:500px) {
+    .sec form{
+        display: flex;
+    }
+
+    header .header-1 .form-container form{
+        display: none;
+    }
+    header .header-1 .form-container{
+        width: 0;
+    }
+}
 header .header-1 .form-container form label:hover{
     color:yellow;
 }
+
+
+
 
 /* header .header-2{
     background:var(--blue);
@@ -130,6 +155,13 @@ header .header-2 .navbar ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:500px) {
+    header .header-2 .navbar ul{
+        justify-content: center;
+    }
 }
 
 header .header-2 .navbar ul li{
@@ -169,8 +201,43 @@ header .header-2.header-active{
     box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: -1;
+  margin-top: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 1.8em !important;
+  display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
 
 
+@media screen and (max-width:500px){
+    header .header-2 .navbar ul li a{
+        font-size: 1.5em;
+    }
+}
 
 
 
