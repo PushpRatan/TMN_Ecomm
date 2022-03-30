@@ -23,20 +23,6 @@ html{
     overflow-x: hidden;
 }
 
-
-.btn:hover{
-    letter-spacing: .2rem;
-    opacity: .8;
-}
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all linear 0.2s;
-}
-
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -44,6 +30,12 @@ body{
 ul {
   list-style: none;
 }
+
+.btn:hover{
+    letter-spacing: .2rem;
+    opacity: .8;
+}
+
 
 .containers{
     max-width: 1170px;
@@ -118,7 +110,10 @@ header .header-1 .form-container form label, .sec label{
     color:#fff;
 }
 
-
+.sec{
+    background-color: white;
+    padding-top: 1px;
+}
 
 .sec form{
     width: 70%;
