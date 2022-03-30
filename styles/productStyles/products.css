@@ -7,12 +7,11 @@
     outline: none;
     transition: all .2s linear;
 }
-body{
+/* body{
     background-color: whitesmoke;
-}
+} */
 .productsMain{
     overflow: hidden;
-    position: relative;
     width: 93%;
     margin: auto;
     display: flex;
@@ -21,7 +20,7 @@ body{
 
 .productsMain .psHeroSection{
     height: auto;
-    /* position: relative; */
+    position: relative;
     display: flex;
     align-items: flex-start;
     background-color: white;
@@ -287,7 +286,7 @@ body{
     width: 85%;
     display: flex;
     padding: 1.3rem 0 .4rem 0;
-    border-bottom: 1px solid rgba(0,0,0,.09);
+    border-bottom: 1px solid rgba(0,0,0,.16);
 }
 .productsMain .psHeroSection .psRight .pinCodeChecker .pinCodeLocationContainer .pinCodeCheckerContainer .pinCodeCheckerField{
     position: absolute;
@@ -351,6 +350,43 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.productsMain .psHeroSection .psRight .productSize{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem .2;
+    position: relative;
+}
+.productsMain .psHeroSection .psRight .productSize .psTitle{
+    font-size: .91rem;
+    color: #878787;
+}
+.productsMain .psHeroSection .psRight .productSize .productSizesContainer{
+    display: flex;
+    flex-direction: row;
+    gap: .6rem;
+    margin-left: .8rem;
+}
+.productsMain .psHeroSection .psRight .productSize .productSizesContainer .pSize{
+    font-size: 1.2rem;
+    padding: .46rem;
+    min-width: 46px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.productsMain .psHeroSection .psRight .productSize .productSizesContainer .pSize:hover{
+    color: blue;
+    border: 1px solid blue;
+}
+.productsMain .psHeroSection .psRight .productSize .productSizesContainer .pSize.sizeActive{
+    color: blue;
+    border:  1px solid blue;
 }
 .productsMain .psHeroSection .psRight .productDetailsContainer{
     display: flex;

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s linear;
+}
+
+
+ .psCart{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    /* height: 100vh; */
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    display: none;
+}
+ .psCart.cdal{
+    display: block;
+}
+.psCart .psCartContainer{
+    position: absolute;
+    
+    top: 50%; 
+    left: 50%; 
+
+    transform: translate(-50%, -50%); 
+    width: 42%;
+    
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: .8rem 1.3rem;
+
+}
+ .psCart .psCartContainer .psCartContainerInner{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.psCart .psCartContainer .psCartContainerInner .psCartImgConter{
+    width: 25%;
+    height: 26vh;
+    position: relative;
+}
+ .psCart .psCartContainer .psCartContainerInner .psCartImgConter .psCartImg{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+ .psCart .psCartContainer .psCartContainerInner .psCartContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin-left: .5rem;
+    margin-top: .4rem;
+}
+ .psCart .psCartContainer .psCartContainerInner .psCartContent .psCartTittle{
+    font-size: .933rem;
+    font-weight: bold;
+}
+ .psCart .psCartContainer .psCartContainerInner .psCartContent .psCartSize{
+    font-size: .91rem;
+    margin: .4rem 0;
+}
+.psCart .psCartContainer .psCartContainerInner .psCartContent .productDetails{
+    display: flex;
+    margin-top: .5rem;
+}
+ .psCart .psCartContainer .psCartContainerInner .psCartContent .productDetails .pPrice{
+    font-size: .93rem;
+    margin-right: .4rem;
+}
+ .psCart .psCartContainer .psCartContainerInner .psCartContent .productDetails  .pDup{
+    font-size: .84rem;
+    opacity: .8;
+    margin-right: .4rem;
+}
+ .psCart .psCartContainer .psCartContainerInner .psCartContent .productDetails  .pDiscount{
+    color: #388E3C;
+    font-weight: bold;
+}
+ .psCart .psCartContainer .psCartContainerInner .psCartContent .psCartBottom{
+    display: flex;
+    align-items: flex-end;
+}
+.psCart .psCartContainer .psCartContainerInner .psCartContent .psCartBottom .psLinkeOne{
+    font-size: .93rem;
+    color:dodgerblue;
+    margin: 3.8rem 1.9rem 0 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+ .psCart .psCartContainer .psCartTitle{
+    font-size: 1.1rem;
+    margin: .5rem 0;
+}
+.psCart .psCartContainer .psCartLink{
+    width: 100%;
+    height: 6vh;
+    color: white;
+    background-color: black;
+    font-size: 1.02rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
