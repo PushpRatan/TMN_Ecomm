@@ -18,6 +18,10 @@ body{
     display: flex;
     width: 100%;
 }
+.Flex-Down{
+    display: flex;
+    /* width: 100%; */
+}
 
 .Cart-Outer-Box{
     display: flex;
@@ -51,7 +55,6 @@ body{
 .Cart-Outer-Box{
     display: flex;
     margin-top: 10px;
-    
     margin-bottom: 10px;
 }
 
@@ -81,7 +84,7 @@ body{
 
 .Item-Info{
     margin-left: 20px;
-    width: 100%;
+    width: 50%;
 }
 
 .Item-Name{
@@ -94,20 +97,47 @@ body{
 }
 
 .Item-Price{
-    float: right;
+    /* float: right; */
+    margin-top: 5px;
+    display: flex;
+    font-size: medium;
     font-family:  'Quicksand', sans-serif;;
 }
 
 .Item-Quantity{
-    width: 70%;
+    /* width: 70%; */
     display: flex;
-    
+    margin-top: 5px;
+    font-size: medium;
     font-family:  'Quicksand', sans-serif;;
 }
 .Item-Size{
     width: 70%;
+    margin-top: 5px;
     display: flex;
+    font-size: medium;
     font-family:  'Quicksand', sans-serif;;
+}
+
+.Total-Price{
+    margin-top: 5px;
+    font-size: medium;
+}
+
+.textarea:focus , .Qty-input , .Qty-input:focus{
+    border:none;
+    outline: none;
+    width: 50px;
+    padding-top: 8px;
+    font-size: medium;
+    font-weight: 100;
+}
+
+
+.Remove-Button{
+    font-size: small;
+    font-weight: bold;
+    float: left;
 }
 .Product-List{
     display: flex;
@@ -163,6 +193,7 @@ body{
     font-family:  'Quicksand', sans-serif;
     font-size: 25px;
     font-weight: bold;
+    display: flex;
 }
 
 .Inner-Title{
@@ -180,6 +211,12 @@ body{
     font-family:  'Quicksand', sans-serif;
     font-size: 17px;
     font-weight: 800;
+    display: flex;
+}
+
+.Total-Price{
+    display: flex;
+    font-family:  'Quicksand', sans-serif;
 }
 
 .Delivery{
@@ -196,7 +233,7 @@ body{
 
 .Checkout-Button {
     background-color: black;
-    width: 240px !important;
+    width: 220px !important;
     height: 40px !important;
     color: white;
     font-family:  'Quicksand', sans-serif;
@@ -217,4 +254,31 @@ body{
     font-size: 15px;
     font-family:  'Quicksand', sans-serif;
     cursor: pointer;
+}
+
+@media screen and (max-width:1200px){
+    .Cart-Container{
+        width: 60%;
+    }
+    .Cart-Summary{
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .Cart-Outer-Box{
+        display: inline;
+    }
+    .Cart-Container{
+        width: 100%;
+    }
+    .Cart-Summary{
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+        height: 200px;
+    }
+    .Flex{
+        width: 320px;
+    }
 }
