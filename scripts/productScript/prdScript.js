@@ -38,8 +38,6 @@ function nextImage(){
     document.getElementById("cccc").src = imagesToSlide[imageIndex];
 }
 
-
-//Products Information
 const products = [
     {
         id:1,
@@ -51,12 +49,12 @@ const products = [
         OriginalPrice:"2,499",
         rate:"4.0",
         ratings:"111",
-        reviews:"13",
+        reviews:"⭐⭐⭐",
         color:"Blue",
         outerMaterial:"Mesh",
         modelName:"Glarus M",
         soleMaterial:"EVA",
-        packOf:"1",
+        packOf:1
     },
     {
         id:2,
@@ -68,12 +66,12 @@ const products = [
         OriginalPrice:"999",
         rate:"4.6",
         ratings:"10",
-        reviews:"4",
+        reviews:"⭐⭐⭐⭐",
         color:"Blue",
         outerMaterial:"EVA",
         modelName:"STUMPER",
         soleMaterial:"EVA",
-        packOf:"1",
+        packOf:1
     },
     {
         id:3,
@@ -83,14 +81,14 @@ const products = [
         Discountprice:"1,047",
         discount:"58% off",
         OriginalPrice:"2,499",
-        rate:"4",
+        rate:"⭐⭐",
         ratings:"89",
         reviews:"14",
         color:"Red",
         outerMaterial:"PU",
         modelName:"KARTO",
         soleMaterial:"IM EVA",
-        packOf:"1",
+        packOf:1
     },
     {
         id:4,
@@ -101,13 +99,13 @@ const products = [
         discount:"40% off",
         OriginalPrice:"5,499",
         rate:"4.1",
-        ratings:"6",
+        ratings:"⭐⭐⭐",
         reviews:"1",
         color:"Black",
         outerMaterial:"Mesh",
         modelName:"Softride Enzo NXT",
         soleMaterial:"Rubber",
-        packOf:"1",
+        packOf:1
     },
     {
         id:5,
@@ -119,13 +117,13 @@ const products = [
         OriginalPrice:"2,499",
         rate:"3.3",
         ratings:"6",
-        reviews:"2",
+        reviews:"⭐⭐⭐⭐",
         color:"Maroon",
         outerMaterial:"Mesh, Synthetic",
         modelName:"STUMPER",
         occasion:"Sports",
         soleMaterial:"EVA",
-        packOf:"2",
+        packOf:2
     },
     {
         id:6,
@@ -137,13 +135,13 @@ const products = [
         OriginalPrice:"0",
         rate:"4.3",
         ratings:"21",
-        reviews:"5",
+        reviews:"⭐⭐⭐⭐⭐",
         color:"Navy",
         outerMaterial:"Mesh",
         modelName:"Ultra Groove - Live Session",
         occasion:"Casual",
         soleMaterial:"EVA",
-        packOf:"1",
+        packOf:1
     },
     {
         id:7,
@@ -154,14 +152,14 @@ const products = [
         discount:"40% off",
         OriginalPrice:"5,999",
         rate:"4.1",
-        ratings:"36",
-        reviews:"2",
+        ratings:"",
+        reviews:"⭐⭐⭐",
         color:"Green",
         outerMaterial:"Mesh",
         modelName:"Supertec Zero",
         occasion:"Sports",
         soleMaterial:"EVA",
-        packOf:"1",
+        packOf:1
     },
     {
         id:8,
@@ -171,16 +169,18 @@ const products = [
         image:"./images/pumaTwo.jpeg",
         discount:"40% off",
         OriginalPrice:"3,999",
-        rate:"4",
+        rate:"⭐⭐⭐⭐⭐",
         ratings:"895",
         reviews:"80",
         color:"Blue",
         outerMaterial:"Mesh",
         modelName:"Zod Runner NM",
         soleMaterial:"Rubber",
-        packOf:"1",
-    },
+        packOf:1
+    }
 ]
+
+
 
 //Update product details
 function updateProductDetails(productId){
@@ -188,12 +188,8 @@ function updateProductDetails(productId){
         return item.id === productId
     });
     document.getElementById("productTitle").innerText = product.title;
-    document.getElementById("pTitle").innerText = product.title;
     document.getElementById("pDescription").innerText = product.description;
     document.getElementById("pDicPrice").innerText = product.Discountprice;
-    document.getElementById("pOrgPrice").innerText = product.OriginalPrice;
-    document.getElementById("pDiscnt").innerText = product.discount;
-    document.getElementById("pRatte").innerText = product.rate;
     document.getElementById("pRating").innerText = product.ratings;
     document.getElementById("pReviews").innerText = product.reviews;
     document.getElementById("prColor").innerText = product.color;
@@ -208,17 +204,50 @@ function updateProductDetails(productId){
 
 function changeImage(obj){
     document.getElementById("leftImgMain").src = obj.src;
-    document.getElementsByClassName("pslrImage")[0].src = obj.src;
-    document.getElementById("settImage").src = obj.src;
+    document.getElementsByClassName("productLeftImageItems")[0].src = obj.src;
+    document.getElementsByClassName("productColorImage")[0].src = obj.src;
     document.getElementById("cccc").src = obj.src;
 }
 
  function mouserHover(obj){
-     document.getElementsByClassName("pslrImage")[0].src = obj.src;
+     document.getElementById("leftImgMain").src = obj.src;
 }
 
-//validate pin code and deliver address
+//Customer reviews drop down
+function openReviewDropDown(){
+    document.getElementById("reveiwMain").classList.toggle("crReviewActive");
+    document.getElementById("ggggg").classList.toggle("reviewDropActive");
+    document.getElementById("moreAncho").classList.toggle("dAnchorActive");
+}
 
+//open drop down menu for product sizes
+function displaySize(){
+    document.getElementById("prdSize").classList.toggle("activeSize");
+}
+function updateSize(ob){
+    let sizeContentHolder = document.getElementById("sizeCont");
+    let sizeCurrValue = document.getElementById("sizeValue");
+    sizeContentHolder.innerText = "Selected Size : ";
+    sizeCurrValue.innerText = ob.innerText;
+    closeSizeDropDown();
+}
+function closeSizeDropDown(){
+    document.getElementById("prdSize").classList.remove("activeSize");
+}
+
+//Change heart color
+function changeHeartColor(){
+    document.getElementById("chHeartColor").classList.toggle("heartActive");
+}
+
+//Open size chart modal
+function openSizeChart(){
+    document.getElementById("pSizeChart").classList.add("pSizeChartActive");
+}
+function closeSizeChart(){
+    document.getElementById("pSizeChart").classList.remove("pSizeChartActive");
+}
+//validate pin code and deliver address
 function validatePinCode(){
     let pinCode = document.getElementById("pinCodeVal").value;
     pinCode = pinCode.toString().length;
@@ -299,7 +328,7 @@ function updateCart(curProduct){
             </div>
             <div class="psCartBottom">
                 <p class="psLinkeOne">SAVE FOR LATER</p>
-                <p class="psLinkeOne">REMOVE</p>
+                <p class="psLinkeOne" oncllick="closeCart()">REMOVE</p>
             </div>
         </div>
     </div>
