@@ -155,3 +155,16 @@ body{
 .productsMain .cReviewModal .cRMInner .sbBtunn:hover{
     background-color: red;
 }
+
+@media (min-width:250px) and (max-width: 600px){
+    .productsMain .cReviewModal .cRMInner{
+        width: 85%;
+        min-width: 50%;
+    }
+}
+@media (min-width: 600px) and (max-width:1000px){
+    .productsMain .cReviewModal .cRMInner{
+        width: 65%;
+        min-width: 56%;
+    }
+}
