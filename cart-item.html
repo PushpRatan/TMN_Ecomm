@@ -1,29 +1,218 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="footer/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel = "stylesheet" href = "styles/cart-item.css">
+    <link rel="stylesheet" href="footer/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
     <script type = "text/javascript">
         var num_of_products = 2;
-        var sub_total = 3000;
+        var sub_total = 1000;
+    
+        
+        $(document).ready(function() {
+
+            $(".heart").click(function(){
+                if($(this).hasClass("liked")){
+                $(this).html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
+                $(this).removeClass("liked");
+                }else{
+                $(this).html('<i class="fa fa-heart" aria-hidden="true"></i>');
+                $(this).addClass("liked");
+                }
+            });
+
+        $('.Flex-Down input').change(function() {
+            updateQuantity(this);
+        });
+
+        $('.Remove-Button').click(function() {
+            removeItem(this);
+        });
+
+
+        function recalculateCart() {
+        var subtotal = 0;
+        var discount = 0;
+        $('.Item-Info').children(".Row").children(".Total-Price").children(".Total-Item-Price").each(function() {
+            subtotal += parseFloat($(this).text());
+            console.log(subtotal)
+        });
+        
+        $('.Summary-Answer-Para').fadeOut(function() {
+            $('.Summary-Answer-Para').text(subtotal.toFixed(2));
+            $('.Summary-Answer-Para').fadeIn();
+        });
+
+        $('.Summary-Answer-Total').fadeOut(function(){
+            discount += parseFloat($(".Discount-Price").text());
+            $(this).text((subtotal-discount).toFixed(2));
+            $('.Summary-Answer-Total').fadeIn();
+        })
+    
+        }
+
+        function updateQuantity(quantityInput) {
+        var productRow = $(quantityInput).parent().parent();
+        var price = parseFloat(productRow.children(".Item-Price").children(".Item-Price-Para").text());
+        console.log("Price - " + price)
+        var quantity = $(quantityInput).val();
+        var linePrice = price * quantity;
+
+        productRow.children(".Row").children(".Total-Price").children(".Total-Item-Price").each(function() {
+            $(this).fadeOut(function() {
+            $(this).text(linePrice.toFixed(2));
+            recalculateCart();
+            $(this).fadeIn();
+            });
+        });
+        }
+
+        function removeItem(removeButton) {
+        var productRow = $(removeButton).parent();
+        productRow.slideUp(0.5 , function() {
+            productRow.remove();
+            recalculateCart();
+            num_of_products-=1
+            $(".Title p").text(num_of_products)
+        });
+        }
+
+        });
+
     </script> 
+    <title>Shopping Cart</title>
 </head>
 <body>
+    <header>
+
+        <div class="header-1">
+
+            <a href="#" class="logo"> <i class="fa fa-shopping-bag"></i>  shopping </a>
+
+            <div class="form-container">
+                <form action="">
+                    <input type="search" placeholder="search products" id="search" />
+                    <label for="search" class="fa fa-search"></label>
+                </form>
+
+            </div>
+            <div class="icons">
+                <a href="#" class="fa fa-heart"></a>
+                <a href="#" class="fa fa-shopping-cart"></a>
+                <a href="#" class="fa fa-user"></a>
+            </div>
+        </div>
+
+        <div class="form-container sec">
+            <form action="">
+                <input type="search" placeholder="search products" id="search" />
+                <label for="search" class="fa fa-search"></label>
+            </form>
+
+        </div>
+
+        <div class="header-2">
+
+            <nav class="navbar">
+                <ul>
+
+                    <li class="dropdown"><a href="#men">Men</a>
+                        <div class="dropdown-content">
+                            <a href="#">Topwear</a>
+                            <a href="#">Bottomwear</a>
+                            <a href="#">Footwear</a>
+                            <a href="#">Sportswear</a>
+                            <a href="#">Bags & Luggage</a>
+                            <a href="#">Festivewear</a>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#women">Women</a>
+                        <div class="dropdown-content">
+                            <a href="#">Indian & Fusionwear</a>
+                            <a href="#">Westernwear</a>
+                            <a href="#">Footwear</a>
+                            <a href="#">Sportswear</a>
+                            <a href="#">Sleepwear</a>
+                            <a href="#">Backpacks</a>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#kids">Kids</a>
+                        <div class="dropdown-content">
+                            <a href="#">Boy Clothing</a>
+                            <a href="#">Girls Clothing</a>
+                            <a href="#">Footwear</a>
+                            <a href="#">Toys</a>
+                            <a href="#">Infants</a>
+                            <a href="#">Kids Accessories</a>
+                            <a href="#">Personal Care</a>
+                        </div>
+                    </li>
+                    <li class="dropdown" ><a href="#home">Home</a>
+                        <div class="dropdown-content">
+                            <a href="#">Furnishing</a>
+                            <a href="#">Flooring</a>
+                            <a href="#">Bath</a>
+                            <a href="#">Home Decor</a>
+                            <a href="#">Lighting</a>
+                            <a href="#">Bedroom</a>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#gadgets">gadgets</a>
+                        <div class="dropdown-content">
+                            <a href="#">Headphones</a>
+                            <a href="#">Speakers</a>
+                            <a href="#">Mobile</a>
+                            <a href="#">Television</a>
+                            <a href="#">Air Conditioner</a>
+                            <a href="#">Fridge</a>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#books">books</a>
+                        <div class="dropdown-content">
+                            <a href="#">Comics</a>
+                            <a href="#">Magazines</a>
+                            <a href="#">Motivation</a>
+                            <a href="#">SciFi</a>
+                            <a href="#">Physics</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+        </div>
+
+        </header>
+
     <div class = "Cart-Outer-Box">
         <div class="Cart-Container">
-            <div class="Title" >Shopping Bag (<script>document.write(num_of_products)</script>)</div>
+            <div class="Title" >Shopping Bag (<p>2</p>)</div>
             <div class = "Item">
                 <div class = "Item-Image">
                     <img src = "https://cdn.shopify.com/s/files/1/1002/7150/products/New-Mockups---no-hanger---TShirt-I-am-back.jpg?v=1619267537">
                 </div>
                 <div class = "Item-Info">
-                    <div class = "Flex">
+                    
                     <div class = "Item-Name">"I am Back" T-Shirt</div>
-                    <div class = "Item-Price"><b>Rs. 1,500</b></div>
+                    
+                    <div class = "Item-Price" >Rs &nbsp; <p class = "Item-Price-Para">1500.00</p></div>
+                    <div class= "Row">
+                        <div class = "Item-Size"><b>Size: </b> &nbsp; <p class = "Total-Gap">M</p></div>
+                        <div class = "Total-Price"><b>Total: &nbsp;</b>&nbsp; <p class = "Total-Gap-2"></p>Rs &nbsp; <p class = "Total-Item-Price">1500.00</p></div>
                     </div>
-                    <div class = "Item-Quantity"><b>Quantity  :</b> 1</div>
-                    <div class = "Item-Size"><b>Size  :</b> M</div>
+                    
+                    <div class = "Flex-Down">
+                        <span id = heart class = "heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
+                        <input class = "Qty-input" type="number" value="1" min = "1">
+                    </div>
+                </div>
+                <div class = "Remove-Button">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
                 </div>
             </div>
 
@@ -32,28 +221,72 @@
                     <img src = "https://www.mydesignation.com/wp-content/uploads/2019/08/malayali-tshirt-mydesignation-mockup-image-latest-golden-.jpg">
                 </div>
                 <div class = "Item-Info">
-                    <div class = "Flex">
-                        <div class = "Item-Name">Yellow Round Neck T-Shirt</div>
-                        <div class = "Item-Price"><b>Rs. 1,500</b></div>
-                        </div>
-                    <div class = "Item-Quantity"><b>Quantity  :</b> 1</div>
-                    <div class = "Item-Size"><b>Size  :</b> M</div>
+                    <div class = "Item-Name">Yellow Round Neck T-Shirt</div>
+                    <div class = "Item-Price" >Rs &nbsp; <p class = "Item-Price-Para">1500.00</p></div>
+                    <div class= "Row">
+                        <div class = "Item-Size"><b>Size: </b> &nbsp; <p class = "Total-Gap">XL</p></div>
+                        <div class = "Total-Price"><b>Total: &nbsp;</b>&nbsp; <p class = "Total-Gap-2"></p>Rs &nbsp; <p class = "Total-Item-Price">1500.00</p></div>
+                    </div>
+                    
+                    <div class = "Flex-Down">
+                        <span id = heart class="heart"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span>
+                        <input class = "Qty-input" type="number" value="1" min = "1">
+                    </div>
+                </div>
+                <div class = "Remove-Button">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
         <div class= "Cart-Summary">
-            <div class = "Title">Summary</div>
+            <div class = "Heading">Add a discount code</div>
             <div class = "Flex">
-                <div class = "Inner-Title">SubTotal</div>
-                <div class = "Inner-Answer">
-                    Rs.<script> document.write(sub_total)</script>
+                <input type="text" class= "Discount-Text-Box">
+                <div class = "Add-Button">Add</div>
+            </div>
+            <div class = "Flex">
+                <div class = "Delivery">SubTotal</div>
+                <div class = "Delivery-Answer">
+                    Rs. <p class = "Summary-Answer-Para">3000.00</p>
                 </div>
             </div>
             <div class = "Flex">
+                <div class = "Delivery">Discount</div>
+                <div class = "Delivery-Answer">Rs. <p class = "Discount-Price">0.00</p></div>
+            </div>
+            <div class = "Flex" style="margin-bottom:10px ;">
                 <div class = "Delivery">Delivery</div>
                 <div class = "Delivery-Answer">Free</div>
             </div>
+            <div class = "line"></div>
+            <div class = "Flex">
+                <div class = "Inner-Title">Total</div>
+                <div class = "Inner-Answer">
+                    Rs. <p class = "Summary-Answer-Total">3000.00</p>
+                </div>
+            </div>
             <div class = "Checkout-Button">Checkout</div>
+            <div class="Acc-Heading">We accept</div>
+            <div class = "Options">
+                <div>Cash on delivery</div>
+                <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+            </div>
+            <div class="Heading">Prices and delivery costs are not confirmed untill you've reached the checkout.</div>
+            <div class="Options-Offers">
+                <div class = "Comb">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <p>Free Worldwide Shipping</p>
+                </div>
+                <div class = "Comb">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <p>Easy 60 days exchanges and returns</p>
+                </div>
+                <div class = "Comb">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                    <p>24/7 Customer Support</p>
+                </div>
+            </div>
         </div>
     </div>
     <div class = "Related-Products">

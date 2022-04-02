@@ -1,9 +1,9 @@
 body{
     margin: 0;
-    margin-left: 20px;
-    margin-right: 20px;
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
     padding: 0;
-    background: white;
+    background: rgba(250,249,245,255);
     height: 100vh;
     /* display: flex; */
     justify-content: center;
@@ -11,6 +11,9 @@ body{
     scrollbar-width: none;
 }
 
+.header-1{
+    width: 98% !important;
+}
 ::-webkit-scrollbar{
     display: none;
 }
@@ -18,12 +21,18 @@ body{
     display: flex;
     width: 100%;
 }
+.Flex-Down{
+    display: flex;
+    /* width: 100%; */
+}
 
 .Cart-Outer-Box{
     display: flex;
+    padding-left: 10px;
 }
 
 .Cart-Container{
+    padding-left: 20px;
     width: 70%;
     height: 60%;
     background-color: #ffffff;
@@ -31,17 +40,22 @@ body{
     /* box-shadow: 0px 25px 40px #20232533; */
     /* border: solid 1px;
     border-color: black; */
+    background: rgba(250,249,245,255);
+    justify-content: space-between;
     overflow-y: scroll;
 }
 
 
 .Cart-Summary{
-    width: 30%;
+    width: 400px;
     height: 60%;
     background-color: #ffffff;
+    border: 1px rgba(250,249,245,255);
     margin-top: 10px;
-    margin-left: 20px;
-    margin-bottom: 10px;
+    margin-right: 70px;
+    /* padding-bottom: 20px; */
+    padding-left: 20px;
+    padding-top: 30px;
     /* border-radius: 5px; */
     /* box-shadow: 0px 25px 40px #20232533; */
     /* border: solid 1px;
@@ -51,7 +65,6 @@ body{
 .Cart-Outer-Box{
     display: flex;
     margin-top: 10px;
-    
     margin-bottom: 10px;
 }
 
@@ -59,8 +72,9 @@ body{
     display : flex;
     margin-bottom: 5px;
     margin-top: 2px;
-    width: 100%;
+    width: 90%;
     cursor: pointer;
+    justify-content: space-between;
     /* border: solid 1px; */
 }
 
@@ -81,34 +95,112 @@ body{
 
 .Item-Info{
     margin-left: 20px;
-    width: 100%;
+    width: 60%;
 }
 
 .Item-Name{
     margin-top: 5px;
     width: 70%;
-    font-size: large;
+    font-size:  18px;;
     display: flex;
     font-weight: bold;
     font-family:  'Quicksand', sans-serif;;
 }
 
-.Item-Price{
-    float: right;
-    font-family:  'Quicksand', sans-serif;;
+.Flex-Down span{
+    border: 1px solid;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: medium;
+    border: 1px solid #a5a5a5 ;
+    width: 38px;
+    height: 26px;
 }
 
-.Item-Quantity{
-    width: 70%;
+.Flex-Down input{
+    margin-left: 30px;
+    border: 1px solid #a5a5a5 ;
+    width: 100px;
+    height: 24px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 7px;
+}
+
+input[type=number]::-webkit-inner-spin-button{
+    opacity: 1;
+    outline: none;
+    background: none;
+}
+
+.fa-heart-o {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  
+  .fa-heart {
+    color: red;
+    cursor: pointer;
+  }
+
+.Item-Price{
+    /* float: right; */
+    margin-top: 5px;
     display: flex;
-    
+    font-size: 18px;
+    font-family:  'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.Row{
+    display: grid;
+    grid: 30px /auto auto;
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+.Item-Quantity{
+    /* width: 70%; */
+    display: flex;
+    margin-top: 5px;
+    font-size: 15px;
     font-family:  'Quicksand', sans-serif;;
 }
 .Item-Size{
     width: 70%;
+    margin-top: 5px;
+    font-weight: bold;
     display: flex;
+    font-size: 14px;
     font-family:  'Quicksand', sans-serif;;
 }
+
+.Total-Price{
+    margin-top: 5px;
+    font-size: medium;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.textarea:focus , .Qty-input , .Qty-input:focus{
+    font-size: medium;
+    outline: none;
+    font-weight: 100;
+    width: 100px;
+    height: 24px;
+}
+
+
+.Remove-Button{
+    font-size: small;
+    font-weight: bold;
+    float: left;
+}
+
+.Remove-Button i{
+    font-size: large;
+}
+
 .Product-List{
     display: flex;
     overflow-x:scroll ;
@@ -135,8 +227,13 @@ body{
 }
 
 .Related-Products{
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+    background: #ffffff;
 }
 
 .Product-Name{
@@ -159,10 +256,11 @@ body{
 
 .Title{
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-family:  'Quicksand', sans-serif;
     font-size: 25px;
     font-weight: bold;
+    display: flex;
 }
 
 .Inner-Title{
@@ -180,23 +278,36 @@ body{
     font-family:  'Quicksand', sans-serif;
     font-size: 17px;
     font-weight: 800;
+    display: flex;
 }
 
+.Total-Price{
+    display: flex;
+    font-family:  'Quicksand', sans-serif;
+}
+
+.Total-Gap{
+    padding-left: 50px;
+}
 .Delivery{
     font-family:  'Quicksand', sans-serif;
     font-size: 15px;
     width: 60%;
-    font-weight: lighter;
+    font-weight:bold;
+    color:rgb(70, 70, 70);
 }
 .Delivery-Answer{
     font-family:  'Quicksand', sans-serif;
     font-size: 15px;
-    font-weight: lighter;
+    font-weight:bold;
+    color:rgb(70, 70, 70);
+    display: flex;
+    margin-bottom: 6px;
 }
 
 .Checkout-Button {
     background-color: black;
-    width: 240px !important;
+    width: 220px !important;
     height: 40px !important;
     color: white;
     font-family:  'Quicksand', sans-serif;
@@ -205,6 +316,7 @@ body{
     padding-top:15px;
     padding-left: 130px;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .Checkout-Button:hover{
@@ -212,9 +324,139 @@ body{
     transition: 0.4s;
 }
 
+.Options{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    font-size:small;
+    font-family: 'Quicksand', sans-serif;;
+    color: #4b4b4b;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+.Options-Offers{
+    margin-top: 20px;
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+    font-size:small;
+    font-family: 'Quicksand', sans-serif;;
+    color: #4b4b4b;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.Comb{
+    display:block;
+    margin: 5px;
+    align-content: center;
+    width: 100px;
+    color: #383838;
+}
+.Options i , .Options-Offers i{
+    font-size: x-large;
+}
+
+.Options-Offers i{
+    padding-left: 30px;
+    margin-bottom: 5px;
+    color:rgb(0, 0, 0);
+}
+
+.Acc-Heading{
+    font-family:  'Quicksand', sans-serif;
+    font-weight: 1000;
+    margin-bottom: 5px;
+    color: #4b4b4b;
+    font-size: small;
+    text-transform: none !important;
+    border-radius: 0px;
+    outline: none;
+}
+
+.Discount-Text-Box, .Discount-Text-Box:focus{
+    height: 40px;
+    width: 238px;
+    border: 1px solid  #a5a5a5;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    outline: none;
+    padding-left: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #626262;
+
+}
+
+.Add-Button{
+    height: 29px;
+    width: 80px;
+    font-size: 15px;
+    font-weight: bolder;
+    padding-top: 11px;
+    text-align: center;
+    border: 1px solid  #202020;
+    font-family:  'Quicksand', sans-serif;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.Heading{
+    font-family:  'Quicksand', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: #4b4b4b;
+    font-size: small;
+    text-transform: none !important;
+    border-radius: 0px;
+    outline: none;
+}
+
 .Cross{
     margin-left: 40px;
     font-size: 15px;
     font-family:  'Quicksand', sans-serif;
     cursor: pointer;
+}
+
+.Total-Gap-2{
+    padding-left: 35px;
+}
+
+.line{
+    height: 1.3px;
+    width: 348px;
+    background: black;
+}
+
+@media screen and (max-width:1200px){
+    .Cart-Container{
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width:1000px){
+    .Cart-Outer-Box{
+        display: inline;
+    }
+    .Row{
+        display: block;
+        margin-top: 23px;
+        margin-bottom: 23px;
+        
+    }
+
+    .Cart-Container{
+        width: 100%;
+    }
+    .Cart-Summary{
+        width: 380px;
+        margin-left: 20px;
+        margin-top: 20px;
+        height: max-content;
+    }
+    .Flex{
+        width: 380px;
+    }
 }
