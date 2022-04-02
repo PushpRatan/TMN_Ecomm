@@ -178,7 +178,11 @@
                 </div>
                 <div class="raReviwContainer">
                     <div class="customerReviews" id="reveiwMain">
-                        <p class="crTitle" style=" display:flex;align-items:center;position: sticky;top: 0;background-color:white;z-index: 1;">Customer Reviews (<sapn>26</sapn>) <smal class="change" style="font-size: .91rem;color: dodgerblue;cursor: pointer;margin-left:11rem;margin-right: 2.7rem;" onclick="displayReviewModal()">Add Review</smal><span style="font-size: 1.8rem;cursor: pointer;" id="revviewPlus"  onclick="openReviewDropDown()">+</span></p>
+                        <div class="crTitle" style=" display:flex;align-items:center;justify-content:space-between;position: sticky;top: 0;background-color:white;z-index: 1;">
+                            <h3 class="crtittle">Customer Reviews</h3>  
+                            <p class="change" style="font-size: 1.1rem;font-weight:bold;color:  dodgerblue;cursor: pointer;" onclick="displayReviewModal()">Add Review</p>
+                            <p style="font-size: 1.78rem;font-weight:bold;cursor: pointer; margin-right: .3rem;" id="revviewPlus"  onclick="openReviewDropDown()">+</p>
+                        </div>
                         <div  class="crMainReview" id="ggggg">
                             <div class="crReviewContainer" id="gg">
                                 <div class="crReviewTitle">
@@ -259,7 +263,10 @@
                     <h4 class="productDetailTitle" id="productTitle">PUMA</h4>
                     <p class="productDetailDescription" id="pDescription">ZOD Runner NM Running Shoes For Men (Blue)</p>
                     <h5 class="productDetailPrice" id="pDicPrice">₹2,399</h5>
-                    <p class="productRatings" id="pRating">⭐⭐⭐⭐⭐ <span class="productRatingsReviews" id="pReviews">96 reviews</span></p>
+                    <div style="display: flex;align-items: center;" >
+                        <p id="pRating" style="margin-right: .4rem;">⭐⭐⭐⭐⭐</p> 
+                        <p class="productRatingsReviews" style="font-size: .91rem;font-weight: bold; margin-right: .2rem;" id="pReviews">96 </p>reviews
+                    </div>
                 </div>
                 <!-- Product Colors -->
                 <p style="font-size: 1.02rem; margin-top: 1.5rem;margin-bottom:.4rem;font-weight: bold;color: dimgrey;">Choose Color</p>

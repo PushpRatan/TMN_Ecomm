@@ -168,11 +168,15 @@
     background-color: rgba(0,0,0,0.3);
 }
 .productsMain .prodctsMainContainer .productsLeftSection .raReviwContainer .customerReviews .crTitle{
-    font-size: 1.2rem;
+    
+
+}
+.productsMain .prodctsMainContainer .productsLeftSection .raReviwContainer .customerReviews .crTitle .crtittle{
+    font-size: 1.5rem;
     font-weight: bold;
-    /* display: flex;
-    justify-content: space-between; */
-    margin-bottom: .6rem;
+    display: flex;
+    justify-content: space-between; 
+     margin-bottom: .6rem; 
 }
 .productsMain .prodctsMainContainer .productsLeftSection .raReviwContainer .customerReviews .crMainReview{
     width: 100%;
@@ -511,3 +515,84 @@
 .productsMain .prodctsMainContainer .productsRightSection .productBagContainer .ccchfive .chefd.heartActive{
     color: red;
 }
+
+@media (min-width:250px) and (max-width: 600px){
+    .productsMain{
+        width: 96%;
+    }
+    .productsMain .imageSlider{
+        display: none;
+    }
+    .productsMain .prodctsMainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .productsMain .prodctsMainContainer .productsLeftSection{
+        width: 100%;
+        
+    } 
+    .productsMain .prodctsMainContainer .productsLeftSection .productLeftImageContainer {
+        min-height:250px;
+    }
+    .productsMain .prodctsMainContainer .productsLeftSection .productDetailsContainer .productDetailsInformation{
+        width: 75%;
+    }
+    .productsMain .prodctsMainContainer .productsLeftSection .raReviwContainer .customerReviews .crTitle .change{
+        margin-left: 0;
+    }
+    .productsMain .prodctsMainContainer .productsRightSection{
+        width: 100%;
+        padding: .8rem 0 0 0;
+    }
+    .productsMain .prodctsMainContainer .productsRightSection .productSize{
+        width: 97%;
+    }
+    .productsMain .prodctsMainContainer .productsRightSection .pinCodeChecker .pinCodeLocationContainer {
+        width: 100%;
+    }
+    .productsMain .prodctsMainContainer .productsRightSection .productBagContainer .productBagContnerInner{
+        width: 85%;
+    }
+   
+}
+@media (min-width: 600px) and (max-width:1000px){
+    .productsMain{
+        width: 96%;
+    }
+    .productsMain .imageSlider{
+        display: none;
+    }
+    .productsMain .prodctsMainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .productsMain .prodctsMainContainer .productsLeftSection{
+        width: 100%;
+        
+    } 
+    .productsMain .prodctsMainContainer .productsLeftSection .productLeftImageContainer {
+        min-height:250px;
+    }
+    .productsMain .prodctsMainContainer .productsLeftSection .productDetailsContainer .productDetailsInformation{
+        width: 75%;
+    }
+    .productsMain .prodctsMainContainer .productsLeftSection .raReviwContainer .customerReviews .crTitle .change{
+        margin-left: 0;
+    }
+    .productsMain .prodctsMainContainer .productsRightSection{
+        width: 100%;
+        padding: .8rem 0 0 0;
+    }
+    .productsMain .prodctsMainContainer .productsRightSection .productSize{
+        width: 93%;
+    }
+    .productsMain .prodctsMainContainer .productsRightSection .pinCodeChecker .pinCodeLocationContainer {
+        width: 80%;
+    }
+    .productsMain .prodctsMainContainer .productsRightSection .productBagContainer .productBagContnerInner{
+        width: 85%;
+    }
+}
+@media (min-width:1000px) and (max-width:1200px){
+    
+}  
