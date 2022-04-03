@@ -270,19 +270,19 @@ function validatePinCode(){
 
 let recentCard = `
     <div class="it" >
-        <div class="productImgContainer">
-            <img class="productImage" id="CDD"   src="./images/fila.jpeg" alt="adidas""/>
-        </div>
-        <div class="productDetails">
-            <h4 class="productTitle">FILA</h4>
-            <p class="productDescription">IZUNA Running Sprts Shoes For Men (Grey)</p>
-            <div class="productPrices">
-                <h5 class="pPrice">₹1,295</h5>
-                <p class="pDup" style="text-decoration: line-through;">₹2,699</p>
-                <small class="pDiscount">52% off</small>
-            </div>
-        </div>
-    </div>
+          <div class="productImgContainer">
+                <img class="productImage" id="CDD"   src="./images/pumaTwo.jpeg" alt="adidas""/>
+          </div>
+          <div class="productDetails">
+                <h4 class="productTitle">PUMA</h4>
+                <p class="productDescription">Zod Runner NM Running Shoes For Men (Grey)</p>
+                <div class="productPrices">
+                    <h5 class="pPrice">₹2,399</h5>
+                    <p class="pDup" style="text-decoration: line-through;">₹3,999</p>
+                    <small class="pDiscount">40% off</small>
+                </div>
+          </div>
+     </div>
 `; 
 let currentCard ;
 let recentArray = [];
@@ -328,7 +328,7 @@ function updateCart(curProduct){
             </div>
             <div class="psCartBottom">
                 <p class="psLinkeOne">SAVE FOR LATER</p>
-                <p class="psLinkeOne" oncllick="closeCart()">REMOVE</p>
+                <p class="psLinkeOne" onclick="closeCart()">REMOVE</p>
             </div>
         </div>
     </div>
