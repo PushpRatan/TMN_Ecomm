@@ -22,8 +22,8 @@ function validate() {
    
     
     //if name and password match
-    if (username == "negative" && password == "naseeb") {
-        window.location = "home.html";
+    if (username == "" && password == "") { 
+        window.location = "./index.html";
         return false;
     }
     //code for try upto 3 chance then disable username and password field
