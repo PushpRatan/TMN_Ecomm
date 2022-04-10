@@ -19,7 +19,6 @@ function validate() {
     {
         alert("Please check your Credentials");
     }
-   
     
     //if name and password match
     if (username == "" && password == "") { 
@@ -35,5 +34,16 @@ function validate() {
             document.getElementById("submit").disabled = true;
             return false;
         }
+    }
+}
+
+
+function matchPassword() {
+    var pw1 = document.getElementById("password");
+    var pw2 = document.getElementById("password2");
+    if (pw1 != pw2) {
+        alert("Passwords did not match");
+    } else {
+        alert("Password created successfully");
     }
 }
