@@ -116,3 +116,28 @@
     justify-content: center;
     text-decoration: none;
 }
+
+@media (min-width:250px) and (max-width: 600px){
+    .psCart .psCartContainer{
+        width: 75%;
+    }
+    .psCart .psCartContainer .psCartContainerInner {
+        flex-direction: column;
+    }
+    .psCart .psCartContainer .psCartContainerInner .psCartImgConter {
+        width: 75%;
+        margin-right: auto;
+    }
+}
+@media (min-width: 600px) and (max-width:1000px){
+    .psCart .psCartContainer{
+        width: 75%;
+    }
+    .psCart .psCartContainer .psCartContainerInner {
+        flex-direction: column;
+    }
+    .psCart .psCartContainer .psCartContainerInner .psCartImgConter {
+        width: 75%;
+        margin-right: auto;
+    }
+}

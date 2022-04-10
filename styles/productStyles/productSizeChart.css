@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s linear;
+}
+.pSizeChart{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    /* height: 100vh; */
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    display: none;
+}
+ .pSizeChart.pSizeChartActive{
+    display: block;
+}
+.pSizeChart .pSizeChartContainer{
+    position: absolute;
+    
+    top: 50%; 
+    left: 50%; 
+
+    transform: translate(-50%, -50%); 
+    width: 62%;
+    
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: .8rem 1.3rem;
+
+}
+.pSizeChart .pSizeChartContainer .pSizeChartContainerInner{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin: .2rem 0 2rem 0;
+}
+.pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartLeft{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+.pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartLeft .pSizeChartLeftHeader, .pSizeChartLeftItems{
+    display: flex;
+    width: 100%;
+    padding: .7rem .6rem;
+    justify-content: space-between;
+}
+.pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartLeft .pSizeChartLeftHeader{
+    background-color: rgba(0,0,0,0.07);
+}
+.pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartLeft .pSizeChartLeftHeader .pSizeHeaders{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartRight{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-left: 1px solid rgba(0,0,0,0.2);
+}
+.pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartRight .pSizeChartRightTop{
+    display: flex;
+    flex-direction: column;
+    padding: .8rem .4rem;
+}
+.pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartRight .pSizeChartRightTop .psSizeRightTitle{
+    font-size: .93rem;
+}
+.pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartRight .pSizeChartRightTop .psSizeRightText{
+    font-size: .85rem;
+}
+.pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartRight .psSizeRightImage{
+    width: 50%;
+    margin: auto;
+}
+.pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartLeft .pSizeChartLeftItems .pSizeChartItem{
+    text-align: center;
+}
+ @media (min-width:250px) and (max-width: 600px){
+    .pSizeChart .pSizeChartContainer{
+        display: flex;
+        width: 85%;
+    }
+    .pSizeChart .pSizeChartContainer .pSizeChartContainerInner{
+        flex-direction: column;
+    }
+    .pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartLeft{
+        width: 100%;
+    }
+    .pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartRight{
+        width: 100%;
+        display: none;
+    }
+    .pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartLeft .pSizeChartLeftHeader .pSizeHeaders{
+        font-size: .88rem;
+    }
+ }    
+
+ @media (min-width: 600px) and (max-width:1000px){
+    .pSizeChart .pSizeChartContainer{
+        display: flex;
+        width: 85%;
+    }
+    .pSizeChart .pSizeChartContainer .pSizeChartContainerInner{
+        flex-direction: column;
+    }
+    .pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartLeft{
+        width: 100%;
+    }
+    .pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartRight{
+        width: 100%;
+        display: none;
+    }
+    .pSizeChart .pSizeChartContainer .pSizeChartContainerInner .pSizeChartLeft .pSizeChartLeftHeader .pSizeHeaders{
+        font-size: .88rem;
+    }
+}
+@media (min-width:1000px) and (max-width:1200px){
+    
+} 

@@ -8,20 +8,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./footer/style.css" />
     <link rel="stylesheet" href="./styles/productStyles/productImageSlider.css"  />
     <link rel="stylesheet" href="./styles/productStyles/products.css" />
     <link rel="stylesheet" href="./styles/productStyles/similarProductts.css" />
     <link rel="stylesheet" href="./styles/productStyles/customerReview.css" />
+    <link rel="stylesheet" href="./styles/productStyles/productSizeChart.css" />
     <link rel="stylesheet" href="./styles/productStyles/productCart.css" />
+    <style>
+        html{
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
     <header>
 
         <div class="header-1">
 
-            <a href="#" class="logo"> <i class="fa fa-shopping-bag"></i>  shopping </a>
+            <a href="./index.html" class="logo"> <i class="fa fa-shopping-bag"></i>  shopping </a>
 
             <div class="form-container">
                 <form action="">
@@ -32,7 +39,7 @@
             </div>
             <div class="icons">
                 <a href="#" class="fa fa-heart"></a>
-                <a href="#" class="fa fa-shopping-cart"></a>
+                <a href="./cart-item.html" class="fa fa-shopping-cart"></a>
                 <a href="#" class="fa fa-user"></a>
             </div>
         </div>
@@ -47,7 +54,7 @@
 
         <div class="header-2">
 
-            <nav class="navbar">
+            <!-- <nav class="navbar">
                 <ul>
 
                     <li class="dropdown"><a href="#men">Men</a>
@@ -115,9 +122,13 @@
 
 
 
+
+ -->
+
         </div>
 
         </header>
+    
     <main class="productsMain" >
         
         <section class="imageSlider">
@@ -131,122 +142,30 @@
                 <div class="next">></div>
             </div>
         </section>
-        <section class="psHeroSection" >
-            <div class="psLeft" id="exzoom" style="position: sticky; top:0;">
-                <div class="pslTop" >
-                    <div class="psltLeft" id="zoomImages">
-                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" id="leftImgMain" src="./images/fila.jpeg" alt="wrognActive" /></div>
-                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" src="./images/slideShowOne.jpeg" alt="wrognActive" /></div>
-                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" src="./images/slideShowTwo.jpeg" alt="wrognActive" /></div>
-                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" src="./images/slideShowThree.jpeg"  alt="wrognActive" /></div>
-                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" src="./images/slideToShowFive.jpeg"  alt="wrognActive" /></div>
-                        <div class="psltlSlideImg" ><img class="pslImages"  onmouseover="mouserHover(this)" src="./images/slideToShowSix.jpeg"  alt="wrognActive" /></div>
-                        
-                    </div>
-                    <div class="psltRight" id="img-container">
-                        <img  id="zoom" class="pslrImage" src="./images/fila.jpeg" data-zoom-image="./images/fila.jpeg" alt="WROGN ACTIVE" />
-                    </div>
-                </div>
 
-                <div class="pslBottom">
-                    <button class="bttns" style="background-color: #FE9000; width: 100%;" id="cartBtn" type="button" onclick="openCart()"><img class="btnImg" src="./images/cart.jpg" alt="cart" />ADD TO CART</button>
-                </div>
-            </div>
-            <div class="psRight">
-                <p class="pageIndication">Home <span class="pageNarrow">></span> Footwear <span class="pageNarrow">></span> Men's Footwear <span class="pageNarrow">></span> <span id="productTitle" style="font-weight: bold;color: black;">FILA Shoes</span></p>
-                <div class="productRightInformation" style="margin-top:.9rem;" >
-                    <h4 class="prTitle" id="pTitle">FILA</h4>
-                    <p class="prdescription" id="pDescription">IZUNA Running Shoes For Men (Grey)</p>
-                    <div class="prPrices">
-                        <h4 class="prPrice" >₹<span id="pDicPrice">1,295</span></h4>
-                        <p class="prDuplicate" >₹<span id="pOrgPrice" style="text-decoration: line-through;">2,699</span></p>
-                        <h6 class="prDiscount" id="pDiscnt">52% off</h6>
-                    </div>
-                    <div class="prRatingsReviews">
-                        <div class="prRatingsContainer">
-                            <p class="prRating" id="pRatte">4.2</p>
-                            <p class="prStar" >*</p>
-                        </div>
-                        <h5 class="prReviews"><span id="pRating">329</span> ratings and <span id="pReviews" >56</span> reviews</h5>
-                    </div>
-                </div>
-                <!-- Product Offers -->
-                <div class="productAvalbleOffers">
-                    <h6 class="offferTitle">Available Offers</h6>
-                    <div class="productOffersContainer">
-                        <div class="productOffer">
-                            <div class="pOfferImageContainer">
-                                <img class="pOfferImage" src="./images/couponTag.png" alt="coupon" />
-                            </div>
-                            <p class="pOfferDescription"><span class="pOfferTitle">Combo Offer</span> Buy 2 items save 5%, Buy 3 or more save 10% <a class="pOfferLink" href="#">See all products T&C</a></p>
-                        </div>
-                        <div class="productOffer">
-                            <div class="pOfferImageContainer">
-                                <img class="pOfferImage" src="./images/couponTag.png" alt="coupon" />
-                            </div>
-                            <p class="pOfferDescription"><span class="pOfferTitle">Bank Offer</span> 5% Unlimited Cashback on Flipkart Axis Bank Credit Card <a class="pOfferLink" href="#"> T&C</a></p>
-                        </div>
-                        <div class="productOffer">
-                            <div class="pOfferImageContainer">
-                                <img class="pOfferImage" src="./images/couponTag.png" alt="coupon" />
-                            </div>
-                            <p class="pOfferDescription"><span class="pOfferTitle">Partner Offer</span> Sign up for Flipkart Pay Later and get Flipkart Gift Card worth ₹100* <a class="pOfferLink" href="#"> Know More</a></p>
-                        </div>
-                        <div class="productOffer">
-                            <div class="pOfferImageContainer">
-                                <img class="pOfferImage" src="./images/couponTag.png" alt="coupon" />
-                            </div>
-                            <p class="pOfferDescription"><span class="pOfferTitle">Partner Offer</span> Order More, Win More: Chance to win an iPad and EGVs worth ₹5000 on Flipkart Pay Later 
-                                transaction <a class="pOfferLink" href="#">Know More</a></p>
-                        </div>
-                        <div class="productOffer">
-                            <div class="pOfferImageContainer">
-                                <img class="pOfferImage" src="./images/costEmi.png" alt="coupon" />
-                            </div>
-                            <p class="pOfferDescription"> No Cost EMI on Bajaj Finserv EMI Card on cart value about ₹2999<a class="pOfferLink" href="#">T&C</a></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pin Code Checker -->
-                <div class="pinCodeChecker">
-                    <div class="pinCodeLocationContainer">
-                        <div class="pinCodeLocationContainerWrap">
-                            <div class="pinCodeLocationImgContainer">
-                                <img class="pinCodeLocationImg" src="./images/location.png" alt="deliver location" />
-                            </div>
-                            <p class="pinCodeDeliverTitle">Deliver to</p>
-                        </div>
-                        <div class="pinCodeCheckerContainer">
-                            <input class="pinCodeCheckerField" id="pinCodeVal" type="text" name="text" placeholder="Enter Pin" />
-                            <button class="pinCodeCheckerButton" type="button" onclick="validatePinCode()">Check</button>
-                        </div>
-                        <p class="pinCodeDeliverDetails" id="toReplceWrong" style="color: red;"></p>
-                        <p class="pinCodeDeliverDetails" id="toReplce" style="color: green;"></p>
-                    </div>
-                    <div class="productColors">
-                        <h6 class="pcTitle">Color</h6>
-                        <div class="colorImage">
-                            <div class="cIContainer" style="cursor: pointer;"><img class="ciImage" id="settImage" onmouseover="mouserHover(this)" style="object-fit: contain;" src="./images/color.jpeg" alt="Color" /></div>
-                            <div class="cIContainer" style="cursor: pointer;"><img class="ciImage" id="settImage" onmouseover="mouserHover(this)" src="./images/fila.jpeg" alt="fila" /></div>
-                        </div>
 
+        <section class="prodctsMainContainer" >
+            <div class="productsLeftSection">
+                <div class="productLeftImageContainer">
+                    <img class="productLeftImg" id="leftImgMain" src="./images/pumaTwo.jpeg" alt="fila" />
+                </div>
+                <div class="productLeftImageGallery">
+                    <div class="productLeftImageGalleryContainer">
+                        <img class="productLeftImageItems" style="object-fit: cover;" src="./images/pumaTwo.jpeg" alt="fila" onmouseover="mouserHover(this)" />
+                    </div>
+                    <div class="productLeftImageGalleryContainer">
+                        <img class="productLeftImageItems" src="./images/slideShowTwo.jpeg" alt="fila" onmouseover="mouserHover(this)" />
+                    </div>
+                    <div class="productLeftImageGalleryContainer">
+                        <img class="productLeftImageItems" src="./images/slideShowThree.jpeg" alt="fila" onmouseover="mouserHover(this)" />
+                    </div>
+                    <div class="productLeftImageGalleryContainer">
+                        <img class="productLeftImageItems" src="./images/slideToShowFive.jpeg" alt="fila" onmouseover="mouserHover(this)" />
+                    </div>
+                    <div class="productLeftImageGalleryContainer" style="margin-right: 0;">
+                        <img class="productLeftImageItems" src="./images/slideToShowSix.jpeg" alt="fila" onmouseover="mouserHover(this)"/>
                     </div>
                 </div>
-                <!-- Select size  -->
-                <div class="productSize">
-                    <p class="psTitle">
-                        Size-UK/India
-                    </p>
-                    <div class="productSizesContainer">
-                        <p class="pSize" onclick="displayColor(this)">6</p>
-                        <p class="pSize" onclick="displayColor(this)">7</p>
-                        <p class="pSize" onclick="displayColor(this)">8</p>
-                        <p class="pSize" onclick="displayColor(this)">9</p>
-                        <p class="pSize" onclick="displayColor(this)">10</p>
-                        <p class="pSize" onclick="displayColor(this)">11</p>
-                    </div>
-                </div>
-                <!-- Product Details  -->
                 <div class="productDetailsContainer">
                     <div class="productDetailsHeader">
                         <h3 class="pdhTitle">Product Details</h3>
@@ -266,103 +185,190 @@
 
                     </div>
                 </div>
-
-                <!-- Ratings and Reviews -->
                 <div class="raReviwContainer">
-                    <div class="ratingsContainer">
-                        <div class="ratingContaner">
-                            <p class="rcTitle">RATINGS</p>
-                            <div class="rcImgContainer"><img class="rcImg" src="./images/reviewStar.png" alt="reviewStar" /></div>
+                    <div class="customerReviews" id="reveiwMain">
+                        <div class="crTitle" style=" display:flex;align-items:center;justify-content:space-between;position: sticky;top: 0;background-color:white;z-index: 1;">
+                            <h3 class="crtittle">Customer Reviews</h3>  
+                            <p class="change" style="font-size: 1.1rem;font-weight:bold;color:  dodgerblue;cursor: pointer;" onclick="displayReviewModal()">Add Review</p>
+                            <p style="font-size: 1.78rem;font-weight:bold;cursor: pointer; margin-right: .3rem;" id="revviewPlus"  onclick="openReviewDropDown()">+</p>
                         </div>
-                        <div class="ratingStarContner">
-                            <h3 class="rsTitle">4.2</h3>
-                            <sub class="rsSub">
-                                <div class="rsSubConer"><img class="rsSubStar" src="./images/brownStar.png" alt="star" /></div>
-                            </sub>
-                        </div>
-                        <p class="rcVerifedUsers"><span>56</span> Verified Buyers</p>
-                    </div>
-                    <div class="customerReviews" >
-                        <p class="crTitle" style=" display:flex;align-items:center;position: sticky;top: 0;background-color:white;z-index: 1;">Customer Reviews (<sapn>26</sapn>) <smal class="change" style="font-size: .91rem;color: dodgerblue;cursor: pointer;" onclick="displayReviewModal()">Add Review</smal></p>
-                        <div class="crReviewContainer" id="gg">
-                            <div class="crReviewTitle">
-                                <p class="crRatngStar">4*</p>
-                                <p class="crRatngReviw">Very lightweight and beautiful color loved it</p>
-                            </div>
-                            <div class="crlikesDisklikes">
-                                <p class="crlikeDislkeTitle">Tulika Agarwal | 24 Mar 2022</p>
-                                <div class="crlkdkContainer">
-                                    <div class="crlkdkLeft">
-                                        <i class="fa fa-thumbs-up iconnnnLike clickLike" ><span class="ttt">7</span></i>
+                        <div  class="crMainReview" id="ggggg">
+                            <div class="crReviewContainer" id="gg">
+                                <div class="crReviewTitle">
+                                    <p class="crRatngStar">4*</p>
+                                    <p class="crRatngReviw">Very lightweight and beautiful color loved it</p>
+                                </div>
+                                <div class="crlikesDisklikes" style="width: 99%;">
+                                    <p class="crlikeDislkeTitle">Tulika Agarwal | 24 Mar 2022</p>
+                                    <div class="crlkdkContainer">
+                                        <div class="crlkdkLeft">
+                                            <i class="fa fa-thumbs-up iconnnnLike clickLike" ><span class="ttt">7</span></i>
+                                        </div>
+                                        <div class="crlkdkLeft">
+                                            <i class="fa fa-thumbs-down iconnnnDislike clickDisLike" ><span class="ttt">2</span></i>
+                                        </div>
                                     </div>
-                                    <div class="crlkdkLeft">
-                                        <i class="fa fa-thumbs-down iconnnnDislike clickDisLike" ><span class="ttt">2</span></i>
+                                </div>
+                            </div>
+                            <div class="crReviewContainer">
+                                <div class="crReviewTitle">
+                                    <p class="crRatngStar">4*</p>
+                                    <p class="crRatngReviw">This is very faboulour shoes I like it</p>
+                                </div>
+                                <div class="crlikesDisklikes">
+                                    <p class="crlikeDislkeTitle">Priyanka Sharma | 22 Mar 2022 </p>
+                                    <div class="crlkdkContainer">
+                                        <div class="crlkdkLeft">
+                                            <i class="fa fa-thumbs-up iconnnnLike clickLike"><span class="ttt">11</span></i>
+                                        </div>
+                                        <div class="crlkdkLeft">
+                                            <i class="fa fa-thumbs-down  iconnnnDislike clickDisLike" ><span class="ttt">4</span></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="crReviewContainer">
+                                <div class="crReviewTitle">
+                                    <p class="crRatngStar">3*</p>
+                                    <p class="crRatngReviw">Superrr 😍😍😍</p>
+                                </div>
+                                <div class="crlikesDisklikes">
+                                    <p class="crlikeDislkeTitle">Jamini Nagesh | 21 Mar 2022</p>
+                                    <div class="crlkdkContainer">
+                                        <div class="crlkdkLeft">
+                                            <i class="fa fa-thumbs-up iconnnnLike clickLike" ><span class="ttt">3</span></i>
+                                        </div>
+                                        <div class="crlkdkLeft">
+                                            <i class="fa fa-thumbs-down iconnnnDislike clickDisLike" ><span class="ttt">1</span></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="crReviewContainer">
+                                <div class="crReviewTitle">
+                                    <p class="crRatngStar">4*</p>
+                                    <p class="crRatngReviw">Superrr and Loved it 😍😍</p>
+                                </div>
+                                <div class="crlikesDisklikes">
+                                    <p class="crlikeDislkeTitle">Meghana Sheety | 20 Mar 2022</p>
+                                    <div class="crlkdkContainer">
+                                        <div class="crlkdkLeft">
+                                            <i class="fa fa-thumbs-up iconnnnLike clickLike"><span  class="ttt">4</span></i>
+                                        </div>
+                                        <div class="crlkdkLeft">
+                                            <i class="fa fa-thumbs-down iconnnnDislike clickDisLike" ><span class="ttt">3</span></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="crReviewContainer">
-                            <div class="crReviewTitle">
-                                <p class="crRatngStar">4*</p>
-                                <p class="crRatngReviw">This is very faboulour shoes I like it</p>
-                            </div>
-                            <div class="crlikesDisklikes">
-                                <p class="crlikeDislkeTitle">Priyanka Sharma | 22 Mar 2022 </p>
-                                <div class="crlkdkContainer">
-                                    <div class="crlkdkLeft">
-                                        <i class="fa fa-thumbs-up iconnnnLike clickLike"><span class="ttt">11</span></i>
-                                    </div>
-                                    <div class="crlkdkLeft">
-                                        <i class="fa fa-thumbs-down  iconnnnDislike clickDisLike" ><span class="ttt">4</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="crReviewContainer">
-                            <div class="crReviewTitle">
-                                <p class="crRatngStar">3*</p>
-                                <p class="crRatngReviw">Superrr 😍😍😍</p>
-                            </div>
-                            <div class="crlikesDisklikes">
-                                <p class="crlikeDislkeTitle">Jamini Nagesh | 21 Mar 2022</p>
-                                <div class="crlkdkContainer">
-                                    <div class="crlkdkLeft">
-                                        <i class="fa fa-thumbs-up iconnnnLike clickLike" ><span class="ttt">3</span></i>
-                                    </div>
-                                    <div class="crlkdkLeft">
-                                        <i class="fa fa-thumbs-down iconnnnDislike clickDisLike" ><span class="ttt">1</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="crReviewContainer">
-                            <div class="crReviewTitle">
-                                <p class="crRatngStar">4*</p>
-                                <p class="crRatngReviw">Superrr and Loved it 😍😍</p>
-                            </div>
-                            <div class="crlikesDisklikes">
-                                <p class="crlikeDislkeTitle">Meghana Sheety | 20 Mar 2022</p>
-                                <div class="crlkdkContainer">
-                                    <div class="crlkdkLeft">
-                                        <i class="fa fa-thumbs-up iconnnnLike clickLike"><span  class="ttt">4</span></i>
-                                    </div>
-                                    <div class="crlkdkLeft">
-                                        <i class="fa fa-thumbs-down iconnnnDislike clickDisLike" ><span class="ttt">3</span></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" style="cursor: pointer;text-decoration: none;" >View More Reviews</a>
+                        <a id="moreAncho" href="#" style="cursor: pointer;text-decoration: none;" class="diddd">View More Reviews</a>
                     </div>
                 </div>
             </div>
+            <div class="productsRightSection" style="position:sticky">
+                <!-- Product Description -->
+                <div class="productDetailsContainer">
+                    <h4 class="productDetailTitle" id="productTitle">PUMA</h4>
+                    <p class="productDetailDescription" id="pDescription">ZOD Runner NM Running Shoes For Men (Blue)</p>
+                    <h5 class="productDetailPrice" id="pDicPrice">₹2,399</h5>
+                    <div style="display: flex;align-items: center;" >
+                        <p id="pRating" style="margin-right: .4rem;">⭐⭐⭐⭐⭐</p> 
+                        <p class="productRatingsReviews" style="font-size: .91rem;font-weight: bold; margin-right: .2rem;" id="pReviews">96 </p>reviews
+                    </div>
+                </div>
+                <!-- Product Colors -->
+                <p style="font-size: 1.02rem; margin-top: 1.5rem;margin-bottom:.4rem;font-weight: bold;color: dimgrey;">Choose Color</p>
+                <div class="productColors">
+                    <div class="productColorImageContainer">
+                        <img class="productColorImage" src="./images/pumaTwo.jpeg" onmouseover="mouserHover(this)" alt="fila" />
+                    </div>
+                    <div class="productColorImageContainer">
+                        <img class="productColorImage" src="./images/linkZro.jpeg" onmouseover="mouserHover(this)" alt="fila" />
+                    </div>
+                    <div class="productColorImageContainer">
+                        <img class="productColorImage" src="./images/gosto.jpeg" onmouseover="mouserHover(this)" alt="gosto" />
+                    </div>
+                </div>
+                <!-- Product Size -->
+                <div class="productSize">
+                   <div class="productSizeContaner">
+                        <p class="psTitle" id="sizeCont">
+                            Choose your size 
+                        </p>
+                        <span style="color: green; flex-grow: 1;padding: .1rem 0 0 .5rem;font-weight: bold;" id="sizeValue"></span>
+                        <i class="fa fa-sort-desc" style="font-size: 1.44rem;cursor: pointer;" onclick="displaySize()"></i>
+                   </div>
+                   <div class="producSizesContainer" id="prdSize">
+                        <p class="productSizeItem" onclick="updateSize(this)">XS</p>
+                        <p class="productSizeItem" onclick="updateSize(this)">S</p>
+                        <p class="productSizeItem" onclick="updateSize(this)">M</p>
+                        <p class="productSizeItem" onclick="updateSize(this)">L</p>
+                        <p class="productSizeItem" onclick="updateSize(this)">XL</p>
+                        <p class="productSizeItem" onclick="updateSize(this)">XXL</p>
+                   </div>
+                </div>
+                <p  style="margin-top: .3rem;color: blue;"><a href="#" style="color: blue;" onclick="openSizeChart()">Size Chart</a></p>
+                <!-- Pin Code Checker -->
+                <div class="pinCodeChecker">
+                    <div class="pinCodeLocationContainer">
+                        <div class="pinCodeLocationContainerWrap">
+                            <div class="pinCodeLocationImgContainer">
+                                <img class="pinCodeLocationImg" src="./images/location.png" alt="deliver location" />
+                            </div>
+                            <p class="pinCodeDeliverTitle">Deliver to</p>
+                        </div>
+                        <div class="pinCodeCheckerContainer">
+                            <input class="pinCodeCheckerField" id="pinCodeVal" type="text" name="text" placeholder="Enter Pin" step="font-weight:bold;" />
+                            <button class="pinCodeCheckerButton" type="button" onclick="validatePinCode()">Check</button>
+                        </div>
+                        <p class="pinCodeDeliverDetails" id="toReplceWrong" style="color: red;"></p>
+                        <p class="pinCodeDeliverDetails" id="toReplce" style="color: green;"></p>
+                    </div>
+                    
+                </div>
+                <!-- Product Bag -->
+                <div class="productBagContainer">
+                    <div class="productBagContnerInner">
+                        <div class="productBagCTop">
+                            <h5 class="productBagTitle" onclick="openCart()">ADD TO BAG</h5>                        </div>
+                        <div class="productBagBottom">
+                            <div class="productBagLogo">
+                                <div class="productBagImage">
+                                    <i class="fa fa-globe" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <p class="productBagDescript">Free Worldwide
+                                    shipping
+                                </p>
+                            </div>
+                            <div class="productBagLogo">
+                                <div class="productBagImage">
+                                    <i class="fa fa-truck" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <p class="productBagDescript"> Easy 60-Day
+                                    Exchanges & Returns
+                                </p>
+                            </div>
+                            <div class="productBagLogo">
+                                <div class="productBagImage">
+                                    <i class="fa fa-clock-o" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <p class="productBagDescript">24/7 Customer
+                                    Support
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 style="background-color: black;padding: .2rem .3rem;cursor: pointer;" class="ccchfive"><i class="fa fa-heart chefd" id="chHeartColor" onclick="changeHeartColor()"></i></h5>
+                </div>
+           </div>
         </section>
         
         <!-- Similar Products Cards -->
         <section class="similarProducts" >
             <h3 class="spTitle">Similar Products</h3>
             <div class=" owl-carousel owl-theme">
-                <div class=" item" onclick="updateProductDetails(1)" id="1">
+                <a href="#" style="text-decoration: none;"><div class=" item" onclick="updateProductDetails(1)" id="1">
                     <div class="productImgContainer">
                         <img class="productImage" id="CDD" onclick="changeImage(this)"  src="./images/adidas.jpeg" alt="adidas""/>
                     </div>
@@ -375,9 +381,9 @@
                             <small class="pDiscount">45% off</small>
                         </div>
                     </div>
-                </div>
+                </div></a>
 
-                <div class="item" onclick="updateProductDetails(2)" id="2">
+                <a href="#" style="text-decoration:none;"><div class="item" onclick="updateProductDetails(2)" id="2">
                     <div class="productImgContainer">
                         <img class="productImage"  onclick="changeImage(this)" src="./images/ciffraStumper.jpeg" alt="adidas" />
                     </div>
@@ -390,9 +396,9 @@
                             <small class="pDiscount">70% off</small>
                         </div>
                     </div>
-                </div>
+                </div></a>
 
-                <div class="item" onclick="updateProductDetails(3)" id="3">
+                <a href="#" style="text-decoration: none;"><div class="item" onclick="updateProductDetails(3)" id="3">
                     <div class="productImgContainer">
                         <img class="productImage"  onclick="changeImage(this)" src="./images/filaTwo.jpeg" alt="adidas" />
                     </div>
@@ -405,9 +411,9 @@
                             <small class="pDiscount">58% off</small>
                         </div>
                     </div>
-                </div>
+                </div></a>
 
-                <div class="item" onclick="updateProductDetails(4)" id="4">
+                <a href="#" style="text-decoration: none;"><div class="item" onclick="updateProductDetails(4)" id="4">
                     <div class="productImgContainer">
                         <img class="productImage"  onclick="changeImage(this)" src="./images/puma.jpeg" alt="adidas" />
                     </div>
@@ -420,9 +426,9 @@
                             <small class="pDiscount">42% off</small>
                         </div>
                     </div>
-                </div>
+                </div></a>
 
-                <div class=" item" onclick="updateProductDetails(5)" id="5">
+                <a href="#" style="text-decoration: none;"><div class=" item" onclick="updateProductDetails(5)" id="5">
                     <div class="productImgContainer">
                         <img class="productImage"  onclick="changeImage(this)"  src="./images/wrognactivetwo.jpeg" alt="adidas" />
                     </div>
@@ -435,9 +441,9 @@
                             <small class="pDiscount">58% off</small>
                         </div>
                     </div>
-                </div>
+                </div></a>
 
-                <div class=" item" onclick="updateProductDetails(6)" id="6">
+                <a href="#" style="text-decoration: none;"><div class=" item" onclick="updateProductDetails(6)" id="6">
                     <div class="productImgContainer">
                         <img class="productImage"  onclick="changeImage(this)" src="./images/sketchers.jpeg" alt="adidas" />
                     </div>
@@ -450,9 +456,9 @@
                             <small class="pDiscount">40% off</small>
                         </div>
                     </div>
-                </div>
+                </div></a>
                 
-                <div class=" item" onclick="updateProductDetails(7)" id="7">
+                <a href="#" style="text-decoration: none;"><div class=" item" onclick="updateProductDetails(7)" id="7">
                     <div class="productImgContainer">
                         <img class="productImage"  onclick="changeImage(this)" src="./images/pumaThree.jpeg" alt="puma tree" />
                     </div>
@@ -465,9 +471,9 @@
                             <small class="pDiscount">40% off</small>
                         </div>
                     </div>
-                </div>
+                </div></a>
 
-                <div class=" item" onclick="updateProductDetails(8)" id="8">
+                <a href="#" style="text-decoration: none;"><div class=" item" onclick="updateProductDetails(8)" id="8">
                     <div class="productImgContainer">
                         <img class="productImage"  onclick="changeImage(this)" src="./images/pumaTwo.jpeg" alt="puma Two" />
                     </div>
@@ -480,7 +486,7 @@
                             <small class="pDiscount">40% off</small>
                         </div>
                     </div>
-                </div>
+                </div></a>
             </div>
         </section>
 
@@ -490,15 +496,15 @@
             <div class="spp" id="recentt"  >
                 <div class="it" >
                     <div class="productImgContainer">
-                        <img class="productImage" id="CDD"   src="./images/fila.jpeg" alt="adidas""/>
+                        <img class="productImage" id="CDD"   src="./images/pumaTwo.jpeg" alt="adidas""/>
                     </div>
                     <div class="productDetails">
-                        <h4 class="productTitle">FILA</h4>
-                        <p class="productDescription">IZUNA Running Sprts Shoes For Men (Grey)</p>
+                        <h4 class="productTitle">PUMA</h4>
+                        <p class="productDescription">Zod Runner NM Running Shoes For Men (Grey)</p>
                         <div class="productPrices">
-                            <h5 class="pPrice">₹1,295</h5>
-                            <p class="pDup" style="text-decoration: line-through;">₹2,699</p>
-                            <small class="pDiscount">52% off</small>
+                            <h5 class="pPrice">₹2,399</h5>
+                            <p class="pDup" style="text-decoration: line-through;">₹3,999</p>
+                            <small class="pDiscount">40% off</small>
                         </div>
                     </div>
                 </div>
@@ -506,7 +512,7 @@
         </section>
 
         <!-- Customer Review Modal -->
-     <section class="cReviewModal" id="cRModl">
+        <section class="cReviewModal" id="cRModl">
         <form class="cRMInner">
             <h3 class="crTi">Add Review and Ratings</h3>
             <div class="formFields">
@@ -534,26 +540,102 @@
                 <button class="sbBtunn"  type="button" onclick="displayReviewModal()">Close</button>
             </div>
         </form>
-    </section>
+        </section>
+        
+        <!-- Product Size Char -->
+        <section class="pSizeChart" id="pSizeChart">
+            <div class="pSizeChartContainer">
+                <h6 style="font-size: 1.9rem;font-weight: bold;;">Size Chart<span style="float: right;font-size: .91rem;color: red;cursor: pointer;padding-top: .3rem;" onclick="closeSizeChart()">Close</span></h6>
+                <div class="pSizeChartContainerInner">
+                    <div class="pSizeChartLeft">
+                        <div class="pSizeChartLeftHeader">
+                            <p class="pSizeHeaders">UK/India</p>
+                            <p class="pSizeHeaders">Length (in cm)</p>
+                            <p class="pSizeHeaders">Brand Size</p>
+                            <p class="pSizeHeaders">Euro</p>
+                        </div>
+                        <div class="pSizeChartLeftItems">
+                            <p class="pSizeChartItem">3</p>
+                            <p class="pSizeChartItem">23.5</p>
+                            <p class="pSizeChartItem">3</p>
+                            <p class="pSizeChartItem">36</p>
+                        </div>
+                        <div class="pSizeChartLeftItems">
+                            <p class="pSizeChartItem">5</p>
+                            <p class="pSizeChartItem">25.4</p>
+                            <p class="pSizeChartItem">5</p>
+                            <p class="pSizeChartItem">38</p>
+                        </div>
+                        <div class="pSizeChartLeftItems">
+                            <p class="pSizeChartItem">4</p>
+                            <p class="pSizeChartItem">24.4</p>
+                            <p class="pSizeChartItem">4</p>
+                            <p class="pSizeChartItem">37</p>
+                        </div>
+                        <div class="pSizeChartLeftItems">
+                            <p class="pSizeChartItem">7</p>
+                            <p class="pSizeChartItem">27</p>
+                            <p class="pSizeChartItem">7</p>
+                            <p class="pSizeChartItem">40</p>
+                        </div>
+                        <div class="pSizeChartLeftItems">
+                            <p class="pSizeChartItem">6</p>
+                            <p class="pSizeChartItem">26</p>
+                            <p class="pSizeChartItem">6</p>
+                            <p class="pSizeChartItem">39</p>
+                        </div>
+                        <div class="pSizeChartLeftItems">
+                            <p class="pSizeChartItem">9</p>
+                            <p class="pSizeChartItem">28.5</p>
+                            <p class="pSizeChartItem">9</p>
+                            <p class="pSizeChartItem">42</p>
+                        </div>
+                        <div class="pSizeChartLeftItems">
+                            <p class="pSizeChartItem">8</p>
+                            <p class="pSizeChartItem">27.9</p>
+                            <p class="pSizeChartItem">8</p>
+                            <p class="pSizeChartItem">41</p>
+                        </div>
+                    </div>
+                    <div class="pSizeChartRight">
+                        <div class="pSizeChartRightTop">
+                            <p class="psSizeRightTitle">Not sure about your shoe size? Follow these simple steps to 
+                                figure it out:
+                            </p>
+                            <p class="psSizeRightText">1. Place your foot on a blank sheet of paper</p>
+                            <p class="psSizeRightText">2. Make one marking at your longest toe and one marking at the 
+                                backside of your heel
+                            </p>
+                            <p class="psSizeRightText">3. Measure (in centimetres) the length of your foot between these 
+                                two markings
+                            </p>
+                        </div>
+                        <div class="psSizeRightImage">
+                            <img src="./images/foot.jpg" alt="foot" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Product cart Modal -->
-    <section class="psCart" id="ggg">
+        <!-- Product cart Modal -->
+        <section class="psCart" id="ggg">
         <div class="psCartContainer" id="change">
             <div class="psCartContainerInner" id="cartId" >
                 <div class="psCartImgConter">
-                    <img class="psCartImg" src="./images/fila.jpeg" alt="fila"/>
+                    <img class="psCartImg" src="./images/pumaTwo.jpeg" alt="fila"/>
                 </div>
                 <div class="psCartContent">
-                    <p class="psCartTittle">FILA</p>
-                    <p class="psCartTitleDescription">IZUNA Running Sprts Shoes For Men (Grey)</p>
+                    <p class="psCartTittle">PUMA</p>
+                    <p class="psCartTitleDescription">ZOD Runner NM Running Shoes For Men (Blue)
+                    </p>
                     <p class="psCartSize">Size : <span class="psSize">8</span></p>
                     <div class="productDetails">
-                        <h5 class="pPrice">₹1,295</h5>
-                        <p class="pDup" style="text-decoration: line-through;">₹2,699</p>
-                        <small class="pDiscount">52% off</small>
+                        <h5 class="pPrice">₹2,399</h5>
+                        <p class="pDup" style="text-decoration: line-through;">₹3,999</p>
+                        <small class="pDiscount">40% off</small>
                     </div>
                     <div class="psCartBottom">
-                        <p class="psLinkeOne">SAVE FOR LATER</p>
                         <p class="psLinkeOne" onclick="closeCart()">REMOVE</p>
                     </div>
                 </div>
@@ -561,7 +643,7 @@
             <p class="psCartTitle">The product is succesfully added to cart.</p>
             <a class="psCartLink" href="./cart-item.html">View Cart</a>
         </div>
-    </section>
+        </section>
     </main>
      
     <footer class="footer" id="footer" style="clear: left;">
@@ -634,25 +716,6 @@
         </div>
     </footer>
     <script src="./scripts/productScript/prdScript.js" ></script>
-
-    <!-- zoomjs image maginifier plugin -->
-    <script src="./scripts/productScript/zoomExtsn/zoomsl.js" ></script>
-    <script src="./scripts/productScript/zoomExtsn/zoomsl.min.js" ></script>
-    <script >
-        $(document).ready(function(){
-            $(".pslImages").hover(function(){
-                $(".pslrImage").attr('src',$(this).attr('src'));
-            });
-        });
-        </script>
-        <script >
-        $(document).ready(function(){
-            $(".pslrImage").imagezoomsl({
-                zoomrange:[3,3]
-            });
-        });
-    </script>
-
     <!-- product cards sliding using owl-carousel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript">
