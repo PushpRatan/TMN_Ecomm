@@ -1,180 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/db77a28369.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="./styles/homestyle.css">
-    <link rel="stylesheet" href="./navbar and footer/style.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <title>Website</title>
 </head>
-
 <body>
 
 
 
+    <!-- navbar -->
     <nav class="navigation">
-        <a href="./index.html" class="logo">LOGO</a>
+        <div class="wrap">
+            <div class="navLogo">
+                <i class="fa fa-bars ba" id="open" onclick="openSideNav()"></i>
+                <i class="fa fa-times ca" id="close" onclick="closeSideNav()"></i>
+                <a href="#" class="logo">LOGO</a>
+            </div>
 
+            <ul class="menu">
+                <li class="dropdown">
+                    <a href="#">MEN</a>
+                    <div class="dropdown-content">
+                      <a href="#">New Now</a>
+                      <a href="#">Clothing</a>
+                      <a href="#">Accesories</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">WOMEN</a>
+                    <div class="dropdown-content">
+                        <a href="#">New Now</a>
+                        <a href="#">Clothing</a>
+                        <a href="#">Accesories</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">TEENS</a>
+                    <div class="dropdown-content">
+                      <a href="#">Teen Boy</a>
+                      <a href="#">Teen Girls</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">KIDS</a>
+                    <div class="dropdown-content">
+                      <a href="#">Girls</a>
+                      <a href="#">Boys</a>
+                      <a href="#">New Born</a>
+                    </div>
+                </li>
+            </ul>
 
-        <ul class="menu">
-            <li><a href="#">MEN</a></li>
-            <li><a href="#">WOMEN</a></li>
-            <li><a href="#">TEENS</a></li>
-            <li><a href="./kids.html">KIDS</a></li>
-        </ul>
-
-        <div class="right-elements">
-            <a href="#" class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <a href="#" class="wishlist">
-                <i class="fa-solid fa-heart"></i>
-            </a>
-            <a href="./cart.html" class="cart">
-                <i class="fa-solid fa-bag-shopping"></i>
-            </a>
-            <a href="./login1.html" class="user">
-                <i class="fa-solid fa-user"></i>
-            </a>
+            <div class="right-elements">
+                <a href="#" class="wishlist">
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+                <a href="#" class="cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </a>
+                <a href="#" class="user">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </div>
+        <div class="searchbox">
+            <div class="search">
+                <input type="search" placeholder="search" id="search" />
+                <div><label for="search" class="fa fa-search"></label></div>
+            </div>
         </div>
     </nav>
 
+    <div class="sideNav" id="toggleBar">
+      <div class="navItem">
+          <a class="navLink" id="MDrop" onclick="MDrop()" onblur="CMDrop()" href="#">MEN</a>
+          <div class="sideDrop">
+            <div class="overline"></div>
+            <div class=""><a href="#">New Now</a></div>
+            <div class=""><a href="#">Clothing</a></div>
+            <div class=""><a href="#">Accesories</a></div>
+          </div>
+      </div>
+      <div class="navItem">
+          <a class="navLink" id="WDrop" onclick="WDrop()" onblur="CWDrop()" href="#">WOMEN</a>
+          <div class="sideDrop">
+            <div class="overline"></div>
+            <div class=""><a href="#">New Now</a></div>
+            <div class=""><a href="#">Clothing</a></div>
+            <div class=""><a href="#">Accesories</a></div>
+          </div>
+      </div>
+      <div class="navItem">
+          <a class="navLink" id="TDrop" onclick="TDrop()" onblur="CTDrop()" href="#">TEEN</a>
+          <div class="sideDrop">
+            <div class="overline"></div>
+            <div class=""><a href="#">Teen Boys</a></div>
+            <div class=""><a href="#">Teen Girls</a></div>
+          </div>
+      </div>
+      <div class="navItem">
+          <a class="navLink" id="KDrop" onclick="KDrop()" onblur="CKDrop()" href="#">KIDS</a>
+          <div class="sideDrop">
+            <div class="overline"></div>
+            <div class=""><a href="#">Girls</a></div>
+            <div class=""><a href="#">Boys</a></div>
+            <div class=""><a href="#">New Born</a></div>
+          </div>
+      </div>
+      <div class="underline"></div>
+      <div class="sidebtn">
+         <a href="#">LogIn/SignUp</a>
+         <a href="#">About Us</a>
+      </div>
+      <div class="sideLogo"><a href="#" class="logo">LOGO</a></div>
+    </div>
     <div class="carousel">
-        <div class="slideshow">
-            <div class="mySlides fade">
-                <a href="#"><img src="images/img1.png" style="width:100%"></a>
+     <div class="slideshow">
+        <div class="mySlides fade">
+          <a href="#"><img src="images/img1.png" style="width:100%"></a>
 
-            </div>
-            <div class="mySlides fade">
-                <a href="#"><img src="images/levis.jpg" style="width:100%"></a>
+        </div>
+        <div class="mySlides fade">
+          <a href="#"><img src="images/levis.jpg" style="width:100%"></a>
 
-            </div>
-            <div class="mySlides fade">
-                <a href="#"><img src="images/banner1.png" style="width:100%"></a>
+        </div>
+        <div class="mySlides fade">
+          <a href="#" ><img src="images/banner1.png" style="width:100%"></a>
 
-            </div>
         </div>
     </div>
+     </div>
 
-    <div class="heading">SHOP NOW</div>
+      <div class="heading">SHOP NOW</div>
 
-    <div class="container">
-        <div class="shop">
-            <div class="column">
-                <a href="./product.html"><img src="./images/shopmen.jpeg" style="width:100%"></a>
-                <h3>MEN</h3>
-            </div>
-            <div class="column">
-                <a href="./product.html"><img src="./images/shopwomen.webp" style="width:100%"></a>
-                <h3>WOMEN</h3>
-            </div>
-            <div class="column">
-                <a href="./product.html"><img src="images/shopteen.jpeg" style="width:100%"></a>
-                <h3>TEENS</h3>
-            </div>
-            <div class="column">
-                <a href="./kids.html"><img src="images/shopkids.webp" style="width:100%"></a>
-                <h3>KIDS</h3>
-            </div>
+       <div class="container shopContainer">
+      <div class="shop">
+        <div class="column">
+         <a href="#" ><img src="./images/shopmen.jpeg" style="width:100%"></a>
+          <h3>MEN</h3>
         </div>
+        <div class="column">
+          <a href="#"><img src="./images/shopwomen.webp" style="width:100%"></a>
+          <h3>WOMEN</h3>
+        </div>
+        <div class="column">
+          <a href="#"><img src="images/shopteen.jpeg"  style="width:100%"></a>
+          <h3>TEENS</h3>
+        </div>
+        <div class="column">
+          <a href="#"><img src="images/shopkids.webp"  style="width:100%"></a>
+          <h3>KIDS</h3>
+        </div>
+      </div>
     </div>
+<!-- navbar end -->
 
-    <div class="container">
-        <img src="./images/summer.webp" style="width:50%;">
+    <div class="container springSection">
+        <img src="./images/summer.webp" class="springImage">
         <div class="centerText">
-            <div class="text">
-                <p>SPRING-SUMMER</p>
-                <p>COLLECTION</p>
-            </div>
-            <button class="btn-know-more">KNOW MORE</button>
+        <div class="text">
+           <p>SPRING-SUMMER</p>
+            <p>COLLECTION</p>
         </div>
+        <button class="btn-know-more">KNOW MORE</button>
+    </div>
     </div>
 
     <div class="heading">TOP BRANDS</div>
-    <div class="carousel">
-        <div class="brandlogo">
-            <div class="item"><a href="#"><img src="./images/levi-slogo.svg"></a></div>
-            <div class="item"><a href="#"><img src="./images/crocswordmarklogo.svg"></a></div>
-            <div class="item"><a href="#"><img src="./images/fendilogo.svg"></a></div>
-            <div class="item"><a href="#"><img src="./images/forever-21-logo.svg"></a></div>
-            <div class="item"><a href="#"><img src="./images/h-mlogo.svg"></a></div>
-            <div class="item"><a href="#"><img src="./images/mangologo.svg"></a></div>
-            <div class="item"><a href="#"><img src="./images/nikelogo.svg"></a></div>
-            <div class="item"><a href="#"><img src="./images/onlylogo.svg"></a></div>
-            <div class="item"><a href="#"><img src="./images/pumalogo.svg"></a></div>
-        </div>
+    <div class="carousel ">
+    <div class="brandlogo">
+        <div class="item"><a href="#"><img src="./images/levi-slogo.svg"></a></div>
+        <div class="item"><a href="#"><img src="./images/crocswordmarklogo.svg"></a></div>
+        <div class="item"><a href="#"><img src="./images/fendilogo.svg"></a></div>
+        <div class="item"><a href="#"><img src="./images/forever-21-logo.svg"></a></div>
+        <div class="item"><a href="#"><img src="./images/h-mlogo.svg"></a></div>
+        <div class="item"><a href="#"><img src="./images/mangologo.svg"></a></div>
+        <div class="item"><a href="#"><img src="./images/nikelogo.svg"></a></div>
+        <div class="item"><a href="#"><img src="./images/onlylogo.svg"></a></div>
+        <div class="item"><a href="#"><img src="./images/pumalogo.svg"></a></div>
+    </div>
     </div>
 
     <div class="container">
-        <a href=""><img src="./images/rayban.jpeg"></a>
+       <a href=""><img class="imgg raybanImg" src="./images/rayban.jpeg"></a>
     </div>
 
     <div class="heading">SHOP BY POPULAR CATEGORIES</div>
     <div class="container">
-        <div class="category">
-            <div class="column">
-                <img src="./images/fragrance.jpeg" style="width:100%">
-                <h3>FRAGRANCE</h3>
-            </div>
-            <div class="column">
-                <img src="./images/shoes.jpeg" style="width:100%">
-                <H3>SHOES</H3>
-            </div>
-            <div class="column">
-                <img src="images/watch.jpeg" style="width:100%">
-                <h3>WATCH</h3>
-            </div>
-            <div class="column">
-                <img src="images/bagpack.jpeg" style="width:100%">
-                <h3>BAGPACK</h3>
-            </div>
-            <div class="column">
-                <img src="images/makeup.jpeg" style="width:100%">
-                <h3>MAKEUP</h3>
-            </div>
-            <div class="column">
-                <img src="images/demim.jpeg" style="width:100%">
-                <h3>DENIMS</h3>
-            </div>
-            <div class="column">
-                <img src="images/earrings.jpeg" style="width:100%">
-                <h3>JEWELLERY</h3>
-            </div>
-            <div class="column">
-                <img src="images/sunglasses.jpeg" style="width:100%">
-                <h3>SUNGLASSES</h3>
-            </div>
-            <div class="column">
-                <img src="images/fitness.jpeg" style="width:100%">
-                <h3>FITNESS</h3>
-            </div>
-            <div class="column">
-                <img src="images/swimwear.jpeg" style="width:100%">
-                <h3>SWIMWEAR</h3>
-            </div>
-            <div class="column">
-                <img src="images/highheels.jpeg" style="width:100%">
-                <h3>HIGH HEELS</h3>
-            </div>
-            <div class="column">
-                <img src="images/winter.jpeg" style="width:100%">
-                <h3>WINTER</h3>
-            </div>
-        </div>
+  <div class="category">
+    <div class="column">
+      <img src="./images/fragrance.jpeg" style="width:100%">
+      <h3>FRAGRANCE</h3>
+    </div>
+    <div class="column">
+      <img src="./images/shoes.jpeg" style="width:100%">
+      <H3>SHOES</H3>
+    </div>
+    <div class="column">
+      <img src="images/watch.jpeg"  style="width:100%">
+      <h3>WATCH</h3>
+    </div>
+    <div class="column">
+      <img src="images/bagpack.jpeg"  style="width:100%">
+      <h3>BAGPACK</h3>
+    </div>
+    <div class="column">
+      <img src="images/makeup.jpeg"  style="width:100%">
+      <h3>MAKEUP</h3>
+    </div>
+    <div class="column">
+      <img src="images/demim.jpeg"  style="width:100%">
+      <h3>DENIMS</h3>
+    </div>
+    <div class="column">
+      <img src="images/earrings.jpeg"  style="width:100%">
+      <h3>JEWELLERY</h3>
+    </div>
+    <div class="column">
+      <img src="images/sunglasses.jpeg"  style="width:100%">
+      <h3>SUNGLASSES</h3>
+    </div>
+    <div class="column">
+      <img src="images/fitness.jpeg" style="width:100%">
+      <h3>FITNESS</h3>
+    </div>
+    <div class="column">
+      <img src="images/swimwear.jpeg" style="width:100%">
+      <h3>SWIMWEAR</h3>
+    </div>
+    <div class="column">
+      <img src="images/highheels.jpeg" style="width:100%">
+      <h3>HIGH HEELS</h3>
+    </div>
+    <div class="column">
+      <img src="images/winter.jpeg" style="width:100%">
+      <h3>WINTER</h3>
+    </div>
+  </div>
 
     </div>
+
+
+    <!-- footer starts -->
     <footer class="footer" id="footer" style="clear: left;">
         <div class="containers">
             <div class="rows">
@@ -217,12 +294,10 @@
                 </div>
 
                 <div class="footer-col news">
-                    <h4 class="left-align"><span>Sign&nbsp;up&nbsp;for&nbsp;newsletter</span></h4>
+                    <h4 class="left-align"><span>newsletter</span></h4>
                     <ul>
-                        <li style="line-height: 1.3"><span>Sign up now and be the first to know about exclusive offers,
-                                latest fashion news & style tips!</span></li>
-                        <li><br><a target="_blank" rel="nofollow" href="./signup.html"><b>Sign Up</b> <i class="fa fa-arrow-right"
-                                    aria-hidden="true"></i></a></li>
+                        <li style="line-height: 1.3"><span>Sign up now and be the first to know about exclusive offers, latest fashion news & style tips!</span></li>
+                        <li><br><a target="_blank" rel="nofollow" href="#"><b>Sign Up</b> <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
 
                     </ul>
                 </div>
@@ -235,10 +310,7 @@
                         <a target="_blank" rel="nofollow" href="#"><i class="fa fa-linkedin"></i></a>
                         <a target="_blank" rel="nofollow" href="#"><i class="fa fa-youtube"></i></a>
                     </div>
-                    <div class="footer-image">
-                        <a target="_blank" rel="nofollow" href="#"><img src="./images/logo.jpg" alt="TMN Groups"
-                                title="TMN Group of Companies"></a>
-                    </div>
+                    <div class="botLogo"><a href="#" class="logo">LOGO</a></div>
                 </div>
             </div>
             <div class="copyrights">
@@ -254,29 +326,69 @@
         var slideIndex = 0;
         showSlides();
         function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 4000); // Change image every 2 seconds
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          for(i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if(slideIndex > slides.length) {
+            slideIndex = 1
+          }
+          slides[slideIndex - 1].style.display = "block";
+          setTimeout(showSlides, 4000); // Change image every 2 seconds
         };
 
         $('.brandlogo').slick({
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
         });
 
+
+
+        // navbar script
+        function openSideNav(){
+          document.getElementById("toggleBar").classList.add("activee");
+          document.getElementById("open").classList.add("notActive");
+          document.getElementById("close").classList.add("activeee");
+        }
+
+        function closeSideNav(){
+          document.getElementById("toggleBar").classList.remove("activee");
+          document.getElementById("close").classList.remove("activeee");
+          document.getElementById("open").classList.remove("notActive");
+        }
+
+        function MDrop(){
+          document.getElementById("MDrop").classList.add("drp");
+        }
+        function CMDrop(){
+          document.getElementById("MDrop").classList.remove("drp");
+        }
+        function WDrop(){
+          document.getElementById("WDrop").classList.add("drp");
+        }
+        function CWDrop(){
+          document.getElementById("WDrop").classList.remove("drp");
+        }
+        function TDrop(){
+          document.getElementById("TDrop").classList.add("drp");
+        }
+        function CTDrop(){
+          document.getElementById("TDrop").classList.remove("drp");
+        }
+        function KDrop(){
+          document.getElementById("KDrop").classList.add("drp");
+        }
+        function CKDrop(){
+          document.getElementById("KDrop").classList.remove("drp");
+        }
+
+        // navbar script end
     </script>
 
 
 </body>
-
 </html>

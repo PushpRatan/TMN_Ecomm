@@ -1,0 +1,192 @@
+<!-- navbar -->
+<nav class="navigation">
+    <div class="wrap">
+        <div class="navLogo">
+            <i class="fa fa-bars ba" id="open" onclick="openSideNav()"></i>
+            <i class="fa fa-times ca" id="close" onclick="closeSideNav()"></i>
+            <a href="#" class="logo">LOGO</a>
+        </div>
+
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#">MEN</a>
+                <div class="dropdown-content">
+                  <a href="#">New Now</a>
+                  <a href="#">Clothing</a>
+                  <a href="#">Accesories</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">WOMEN</a>
+                <div class="dropdown-content">
+                    <a href="#">New Now</a>
+                    <a href="#">Clothing</a>
+                    <a href="#">Accesories</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">TEENS</a>
+                <div class="dropdown-content">
+                  <a href="#">Teen Boy</a>
+                  <a href="#">Teen Girls</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">KIDS</a>
+                <div class="dropdown-content">
+                  <a href="#">Girls</a>
+                  <a href="#">Boys</a>
+                  <a href="#">New Born</a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="right-elements">
+            <a href="#" class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+            <a href="#" class="user">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </div>
+    <div class="searchbox">
+        <div class="search">
+            <input type="search" placeholder="search" id="search" />
+            <div><label for="search" class="fa fa-search"></label></div>
+        </div>
+    </div>
+</nav>
+
+<div class="sideNav" id="toggleBar">
+  <div class="navItem">
+      <a class="navLink" id="MDrop" onclick="MDrop()" onblur="CMDrop()" href="#">MEN</a>
+      <div class="sideDrop">
+        <div class="overline"></div>
+        <div class=""><a href="#">New Now</a></div>
+        <div class=""><a href="#">Clothing</a></div>
+        <div class=""><a href="#">Accesories</a></div>
+      </div>
+  </div>
+  <div class="navItem">
+      <a class="navLink" id="WDrop" onclick="WDrop()" onblur="CWDrop()" href="#">WOMEN</a>
+      <div class="sideDrop">
+        <div class="overline"></div>
+        <div class=""><a href="#">New Now</a></div>
+        <div class=""><a href="#">Clothing</a></div>
+        <div class=""><a href="#">Accesories</a></div>
+      </div>
+  </div>
+  <div class="navItem">
+      <a class="navLink" id="TDrop" onclick="TDrop()" onblur="CTDrop()" href="#">TEEN</a>
+      <div class="sideDrop">
+        <div class="overline"></div>
+        <div class=""><a href="#">Teen Boys</a></div>
+        <div class=""><a href="#">Teen Girls</a></div>
+      </div>
+  </div>
+  <div class="navItem">
+      <a class="navLink" id="KDrop" onclick="KDrop()" onblur="CKDrop()" href="#">KIDS</a>
+      <div class="sideDrop">
+        <div class="overline"></div>
+        <div class=""><a href="#">Girls</a></div>
+        <div class=""><a href="#">Boys</a></div>
+        <div class=""><a href="#">New Born</a></div>
+      </div>
+  </div>
+  <div class="underline"></div>
+  <div class="sidebtn">
+     <a href="#">LogIn/SignUp</a>
+     <a href="#">About Us</a>
+  </div>
+  <div class="sideLogo"><a href="#" class="logo">LOGO</a></div>
+</div>
+<div class="carousel">
+ <div class="slideshow">
+    <div class="mySlides fade">
+      <a href="#"><img src="images/img1.png" style="width:100%"></a>
+
+    </div>
+    <div class="mySlides fade">
+      <a href="#"><img src="images/levis.jpg" style="width:100%"></a>
+
+    </div>
+    <div class="mySlides fade">
+      <a href="#" ><img src="images/banner1.png" style="width:100%"></a>
+
+    </div>
+</div>
+ </div>
+
+  <div class="heading">SHOP NOW</div>
+
+   <div class="container shopContainer">
+  <div class="shop">
+    <div class="column">
+     <a href="#" ><img src="./images/shopmen.jpeg" style="width:100%"></a>
+      <h3>MEN</h3>
+    </div>
+    <div class="column">
+      <a href="#"><img src="./images/shopwomen.webp" style="width:100%"></a>
+      <h3>WOMEN</h3>
+    </div>
+    <div class="column">
+      <a href="#"><img src="images/shopteen.jpeg"  style="width:100%"></a>
+      <h3>TEENS</h3>
+    </div>
+    <div class="column">
+      <a href="#"><img src="images/shopkids.webp"  style="width:100%"></a>
+      <h3>KIDS</h3>
+    </div>
+  </div>
+</div>
+<!-- navbar end -->
+
+
+
+<script type="text/javascript">
+// navbar script
+function openSideNav(){
+  document.getElementById("toggleBar").classList.add("activee");
+  document.getElementById("open").classList.add("notActive");
+  document.getElementById("close").classList.add("activeee");
+}
+
+function closeSideNav(){
+  document.getElementById("toggleBar").classList.remove("activee");
+  document.getElementById("close").classList.remove("activeee");
+  document.getElementById("open").classList.remove("notActive");
+}
+
+function MDrop(){
+  document.getElementById("MDrop").classList.add("drp");
+}
+function CMDrop(){
+  document.getElementById("MDrop").classList.remove("drp");
+}
+function WDrop(){
+  document.getElementById("WDrop").classList.add("drp");
+}
+function CWDrop(){
+  document.getElementById("WDrop").classList.remove("drp");
+}
+function TDrop(){
+  document.getElementById("TDrop").classList.add("drp");
+}
+function CTDrop(){
+  document.getElementById("TDrop").classList.remove("drp");
+}
+function KDrop(){
+  document.getElementById("KDrop").classList.add("drp");
+}
+function CKDrop(){
+  document.getElementById("KDrop").classList.remove("drp");
+}
+
+// navbar script end
+
+
+</script>
