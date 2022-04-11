@@ -19,37 +19,74 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
   <link rel="stylesheet" href="./styles/kids.css" />
+  <link rel="stylesheet" href="./styles/homestyle.css">
 </head>
 
 <body>
   <main>
 
+    <!-- navbar -->
     <nav class="navigation">
-      <a href="./index.html" class="logo">LOGO</a>
+      <div class="wrap">
+          <div class="navLogo">
+              <i class="fa fa-bars ba" id="open" onclick="openSideNav()"></i>
+              <i class="fa fa-times ca" id="close" onclick="closeSideNav()"></i>
+              <a href="#" class="logo">LOGO</a>
+          </div>
 
+          <ul class="menu">
+              <li class="dropdown">
+                  <a href="#">MEN</a>
+                  <div class="dropdown-content">
+                    <a href="#">New Now</a>
+                    <a href="#">Clothing</a>
+                    <a href="#">Accesories</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a href="#">WOMEN</a>
+                  <div class="dropdown-content">
+                      <a href="#">New Now</a>
+                      <a href="#">Clothing</a>
+                      <a href="#">Accesories</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a href="#">TEENS</a>
+                  <div class="dropdown-content">
+                    <a href="#">Teen Boy</a>
+                    <a href="#">Teen Girls</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a href="#">KIDS</a>
+                  <div class="dropdown-content">
+                    <a href="#">Girls</a>
+                    <a href="#">Boys</a>
+                    <a href="#">New Born</a>
+                  </div>
+              </li>
+          </ul>
 
-      <ul class="menu">
-        <li><a href="#">MEN</a></li>
-        <li><a href="#">WOMEN</a></li>
-        <li><a href="#">TEENS</a></li>
-        <li><a href="./kids.html">KIDS</a></li>
-      </ul>
-
-      <div class="right-elements">
-        <a href="#" class="search">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
-        <a href="#" class="wishlist">
-          <i class="fa-solid fa-heart"></i>
-        </a>
-        <a href="./cart.html" class="cart">
-          <i class="fa-solid fa-bag-shopping"></i>
-        </a>
-        <a href="./login1.html" class="user">
-          <i class="fa-solid fa-user"></i>
-        </a>
+          <div class="right-elements">
+              <a href="#" class="wishlist">
+                  <i class="fa-solid fa-heart"></i>
+              </a>
+              <a href="#" class="cart">
+                  <i class="fa-solid fa-bag-shopping"></i>
+              </a>
+              <a href="#" class="user">
+                  <i class="fa-solid fa-user"></i>
+              </a>
+          </div>
       </div>
-    </nav>
+      <div class="searchbox">
+          <div class="search">
+              <input type="search" placeholder="search" id="search" />
+              <div><label for="search" class="fa fa-search"></label></div>
+          </div>
+      </div>
+  </nav>
 
     <!-- content -->
     <div class="content">
