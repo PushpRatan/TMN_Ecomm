@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./footer/style.css" />
+    <link rel="stylesheet" href="./navbar and footer/navbar/navbar.css" />
     <link rel="stylesheet" href="./styles/productStyles/productImageSlider.css"  />
     <link rel="stylesheet" href="./styles/productStyles/products.css" />
     <link rel="stylesheet" href="./styles/productStyles/similarProductts.css" />
     <link rel="stylesheet" href="./styles/productStyles/customerReview.css" />
     <link rel="stylesheet" href="./styles/productStyles/productSizeChart.css" />
     <link rel="stylesheet" href="./styles/productStyles/productCart.css" />
+    <link rel="stylesheet" href="./navbar and footer/footer/footer.css" />
     <style>
         html{
             font-size: 16px;
@@ -24,112 +25,71 @@
     </style>
 </head>
 <body>
-    <header>
-
-        <div class="header-1">
-
-            <a href="./index.html" class="logo"> <i class="fa fa-shopping-bag"></i>  shopping </a>
-
-            <div class="form-container">
-                <form action="">
-                    <input type="search" placeholder="search products" id="search" />
-                    <label for="search" class="fa fa-search"></label>
-                </form>
-
-            </div>
-            <div class="icons">
-                <a href="#" class="fa fa-heart"></a>
-                <a href="./cart-item.html" class="fa fa-shopping-cart"></a>
-                <a href="#" class="fa fa-user"></a>
-            </div>
-        </div>
-
-        <div class="form-container sec">
-            <form action="">
-                <input type="search" placeholder="search products" id="search" />
-                <label for="search" class="fa fa-search"></label>
-            </form>
-
-        </div>
-
-        <div class="header-2">
-
-            <!-- <nav class="navbar">
-                <ul>
-
-                    <li class="dropdown"><a href="#men">Men</a>
-                        <div class="dropdown-content">
-                            <a href="#">Topwear</a>
-                            <a href="#">Bottomwear</a>
-                            <a href="#">Footwear</a>
-                            <a href="#">Sportswear</a>
-                            <a href="#">Bags & Luggage</a>
-                            <a href="#">Festivewear</a>
-                        </div>
-                    </li>
-                    <li class="dropdown"><a href="#women">Women</a>
-                        <div class="dropdown-content">
-                            <a href="#">Indian & Fusionwear</a>
-                            <a href="#">Westernwear</a>
-                            <a href="#">Footwear</a>
-                            <a href="#">Sportswear</a>
-                            <a href="#">Sleepwear</a>
-                            <a href="#">Backpacks</a>
-                        </div>
-                    </li>
-                    <li class="dropdown"><a href="#kids">Kids</a>
-                        <div class="dropdown-content">
-                            <a href="#">Boy Clothing</a>
-                            <a href="#">Girls Clothing</a>
-                            <a href="#">Footwear</a>
-                            <a href="#">Toys</a>
-                            <a href="#">Infants</a>
-                            <a href="#">Kids Accessories</a>
-                            <a href="#">Personal Care</a>
-                        </div>
-                    </li>
-                    <li class="dropdown" ><a href="#home">Home</a>
-                        <div class="dropdown-content">
-                            <a href="#">Furnishing</a>
-                            <a href="#">Flooring</a>
-                            <a href="#">Bath</a>
-                            <a href="#">Home Decor</a>
-                            <a href="#">Lighting</a>
-                            <a href="#">Bedroom</a>
-                        </div>
-                    </li>
-                    <li class="dropdown"><a href="#gadgets">gadgets</a>
-                        <div class="dropdown-content">
-                            <a href="#">Headphones</a>
-                            <a href="#">Speakers</a>
-                            <a href="#">Mobile</a>
-                            <a href="#">Television</a>
-                            <a href="#">Air Conditioner</a>
-                            <a href="#">Fridge</a>
-                        </div>
-                    </li>
-                    <li class="dropdown"><a href="#books">books</a>
-                        <div class="dropdown-content">
-                            <a href="#">Comics</a>
-                            <a href="#">Magazines</a>
-                            <a href="#">Motivation</a>
-                            <a href="#">SciFi</a>
-                            <a href="#">Physics</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-
-
-
-
- -->
-
-        </div>
-
-        </header>
     
-    <main class="productsMain" >
+    <nav class="navigation">
+        <div class="wrap">
+            <div class="navLogo">
+                <i class="fa fa-bars ba" id="open" onclick="openSideNav()"></i>
+                <i class="fa fa-times ca" id="close" onclick="closeSideNav()"></i>
+                <a href="./index.html" class="logo">LOGO</a>
+            </div>
+    
+            <ul class="menu">
+                <li class="dropdown">
+                    <a href="#">MEN</a>
+                    <div class="dropdown-content">
+                      <a href="#">New Now</a>
+                      <a href="#">Clothing</a>
+                      <a href="#">Accesories</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">WOMEN</a>
+                    <div class="dropdown-content">
+                        <a href="#">New Now</a>
+                        <a href="#">Clothing</a>
+                        <a href="#">Accesories</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">TEENS</a>
+                    <div class="dropdown-content">
+                      <a href="#">Teen Boy</a>
+                      <a href="#">Teen Girls</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="./kids.html">KIDS</a>
+                    <div class="dropdown-content">
+                      <a href="#">Girls</a>
+                      <a href="#">Boys</a>
+                      <a href="#">New Born</a>
+                    </div>
+                </li>
+            </ul>
+    
+            <div class="right-elements">
+                <a href="./cart-item.html" class="wishlist">
+                    <i class="fa fa-heart"></i>
+                </a>
+                <a href="./cart.html" class="cart">
+                    <i class="fa fa-shopping-bag"></i>
+                </a>
+                <a href="./signup.html" class="user">
+                    <i class="fa fa-user"></i>
+                </a>
+            </div>
+        </div>
+        <div class="searchbox">
+            <div class="search">
+                <input type="search" placeholder="search" id="search" />
+                <div><label for="search" class="fa fa-search"></label></div>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <main class="productsMain" style="padding-top: 7rem;">
         
         <section class="imageSlider">
             <div class="imgCont">
@@ -661,7 +621,7 @@
                         </ul>
                     </div>
                 </div>
-
+    
                 <div class="footer-col">
                     <h4 class="left-align"><span>Corporate Info</span></h4>
                     <div class="company">
@@ -675,7 +635,7 @@
                         </ul>
                     </div>
                 </div>
-
+    
                 <div class="footer-col">
                     <h4 class="left-align"><span>Get help</span></h4>
                     <ul class="contact-us">
@@ -686,28 +646,25 @@
                         <li class="email breakWord"><a href="#">Contact</a></li>
                     </ul>
                 </div>
-
+    
                 <div class="footer-col news">
-                    <h4 class="left-align"><span>Sign&nbsp;up&nbsp;for&nbsp;newsletter</span></h4>
+                    <h4 class="left-align"><span>newsletter</span></h4>
                     <ul>
                         <li style="line-height: 1.3"><span>Sign up now and be the first to know about exclusive offers, latest fashion news & style tips!</span></li>
                         <li><br><a target="_blank" rel="nofollow" href="#"><b>Sign Up</b> <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
-
+    
                     </ul>
                 </div>
                 <div class="footer-col social-list">
                     <h4><span>follow us</span></h4>
                     <div class="social-links">
-                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-facebook-f" aria-hidden="true" ></i></a>
                         <a target="_blank" rel="nofollow" href="#"><i class="fa fa-twitter"></i></a>
                         <a target="_blank" rel="nofollow" href="#"><i class="fa fa-instagram"></i></a>
                         <a target="_blank" rel="nofollow" href="#"><i class="fa fa-linkedin"></i></a>
                         <a target="_blank" rel="nofollow" href="#"><i class="fa fa-youtube"></i></a>
                     </div>
-                    <div class="footer-image">
-                        <a target="_blank" rel="nofollow" href="#"><img src="../images/logo.jpg"
-                                alt="TMN Groups" title="TMN Group of Companies"></a>
-                    </div>
+                    <div class="botLogo"><a href="#" class="logo">LOGO</a></div>
                 </div>
             </div>
             <div class="copyrights">
@@ -715,6 +672,7 @@
             </div>
         </div>
     </footer>
+    
     <script src="./scripts/productScript/prdScript.js" ></script>
     <!-- product cards sliding using owl-carousel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -751,6 +709,50 @@
         }
     })
     </script>
+    <script type="text/javascript">
+        // navbar script
+        function openSideNav(){
+          document.getElementById("toggleBar").classList.add("activee");
+          document.getElementById("open").classList.add("notActive");
+          document.getElementById("close").classList.add("activeee");
+        }
+        
+        function closeSideNav(){
+          document.getElementById("toggleBar").classList.remove("activee");
+          document.getElementById("close").classList.remove("activeee");
+          document.getElementById("open").classList.remove("notActive");
+        }
+        
+        function MDrop(){
+          document.getElementById("MDrop").classList.add("drp");
+        }
+        function CMDrop(){
+          document.getElementById("MDrop").classList.remove("drp");
+        }
+        function WDrop(){
+          document.getElementById("WDrop").classList.add("drp");
+        }
+        function CWDrop(){
+          document.getElementById("WDrop").classList.remove("drp");
+        }
+        function TDrop(){
+          document.getElementById("TDrop").classList.add("drp");
+        }
+        function CTDrop(){
+          document.getElementById("TDrop").classList.remove("drp");
+        }
+        function KDrop(){
+          document.getElementById("KDrop").classList.add("drp");
+        }
+        function CKDrop(){
+          document.getElementById("KDrop").classList.remove("drp");
+        }
+        
+        // navbar script end
+        
+        
+        </script>
+        
 </body>
 </html>
 

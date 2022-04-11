@@ -111,7 +111,7 @@ input[type="search" i]{
   font-size: 1.4rem;
   margin-right:.6rem;
   cursor:pointer;
-
+  display: none;
 }
 .menu{
   display:flex;
