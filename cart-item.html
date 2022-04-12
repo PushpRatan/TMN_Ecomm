@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
     <link rel = "stylesheet" href = "styles/cart-item.css">
-    <link rel="stylesheet" href="footer/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,10 +10,47 @@
     <script type = "text/javascript">
         var num_of_products = 2;
         var sub_total = 1000;
-    
         
-        $(document).ready(function() {
+        function openSideNav(){
+            
+            document.getElementById("toggleBar").classList.add("activee");
+            document.getElementById("open").classList.add("notActive");
+            document.getElementById("close").classList.add("activeee");
+          }
+          
+          function closeSideNav(){
+        
+            document.getElementById("toggleBar").classList.remove("activee");
+            document.getElementById("close").classList.remove("activeee");
+            document.getElementById("open").classList.remove("notActive");
+          }
+          
+          function MDrop(){
+            document.getElementById("MDrop").classList.add("drp");
+          }
+          function CMDrop(){
+            document.getElementById("MDrop").classList.remove("drp");
+          }
+          function WDrop(){
+            document.getElementById("WDrop").classList.add("drp");
+          }
+          function CWDrop(){
+            document.getElementById("WDrop").classList.remove("drp");
+          }
+          function TDrop(){
+            document.getElementById("TDrop").classList.add("drp");
+          }
+          function CTDrop(){
+            document.getElementById("TDrop").classList.remove("drp");
+          }
+          function KDrop(){
+            document.getElementById("KDrop").classList.add("drp");
+          }
+          function CKDrop(){
+            document.getElementById("KDrop").classList.remove("drp");
+          }
 
+        $(document).ready(function() {
             $(".heart").click(function(){
                 if($(this).hasClass("liked")){
                 $(this).html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
@@ -213,53 +249,6 @@
     
       
     </div>
-    <!-- navbar end -->
-    
-    
-    
-    <script type="text/javascript">
-    // navbar script
-    function openSideNav(){
-      document.getElementById("toggleBar").classList.add("activee");
-      document.getElementById("open").classList.add("notActive");
-      document.getElementById("close").classList.add("activeee");
-    }
-    
-    function closeSideNav(){
-      document.getElementById("toggleBar").classList.remove("activee");
-      document.getElementById("close").classList.remove("activeee");
-      document.getElementById("open").classList.remove("notActive");
-    }
-    
-    function MDrop(){
-      document.getElementById("MDrop").classList.add("drp");
-    }
-    function CMDrop(){
-      document.getElementById("MDrop").classList.remove("drp");
-    }
-    function WDrop(){
-      document.getElementById("WDrop").classList.add("drp");
-    }
-    function CWDrop(){
-      document.getElementById("WDrop").classList.remove("drp");
-    }
-    function TDrop(){
-      document.getElementById("TDrop").classList.add("drp");
-    }
-    function CTDrop(){
-      document.getElementById("TDrop").classList.remove("drp");
-    }
-    function KDrop(){
-      document.getElementById("KDrop").classList.add("drp");
-    }
-    function CKDrop(){
-      document.getElementById("KDrop").classList.remove("drp");
-    }
-    
-    // navbar script end
-    
-    
-    </script>
 
     <div class = "Cart-Outer-Box">
         <div class="Cart-Container">
