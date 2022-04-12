@@ -12,6 +12,9 @@ body{
      padding: 0px;
      
 }
+.fa-remove:before, .fa-close:before, .fa-times:before {
+    content: "" !important;
+}
 
 ul{
   list-style: none;
@@ -34,6 +37,7 @@ h3{
   align-items: center;
   left: 0px;
   top: 0px;
+  box-sizing: border-box;
   right: 0px;
 }
 
@@ -275,6 +279,30 @@ input[type="search" i]{
 }
 .mySlides {
   display: none;
+}
+
+@media (min-width:300px) and (max-width:668px) {
+    .navLogo .ba{
+      display: block;
+    }
+    .navLogo .ca{
+      display: none;
+    }
+    .navLogo .ca.activeee{
+      display: block;
+    }
+    .navLogo .ba.notActive{
+      display: none;
+    }
+    .sideNav.activee{
+      transform: translateX(0);
+    }
+    .navigation .menu{
+      display: none;
+    }
+    .fa-remove:before, .fa-close:before, .fa-times:before {
+        content: "\f00d" !important;
+    }
 }
 
 /** Navbar End **/
