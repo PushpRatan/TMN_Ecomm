@@ -339,14 +339,15 @@ body{
 .Cart-Outer-Box{
     display: flex;
     padding-left: 10px;
-    
-
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .Cart-Container{
     padding-left: 20px;
     width: 70%;
-    height: 60%;
+    height: max-content;
     background-color: #ffffff;
     /* border-radius: 5px; */
     /* box-shadow: 0px 25px 40px #20232533; */
@@ -361,9 +362,10 @@ body{
 
 .Cart-Summary{
     width: 400px;
-    height: 60%;
+    height: max-content;
     margin-top: 130px;
-
+    
+    /* display: block; */
     background-color: #ffffff;
     border: 1px rgba(250,249,245,255);
     /* margin-top: 10px; */
@@ -377,11 +379,7 @@ body{
     border-color: black; */
 }
 
-.Cart-Outer-Box{
-    display: flex;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+
 
 .Item{
     display : flex;
@@ -411,7 +409,10 @@ body{
 .Item-Info{
     margin-left: 20px;
     width: 60%;
+
 }
+
+
 
 .Item-Name{
     margin-top: 5px;
@@ -751,18 +752,44 @@ input[type=number]::-webkit-inner-spin-button{
     .Cart-Container{
         width: 60%;
     }
+    .Cart-Container{
+        width: 100%;
+    }
+    .Summary-Container{
+        display:grid;
+        align-items: center;
+        height: max-content;
+        width: 100%;
+        justify-content: space-around;
+        right: 50%;
+    }
+    .Cart-Summary{
+        margin-right: 10px;
+        height: max-content;
+    }
 }
-
 
 @media screen and (max-width:1000px){
     .Cart-Outer-Box{
         display: inline;
+        width: 100%;
+        align-items: center;
+    }
+    .Cart-Summary{
+        margin-right: 10px;
+        height: max-content;
+    }
+    .Summary-Container{
+        display:grid;
+        align-items: center;
+        height: max-content;
+        justify-content: space-around;
+        width: 100%;
     }
     .Row{
         display: block;
         margin-top: 23px;
         margin-bottom: 23px;
-        
     }
 
     .Cart-Container{
@@ -773,6 +800,7 @@ input[type=number]::-webkit-inner-spin-button{
         margin-left: 20px;
         margin-top: 20px;
         height: max-content;
+        right: 50%;
     }
     .Flex{
         width: 380px;
