@@ -51,16 +51,19 @@ h3{
 }
 
 .searchbox{
-    width: 100%;
+    width: max-content;
+
 }
 
-.search{
-    width: 50%;
-    max-width: 548px;
+
+
+ .search{
+    display: inline-block;
     margin: auto;
     text-align: center;
     display: flex;
     align-items: center;
+
 }
 
 input[type="search" i]{
@@ -68,33 +71,35 @@ input[type="search" i]{
 }
 
 .searchbox input{
-    border: 2px solid #551a8b;
-    border-right: none;
-    padding: 8px;
-    width: 85%;
-    height: 44px;
-    font-size: 1.2em;
-    outline: none;
+    box-sizing: border-box;
+    border: 2px solid black;
+    width: 200px;
+    padding: 2px;
+    padding-left: 8px;
+    height: 30px;
+    font-size: 1em;
+    border-radius: 5px;
 }
 
-.search div{
-    width: 15%;
-    height: 44px;
-    font-size: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #551a8b;
-    background: #551a8b;
-    border-left: none;
-    color: white;
+/* .search label{
+    margin-left: -20px;
+} */
 
+.searchbox > .fa-search{
+    display: none;
 }
 
 @media screen and (max-width:668px) {
-    .search{
-        width: 90%;
+    .searchbox > .fa-search{
+        display: inline;
     }
+    .search{
+        display: none;
+    }
+}
+.min-search{
+    margin-right:-100px;
+    display: inline-block;
 }
 
 .navLogo{
@@ -115,6 +120,10 @@ input[type="search" i]{
 }
 .menu{
   display:flex;
+}
+.menu-sec{
+    width: max-content;
+    margin: auto;
 }
 
 .menu li a{
@@ -162,6 +171,11 @@ input[type="search" i]{
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 600;
+}
+
+.right-elements{
+    display: flex;
+    gap: .5em;
 }
 
 .right-elements a{

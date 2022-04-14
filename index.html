@@ -27,6 +27,29 @@
                 <a href="#" class="logo">LOGO</a>
             </div>
 
+
+
+            <div class="right-elements">
+                <a href="#" class="searchbox">
+                    <div class="search" id="searching">
+                        <input type="search" placeholder="search"/>
+                        <!-- <label for="search" class="fa fa-search"></label> -->
+                    </div>
+                    <i class="fa fa-search" id="search" onclick="ser()"></i>
+                </a>
+                <a href="#" class="wishlist">
+                    <i class="fa-solid fa-heart" id="wish" ></i>
+                </a>
+                <a href="#" class="cart">
+                    <i class="fa-solid fa-bag-shopping" id="cart"></i>
+                </a>
+                <a href="#" class="user">
+                    <i class="fa-solid fa-user" id="user"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="menu-sec">
             <ul class="menu">
                 <li class="dropdown">
                     <a href="#">MEN</a>
@@ -60,25 +83,8 @@
                     </div>
                 </li>
             </ul>
+        </div>
 
-            <div class="right-elements">
-                <a href="#" class="wishlist">
-                    <i class="fa-solid fa-heart"></i>
-                </a>
-                <a href="#" class="cart">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </a>
-                <a href="#" class="user">
-                    <i class="fa-solid fa-user"></i>
-                </a>
-            </div>
-        </div>
-        <div class="searchbox">
-            <div class="search">
-                <input type="search" placeholder="search" id="search" />
-                <div><label for="search" class="fa fa-search"></label></div>
-            </div>
-        </div>
     </nav>
 
     <div class="sideNav" id="toggleBar">
@@ -384,6 +390,14 @@
         }
         function CKDrop(){
           document.getElementById("KDrop").classList.remove("drp");
+        }
+
+        function ser(){
+            document.getElementById("searching").classList.add("min-search");
+            document.getElementById("search").style.display = "none";
+            document.getElementById("wish").style.display = "none";
+            document.getElementById("cart").style.display = "none";
+            document.getElementById("user").style.display = "none";
         }
 
         // navbar script end
