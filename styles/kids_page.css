@@ -1,0 +1,61 @@
+body{
+    overflow-x: hidden; ;
+}
+
+.container{
+    margin-left: 0;
+    margin-right: 0;
+    /* border: solid 10px black; */
+}
+
+.container_{
+    margin-left:0 ;
+    margin-right: 0;
+    margin-bottom:0;
+    margin-top: 10rem;
+    width: 100%;
+    /* border: solid 10px black; */
+    /* height:100px; */
+}
+.conatiner_2{
+    width: 100%; 
+        /* border: solid 10px black; */
+}
+.flex-box{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.card-container{
+    border: solid 1px black;
+}
+.card{
+    height: 50%;
+    /* width: 20%; */
+    /* width: 50%; */
+    /* border: solid 10px black; */
+}
+.card-item{
+    /* width: ; */
+    height: 50%;
+    /* border: solid 10px black; */
+}
+h3{
+    text-align: center;
+    font-style: bold;
+}
+.carousel{
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-inner{
+    width: 100%;    
+}
+
+@media only screen and (max-width: 800px){
+    .flex-box{
+        flex-direction: column;
+    }
+}
