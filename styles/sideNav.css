@@ -1,0 +1,924 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s linear;
+}
+.userContainer{
+    width: 66%;
+    /* height: auto; */
+    margin:7rem auto 0rem auto;
+    position: relative;
+    display: flex;
+    /* margin: 3rem 0; */
+    flex-direction: column;
+    justify-content: center;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.headerTitle{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.userName{
+    font-size: .91rem;
+}
+.mainnContainer{
+    width: 100%;
+    display: flex;
+    /* height: 100vh; */
+    flex-direction: row;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin: .4rem 0 0 0;
+    padding: .6rem 0;
+    /* background-color: black; */
+}
+.sideNav{
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 .2rem;
+    border-right: 1px solid rgba(0,0,0,0.11)
+}
+.navLink{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    border: 1px solid rgba(0,0,0,0.11);
+    padding: .6rem .3rem;
+    font-size: .91rem;
+    color: #282C3F;
+    cursor: pointer;
+}
+.navLink:hover{
+    background-color: black;
+    color: white;
+}
+.navContent{
+    width: 70%;
+    margin-left: 2rem;
+    padding: .6rem .2rem;
+   
+}
+.active{
+    background-color: black;
+    color: white;
+}
+/* Personal Details styles */
+.personalCard{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    display: none;
+}
+.personalCard.personalCardActive{
+    display: block;
+}
+.personalCard .pCardTitle{
+    margin: .2rem 0 1rem 0;
+    padding: 0 0 .3rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    word-spacing: .3rem;
+    letter-spacing: .1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.09);
+}
+.personalCardInner{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+}
+.pCardLeft{
+    width: 60%;
+    height: auto;
+    margin-right: auto;
+}
+.profileField{
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: .3rem;
+    margin-bottom: .99rem;
+    letter-spacing: .08rem;
+    /* background-color: black; */
+    color: black;
+}
+.profileItem{
+    /* align-items: flex-end; */
+    width: 55%;
+    margin-left: auto;
+}
+.profileBtn{
+    background-color: palevioletred;
+    width: 100%;
+    padding: .4rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 1.03rem;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+.profileBtn:hover{
+    background-color: purple;
+    color: white;
+}
+.pCardRight{
+    width: 36%;
+}
+.pCardRImg{
+    width: 150px;
+    height: 150px;
+    margin-left: 3rem;
+}
+.profilePic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* Wishlist Card styles  */
+.wishlistCard{
+    display: none;
+    width: 100%;
+}
+.wishlistCard.wishlistCardActive{
+    display: block;
+}
+.wishCardTitle{
+    font-size: 1.1rem;
+    word-spacing: .2rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    margin: .2rem 0 .8rem 0;
+}
+.wishCard{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 55%;
+    margin-right: auto;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: .3rem;
+    /* background-color: black; */
+}
+.wishCardTop{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.wishCardImg{
+    width: 29%;
+    height:140px;
+    /* margin-right: auto; */
+}
+.wishCardImgg{
+    width: 100%;
+    height: 100%;
+}
+.wishCardContent{
+    margin-left: .9rem;
+}
+.wishTitle{
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: .08rem;
+    word-spacing: .2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.wishTag{
+    font-size: .88rem;
+    word-spacing: .2rem;
+    letter-spacing: .07rem;
+}
+.price{
+    font-size: .93rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    padding: 0;
+    margin-top: .2rem;
+    margin-bottom: 0;
+}
+.rating{
+    padding:0;
+    margin-top: 0;
+    margin-bottom: .4rem;
+    font-size: .81rem;
+    font-weight: bold;
+    opacity: .9;
+    letter-spacing: .08rem;
+}
+.items{
+    font-size: .91rem;
+    margin-top: .4rem;
+    padding-top: .5rem;
+    word-spacing: .2rem;
+    letter-spacing: .1rem;
+}
+.wishButton{
+    background-color: darkorange;
+    color: white;
+    padding: .5rem 0;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: .5rem;
+    cursor: pointer;
+}
+.wishButton:hover{
+    background-color: hotpink;
+    color: white;
+}
+
+/* Your orders Styles  */
+.ordersCard{
+    display: none;
+    width: 59%;
+    margin-right: auto;
+    position: relative;
+}
+.ordersCard.ordersCardActive{
+    display: block
+}
+.ordersInner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.orderTitle{
+    font-size: 1.08rem;
+    padding: .8rem .2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+.orderTop{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem .3rem;
+}
+.date{
+    font-size: .88rem;
+    word-spacing: .1rem;
+}
+.total{
+    font-size: .84rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+}
+.orderId{
+    font-size: .84rem;
+
+}
+
+
+/* saved cards styles */
+.savedCards{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    display: none;
+}
+.savedCards.savedCardActive{
+    display: block;
+}
+.savedCTitle{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: chocolate;
+}
+.savedCButton{
+    background-color: white;
+    border: 2px solid rgba(0,0,0,0.09);
+    padding: .3rem .2rem;
+    text-align: center;
+    width: 20%;
+    margin-right: auto;
+    margin: .2rem 0 1.6rem 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+.savedCButton:hover{
+    background-color: black;
+    color: white;
+}
+.savedDetails{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    border: 1px solid rgba(0,0,0,0.22);
+    padding: .4rem 0 0 0 ;
+}
+.savedCardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 .4rem;
+}
+.sCNae{
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    opacity: 0.9;
+}
+.scType{
+    font-size: .98rem;
+    color: black;
+    opacity: 0.8;
+}
+.scNumber{
+    padding: 0 .4rem;
+    margin: .5rem 0;
+    font-size: .91em;
+    font-weight: bold;
+    opacity: .81;
+}
+.scUserDetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .4rem;
+}
+.scUserName{
+    font-size: .94rem;
+    color:#282C3F;
+    font-weight: normal;
+}
+.val{
+    font-size: .95rem;
+}
+.va{
+    font-size: .96rem;
+}
+.cardButtons{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    width: 49%;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: .4rem ;
+    border-radius: 1px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn1:hover{
+    background-color: black;
+    color: white;
+}
+.btn2:hover{
+    background-color: orangered;
+    color: white;
+}
+/* card modal styles */
+.bttn1{
+    background-color:forestgreen;
+    color: white;
+    width: 60%;
+}
+.bttn2{
+    background-color: red;
+    color: white;
+    width: 38%;
+}
+
+
+
+/* Address styles */
+.savedCardss{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    display: none;
+}
+.savedCardss.savedsCardActive{
+    display: block;
+}
+.addresDe{
+    padding: .5rem 0 0 0;
+    margin-bottom: .8rem;
+}
+.addressTitle{
+    font-size: .91rem;
+    font-weight: bold;
+    padding: .1rem .4rem;
+    letter-spacing: .05rem;
+    word-spacing: .2rem;
+}
+.addressCaption{
+    font-size: .83rem;
+    padding: .1rem .4rem .5rem .4rem;
+    letter-spacing: .1rem;
+}
+.addressDetails{
+    padding: .1rem .4rem;
+    font-size: .90rem;
+    word-spacing: .3rem;
+    letter-spacing: .1rem;
+}
+.statePin{
+    padding: .2rem .4rem .5rem .4rem;
+    font-size: .89rem;
+    word-spacing: .3rem;
+    letter-spacing: .1rem;
+} 
+
+
+
+/* Credit cards section styles */
+.creditCards{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    margin-right: auto;
+    padding: .8rem .4rem;
+    display: none;
+}
+.creditCards.creditCardActive{
+    display: block;
+}
+.creditCard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,0.09);
+    box-shadow: 0px 2px rgba(0,0,0,0.08);
+}
+.cardTitle{
+    font-size: 1.09rem;
+    font-weight: bold;
+    opacity: 0.8;
+
+}
+.price{
+    font-size: .88rem;
+    padding: .3rem 0;
+    font-weight: bold;
+}
+.descp{
+    font-size: 1.08rem;
+    font-weight: normal;
+    padding: .5rem 0 .2rem 0;
+}
+.code{
+    font-size: .93rem;
+    font-weight: bold;
+    color: green;
+    padding-top: 0;
+}
+.creditOffers{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: .8rem;
+    width: 100%;
+}
+.creditOfferContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding: .8rem .3rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0px 2px rgba(0,0,0,0.08);
+}
+.offerPrice{
+    font-size: .93rem;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem .8rem;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.offPrice{
+    font-size: .88rem;
+    font-weight: bold;
+    color:green;
+    
+}
+.offersOptions{
+    display: flex;
+    flex-direction: column;
+}
+.offerTitle{
+    font-size: 1rem;
+}
+.offerExpire{
+    font-size: .98rem;
+}
+.offerDesc{
+    font-size: .88rem;
+    font-weight: normal;
+}
+
+
+
+
+/* Address Card Modal Styles */
+.addressCard, .cardModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    /* background-color: white; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.addressCard.addressCardActive{
+    display: block;
+}
+.addressCardInner, .cardInner{
+    width: 25%;
+    /* margin: auto; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: .4rem .6rem .2rem .6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* justify-content: flex-end; */
+}
+.addressCardInner{
+    background-color: whitesmoke;
+    padding: 0;
+}
+.addressTitle{
+    background-color: white;
+    padding: .9rem .6rem;
+}
+.labe{
+    opacity: .7;
+    font-size: .83rem;
+    margin-bottom: .2rem;
+}
+.formCardContainerr{
+    display: flex;
+    flex-direction: column;
+    margin: .9rem 0rem;
+    width: 100%;
+    height: 46vh;
+    overflow-y: scroll;
+    background-color: white;
+    padding: .9rem .6rem;
+}
+.addresBtn{
+    margin-top: .3rem;
+}
+
+
+/* Saved Cards Modal Styles */
+.cardModal.cardActive{
+    display: block;
+}
+
+.cardTitlee{
+    font-size: .99rem;
+    font-weight: bold;
+    margin: .2rem 0rem;
+}
+.formCardContainer{
+    display: flex;
+    flex-direction: column;
+    margin: .9rem 0rem;
+    width: 100%;
+    /* padding: 0 1rem; */
+}
+.formItems{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .9rem;
+}
+.formLabel{
+    font-size: .88rem;
+
+}
+.formInput{
+    width: 100%;
+    height: 5vh;
+    position: relative;
+}
+.formfield{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0 .5rem;
+    
+
+}
+.formfield:focus{
+    border: 1px solid rgba(0,0,0,1);
+}
+/** footer **/
+.footer{
+    width: 100%;
+    /* background-color: #1c1c36; */
+    background-color: #202020;
+    padding: 70px 0;
+    height: max-content;
+    font-family: "poppins", sans-serif;
+    font-size: 1em;
+  
+  }
+  @media screen and (min-width:1201px) {
+      .footer{
+          padding-bottom: 30px;
+      }
+  }
+  
+  .rows {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .containers{
+      max-width: 1170px;
+      margin: auto;
+      padding: 20px;
+  }
+  
+  .footer-col {
+    width: 20%;
+    height: max-content;
+  }
+  
+  .footer-col div img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .footer-col h4 {
+    font-size: 20px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .footer-col h4 span {
+    padding-bottom: 3px;
+    /* border-bottom: 3px solid #4a47a3; */
+    border-bottom: 3px solid #ffffff;
+  
+  }
+  
+  .footer-col .company{
+    display: flex;
+  
+    gap: 5rem;
+  }
+  
+  .footer-col .company ul {
+    padding: 0 12px;
+    margin: 0;
+  }
+  
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .left-align {
+    text-align: left !important;
+    padding-left: 10px;
+  }
+  
+  .footer-col .company ul li , .footer-col .company ul li a {
+    text-align: left;
+  }
+  
+  .footer-col ul li span,
+  .footer-col ul li a,
+  .footer-col ul li {
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    /* color: #dde5ecf3; */
+    display: block;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .footer-col ul li a:hover{
+      font-weight: bold;
+  }
+  
+  @media screen and (min-width:1201px){
+      .footer-col ul li span,
+      .footer-col ul li a,
+      .footer-col ul li{
+          text-align: left;
+      }
+  }
+  
+  .footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    /* background-color: #4a47a3; */
+    background-color: #464646;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+  }
+  
+  .footer-col .social-links a:hover{
+      background-color: rgb(39, 39, 39);
+  }
+  
+  .contact-us{
+    padding:0 10px;
+    margin:0;
+  }
+  
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  .email a {
+    text-align: left !important;
+  }
+  
+  .news ul{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .social-list{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  img, svg{
+    vertical-align:  middle;
+  }
+  
+  .botLogo{
+      margin: auto;
+      margin-top: 20px;
+  }
+  
+  .botLogo a{
+      color: white;
+  }
+  
+  .copyrights{
+    text-align: center !important;
+    margin-top: 20px !important;
+    width: 100% !important;
+  }
+  
+  @media screen and (min-width:1201px) {
+      .copyrights{
+        margin-top: 40px !important;
+      }
+  }
+  
+  
+  .footer-col .social-links {
+    text-align: center;
+  }
+  
+  .footer-image{
+    text-align: center;
+  }
+  
+  .footer-image img{
+    text-align: center !important;
+    height:auto !important;
+    margin-top:15px !important;
+  }
+  
+  .copyrights p{
+    color:aliceblue !important;
+    font-size:12px !important;
+  }
+  
+  
+  
+  @media screen and (max-width: 1200px) {
+      .footer-col {
+        width: 30%;
+        margin-bottom: 30px;
+        padding-left: 10px;
+      }
+  
+      .left-align{
+          text-align: center !important;
+          padding: 0;
+      }
+  
+      .email a{
+          text-align: center !important;
+      }
+  
+      .footer-col .company ul li , .footer-col .company ul li a {
+        text-align: center;
+      }
+  
+      .footer-col .company{
+        display: flex;
+        justify-content: center;
+      }
+      .rows {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5em;
+      }
+  }
+  
+  @media screen and (min-width: 767px) and (max-width: 1130px) {
+    .email {
+      overflow-wrap: break-word;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .footer-col .company ul {
+      padding: 0 10px;
+      margin: 0;
+      width: 100%;
+    }
+    .rows {
+      gap: 2em;
+    }
+    .footer-col .company ul li,
+    .footer-col .company ul li a,
+    .footer-col .company h4,
+    .footer-col ul li,
+    .footer-col ul li a,
+    .footer-col h4,
+    .footer-col .left-align {
+      text-align: center !important;
+    }
+    .footer-col div img {
+      width: 130px;
+    }
+  
+    .footer-col {
+      width: 100%;
+    }
+    .section {
+      width: 100%;
+    }
+    .one,
+    .two,
+    .three {
+      position: relative;
+      text-align: left;
+      margin-top: 50px;
+      margin: -20px;
+      height: 220vh;
+      width: 100%;
+    }
+    .column-right {
+      display: none;
+    }
+    .text p {
+      line-height: 20px;
+    }
+    .column-left p {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 500px) {
+    .footer-col .company ul {
+      padding: 0 10px;
+      margin: 0;
+    }
+  }
