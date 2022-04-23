@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="./styles/sideNav.css" />
+</head>
+<body onload="addFirst()">
+   
+    <main class="userContainer" style="padding-bottom: 7.3rem;">
+        <div class="header">
+            <h6 class="headerTitle">Account</h6>
+            <p class="userName">Chirs Hemsworth</p>
+        </div>
+
+        <div class="mainnContainer">
+            <div class="sideNav">
+                <p class="navLink" onclick="displayy(1)" id="on">Personal Details</p>
+                <p class="navLink" onclick="displayy(2)" id="tw">Wishlist</p>
+                <p class="navLink" onclick="displayy(3)" id="th">Your Orders</p>
+                <p class="navLink" onclick="displayy(4)" id="fu">Saved Cards</p>
+                <p class="navLink" onclick="displayy(5)" id="fi">Addresses</p>
+                <p class="navLink" onclick="displayy(6)" id="si">Coupons & Credits</p>
+                <p class="navLink" >Contact Us</p>
+                <p class="navLink">Terms and Policies</p>
+            </div>
+            <div class="navContent">
+                <!-- Personal Details  -->
+                <div class="personalCard" id="one">
+                    <h5 class="pCardTitle">Profile Details</h5>
+                    <div class="personalCardInner">
+                        <div class="pCardLeft">
+                            <p class="profileField">Full Name <span class="profileItem">Chris Hemsworth</span></p>
+                            <p class="profileField">Mobile Number <span class="profileItem">9032536576</span></p>
+                            <p class="profileField">Email ID <span class="profileItem">chirshemsworth1@gmail.com</span></p>
+                            <p class="profileField">Gender <span class="profileItem">Male</span></p>
+                            <p class="profileField">Date of Birth <span class="profileItem">23-08-1899</span></p>
+                            <p class="profileField">Location <span class="profileItem">Australia</span></p>
+                            <p class="profileField">Hint Name <span class="profileItem">God of Thunder</span></p>
+                            <button type="button" class="profileBtn">EDIT</button>
+                        </div>
+                        <div class="pCardRight">
+                            <div class="pCardRImg">
+                                <img class="profilePic" src="/images/user.jpg" alt="user" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wishlist Section  -->
+                <div class="wishlistCard" id="two">
+                    <h5 class="wishCardTitle">Your Wishlist</h5>
+                    <div class="wishCard">
+                        <div class="wishCardTop">
+                            <div class="wishCardImg">
+                                
+                                <img class="wishCardImgg" src="/images/sketchers.jpeg" alt="productImg" />
+                            </div>
+                            <div class="wishCardContent">
+                                <h6 class="wishTitle">Nike</h6>
+                                <p class="wishTag">A Sports  Shoes for Men</p>
+                                <h6 class="price"> ₹2,599</h6>
+                                <h6 class="rating">3.8 * rating</h6>
+                                <p class="items">Size M <span class="items">items(1)</span></p>
+                            </div>
+                        </div>
+                        <button type="button" class="wishButton">Order Now</button>
+                    </div>
+                    
+                </div>
+
+                <!-- Your orders Section -->
+                <div class="ordersCard" id="three">
+                    <h5 class="orderTitle">Your Orders</h5>
+                    <div class="ordersInner">
+                        <div class="orderTop">
+                            <p class="date">20-04-2022</p>
+                            <p ₹2,999 class="total">₹2,999 </p>
+                            <p class="orderId">Order Id - O4938030498</p>
+                        </div>
+                        <div class="wishCard" style="width: 100%;">
+                            <div class="wishCardTop">
+                                <div class="wishCardImg">
+                                    
+                                    <img class="wishCardImgg" src="/images/sketchers.jpeg" alt="productImg" />
+                                </div>
+                                <div class="wishCardContent">
+                                    <h6 class="wishTitle">Nike</h6>
+                                    <p class="wishTag">A Sports  Shoes for Men</p>
+                                    <h6 class="rating">3.8 * rating</h6>
+                                    <p class="items">Size M <span class="items">items(1)</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saved Cards Section -->
+                <div class="savedCards" id="four">
+                    <h6 class="savedCTitle">Your Saved Cards</h6>
+                    <button type="button" class="savedCButton" onclick="openCardModal()">Add Card</button>
+                    <div class="savedDetails">
+                        <div class="savedCardHeader">
+                            <h6 class="sCNae">SBI Bank</h6>
+                            <p class="scType">Debit Card</p>
+                        </div>
+                        <p class="scNumber">5106 38XX XXXX 4163</p>
+                        <div class="scUserDetails">
+                            <h6 class="scUserName">ANANYA SINGH</h6>
+                            <div class="cardValidity">
+                                <p class="val">Validity</p>
+                                <p class="va">xx/xx</p>
+                            </div>
+                        </div>
+                        <div class="cardButtons">
+                            <button type="button" class="btn btn1">EDIT</button>
+                            <button type="button" class="btn btn2">REMOVE</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address Section -->
+                <div class="savedCardss" id="five">
+                    <h6 class="savedCTitle">Your Addresses</h6>
+                    <button type="button" class="savedCButton" onclick="openAddressModal()">Add <Address></Address></button>
+                    <div class="savedDetails addresDe">
+                        <h6 class="addressTitle">Ananya Singh</h6>
+                        <p class="addressCaption">Office</p>
+                        <p class="addressDetails">182 M|6k|2 Edursnd Streat</p>
+                        <p class="statePin">Noida - <span class="pinCode">210210</span></p>
+                        <div class="cardButtons">
+                            <button type="button" class="btn btn1">EDIT</button>
+                            <button type="button" class="btn btn2">REMOVE</button>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <!-- Credit Cards Section -->
+                <div class="creditCards" id="six">
+                    <div class="creditCard">
+                        <h6 class="cardTitle">Your Credit!</h6>
+                        <p class="price">₹200.00</p>
+                        <h6 class="descp">Have a gift card ?</h6>
+                        <p class="code">GIFT CARD</p>
+                    </div>
+                    <div class="creditOffers">
+                        <div class="creditOfferContainer">
+                            <h5 class="offerPrice">10% <span class="offPrice">off</span></h5>
+                            <div class="offersOptions">
+                                <p class="offerTitle">Minimum purchase offer 2000</p>
+                                <h6 class="offerExpire">Expire : <span class="offerDesc">April-30-2022</span></h6>
+                            </div>
+                        </div>
+                        <div class="creditOfferContainer">
+                            <h5 class="offerPrice">Rs.200 <span class="offPrice">off</span></h5>
+                            <div class="offersOptions">
+                                <p class="offerTitle"> On Minimum purchase of Rs 0</p>
+                                <h6 class="offerExpire">Code :<span class="offerDesc">56106</span></h6>
+                                <h6 class="offerExpire">Expire : <span class="offerDesc">April-30-2022</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Address Card Modal  -->
+    <div class="addressCard" id="addresModalCard">
+        <div class="addressCardInner">
+            <h6 class="addressTitle">ADD NEW ADDRESS</h6>
+            <form class="formCardContainerr">
+                <div class="formItems">
+                    <label class="formLabel labe">Name *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="num" name="name" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel labe">Mobile *</label>
+                    <div class="formInput">
+                        <input type="tel" class="formfield" id="nam" name="mobile" required />
+                    </div>
+                </div>
+                <div style="display: flex; width: 100%;">
+                    <div class="formItems" style="width: 48%;margin-right: auto;">
+                        <label class="formLabel labe">Pincode *</label>
+                        <div class="formInput">
+                            <input type="text" class="formfield" id="pin" name="pin code" required />
+                        </div>
+                    </div>
+                    <div class="formItems" style="width: 48%;">
+                        <label class="formLabel labe">State *</label>
+                        <div class="formInput">
+                            <input type="text" class="formfield" id="state" name="state" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel labe">Address (House No, Building, Street, Area) *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="addr" name="address" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel labe">Locality/ Town  *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="town" name="Locality/town" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel labe">City/ District  *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="city" name="city/District" required />
+                    </div>
+                </div>
+            </form>
+            <div class="cardButtons addresBtn">
+                <button type="button" class="btn bttn1 btn1" style="padding: .76rem 0rem" onclick="closeAddressModal()">SUBMIT</button>
+                <button type="button" class="btn bttn2 btn2" style="padding: .76rem 0rem" onclick="closeAddressModal()">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save Card Modal -->
+    <div class="cardModal" id="cardModalContainer">
+        <div class="cardInner">
+            <h6 class="cardTitlee">Add New Credit/Debit Card</h6>
+            <form class="formCardContainer">
+                <div class="formItems">
+                    <label class="formLabel">Card Number *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="num" name="cardNumber" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel">Card Name *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="nam" name="cardName" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel">Expire Month & Year *</label>
+                    <div class="formInput">
+                        <input type="month" class="formfield" id="mon" name="month" value="Expiry Month & Year" required />
+                    </div>
+                </div>
+            </form>
+            <div class="cardButtons ">
+                <button type="button" class="btn bttn1 btn1" onclick="closeCardModal()">SUBMIT</button>
+                <button type="button" class="btn bttn2 btn2" onclick="closeCardModal()">CLOSE</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" id="footer" style="clear: left;">
+        <div class="containers">
+            <div class="rows">
+                <div class="footer-col">
+                    <h4 class="left-align"><span>SHOP</span></h4>
+                    <div class="company">
+                        <ul>
+                            <li><a href="#" id="footer-about">Ladies</a></li>
+                            <li><a href="#" id="footer-service">Men</a></li>
+                            <li><a href="#" id="footer-policy">Baby</a></li>
+                            <li><a href="#" id="footer-terms">Kids</a></li>
+                            <li><a href="#" id="footer-terms">Ecomm Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="footer-col">
+                    <h4 class="left-align"><span>Corporate Info</span></h4>
+                    <div class="company">
+                        <ul>
+                            <li><a href="#" id="footer-test">Career at TMN</a></li>
+                            <li><a href="#" id="footer-career">About TMN group</a></li>
+                            <li><a href="#" id="footer-blogs">Sustainability</a></li>
+                            <li><a href="#" id="footer-blogs">Press</a></li>
+                            <li><a href="#" id="footer-blogs">Investor relations</a></li>
+                            <li><a href="#" id="footer-blogs">Corporate governance</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="footer-col">
+                    <h4 class="left-align"><span>Get help</span></h4>
+                    <ul class="contact-us">
+                        <li class="email breakWord"><a href="#">Customer service</a></li>
+                        <li class="email breakWord"><a href="#">My TMN</a></li>
+                        <li class="email breakWord"><a href="#">Find a store</a></li>
+                        <li class="email breakWord"><a href="#">Legal & Privacy</a></li>
+                        <li class="email breakWord"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-col news">
+                    <h4 class="left-align"><span>newsletter</span></h4>
+                    <ul>
+                        <li style="line-height: 1.3"><span>Sign up now and be the first to know about exclusive offers, latest fashion news & style tips!</span></li>
+                        <li><br><a target="_blank" rel="nofollow" href="#"><b>Sign Up</b> <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+    
+                    </ul>
+                </div>
+                <div class="footer-col social-list">
+                    <h4><span>follow us</span></h4>
+                    <div class="social-links">
+                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-instagram"></i></a>
+                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                    <div class="botLogo"><a href="#" class="logo">LOGO</a></div>
+                </div>
+            </div>
+            <div class="copyrights">
+                <p>© 2022 Techmihirnaik. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/dashboard.js" ></script>
+    <script type="text/javascript">
+        // navbar script
+        function openSideNav(){
+          document.getElementById("toggleBar").classList.add("activee");
+          document.getElementById("open").classList.add("notActive");
+          document.getElementById("close").classList.add("activeee");
+        }
+        
+        function closeSideNav(){
+          document.getElementById("toggleBar").classList.remove("activee");
+          document.getElementById("close").classList.remove("activeee");
+          document.getElementById("open").classList.remove("notActive");
+        }
+        
+        function MDrop(){
+          document.getElementById("MDrop").classList.add("drp");
+        }
+        function CMDrop(){
+          document.getElementById("MDrop").classList.remove("drp");
+        }
+        function WDrop(){
+          document.getElementById("WDrop").classList.add("drp");
+        }
+        function CWDrop(){
+          document.getElementById("WDrop").classList.remove("drp");
+        }
+        function TDrop(){
+          document.getElementById("TDrop").classList.add("drp");
+        }
+        function CTDrop(){
+          document.getElementById("TDrop").classList.remove("drp");
+        }
+        function KDrop(){
+          document.getElementById("KDrop").classList.add("drp");
+        }
+        function CKDrop(){
+          document.getElementById("KDrop").classList.remove("drp");
+        }
+        
+        document.querySelector("#searchbox").addEventListener("blur", function(){
+            document.getElementById("searching").classList.remove("min-search");
+            document.getElementById("search").style.display = "inline-block";
+            document.getElementById("wish").style.display = "inline-block";
+            document.getElementById("cart").style.display = "inline-block";
+            document.getElementById("user").style.display = "inline-block";
+        });
+        
+        document.querySelector("#searchbox").addEventListener("click",function(){
+            document.getElementById("searching").classList.add("min-search");
+            document.getElementById("search").style.display = "none";
+            document.getElementById("wish").style.display = "none";
+            document.getElementById("cart").style.display = "none";
+            document.getElementById("user").style.display = "none";
+        });
+        
+        
+        
+        
+        document.querySelector("#user").addEventListener("click", function(){
+            if (document.getElementById("user-drop").classList.contains("dropdis")) {
+                window.onclick=document.getElementById("user-drop").classList.remove("dropdis");
+            }
+            else{
+            document.getElementById("user-drop").classList.add("dropdis");
+            }
+        });
+        
+        window.onclick = function(event) {
+        
+        
+           if (event.target.id !=='user') {
+        
+               var dropdowns =
+               document.getElementById("user-drop");
+        
+                   if (dropdowns.classList.contains('dropdis')) {
+                       dropdowns.classList.remove('dropdis');
+                   }
+                   console.log(event.target.id)
+               }
+        
+           }
+        
+        
+        
+        
+        
+        // navbar script end
+        </script>
+        </body>
+</html>
