@@ -533,7 +533,7 @@
 
 
 /* Address Card Modal Styles */
-.addressCard, .cardModal{
+.addressCard, .addressCardddd, .cardModal, .cardModall{
     position: fixed;
     top: 0;
     left: 0;
@@ -549,6 +549,9 @@
     display: none;
 }
 .addressCard.addressCardActive{
+    display: block;
+}
+.addressCardddd.addressCardActiveee{
     display: block;
 }
 .addressCardInner, .cardInner{
@@ -595,6 +598,9 @@
 
 /* Saved Cards Modal Styles */
 .cardModal.cardActive{
+    display: block;
+}
+.cardModall.cardActivve{
     display: block;
 }
 
