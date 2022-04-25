@@ -32,18 +32,18 @@
                     <h5 class="pCardTitle">Profile Details</h5>
                     <div class="personalCardInner">
                         <div class="pCardLeft">
-                            <p class="profileField">Full Name <span class="profileItem">Chris Hemsworth</span></p>
-                            <p class="profileField">Mobile Number <span class="profileItem">9032536576</span></p>
-                            <p class="profileField">Email ID <span class="profileItem">chirshemsworth1@gmail.com</span></p>
-                            <p class="profileField">Gender <span class="profileItem">Male</span></p>
-                            <p class="profileField">Date of Birth <span class="profileItem">23-08-1899</span></p>
-                            <p class="profileField">Location <span class="profileItem">Australia</span></p>
-                            <p class="profileField">Hint Name <span class="profileItem">God of Thunder</span></p>
-                            <button type="button" class="profileBtn">EDIT</button>
+                            <p class="profileField">Full Name <span class="profileItem" id="pName">Chris Hemsworth</span></p>
+                            <p class="profileField">Mobile Number <span class="profileItem" id="pPhone">9032536576</span></p>
+                            <p class="profileField">Email ID <span class="profileItem" id="pEmail">chirshemsworth1@gmail.com</span></p>
+                            <p class="profileField">Gender <span class="profileItem" id="pGender">Male</span></p>
+                            <p class="profileField">Date of Birth <span class="profileItem" id="pDob">23-08-1899</span></p>
+                            <p class="profileField">Location <span class="profileItem" id="pLocation">Australia</span></p>
+                            <p class="profileField">Hint Name <span class="profileItem" id="pHint">God of Thunder</span></p>
+                            <button type="button" class="profileBtn" onclick="openPersonalModal()">EDIT</button>
                         </div>
                         <div class="pCardRight">
                             <div class="pCardRImg">
-                                <img class="profilePic" src="/images/user.jpg" alt="user" />
+                                <img class="profilePic" src="./images/user.jpg" alt="user" />
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                         <div class="wishCardTop">
                             <div class="wishCardImg">
                                 
-                                <img class="wishCardImgg" src="/images/sketchers.jpeg" alt="productImg" />
+                                <img class="wishCardImgg" src="./images/sketchers.jpeg" alt="productImg" />
                             </div>
                             <div class="wishCardContent">
                                 <h6 class="wishTitle">Nike</h6>
@@ -84,7 +84,7 @@
                             <div class="wishCardTop">
                                 <div class="wishCardImg">
                                     
-                                    <img class="wishCardImgg" src="/images/sketchers.jpeg" alt="productImg" />
+                                    <img class="wishCardImgg" src="./images/sketchers.jpeg" alt="productImg" />
                                 </div>
                                 <div class="wishCardContent">
                                     <h6 class="wishTitle">Nike</h6>
@@ -101,21 +101,21 @@
                 <div class="savedCards" id="four">
                     <h6 class="savedCTitle">Your Saved Cards</h6>
                     <button type="button" class="savedCButton" onclick="openCardModal()">Add Card</button>
-                    <div class="savedDetails">
+                    <div class="savedDetails" id="game" style="margin-top: .8rem;">
                         <div class="savedCardHeader">
-                            <h6 class="sCNae">SBI Bank</h6>
-                            <p class="scType">Debit Card</p>
+                            <h6 class="sCNae" id="bNme">SBI Bank</h6>
+                            <p class="scType" id="bcNme">Debit Card</p>
                         </div>
-                        <p class="scNumber">5106 38XX XXXX 4163</p>
+                        <p class="scNumber" id="bNm">5106 38XX XXXX 4163</p>
                         <div class="scUserDetails">
-                            <h6 class="scUserName">ANANYA SINGH</h6>
+                            <h6 class="scUserName" id="bcHnum">ANANYA SINGH</h6>
                             <div class="cardValidity">
                                 <p class="val">Validity</p>
-                                <p class="va">xx/xx</p>
+                                <p class="va" id="bmn">07/39</p>
                             </div>
                         </div>
                         <div class="cardButtons">
-                            <button type="button" class="btn btn1">EDIT</button>
+                            <button type="button" class="btn btn1" onclick="openCarddModal()">EDIT</button>
                             <button type="button" class="btn btn2">REMOVE</button>
                         </div>
                     </div>
@@ -123,20 +123,24 @@
 
                 <!-- Address Section -->
                 <div class="savedCardss" id="five">
-                    <h6 class="savedCTitle">Your Addresses</h6>
-                    <button type="button" class="savedCButton" onclick="openAddressModal()">Add <Address></Address></button>
-                    <div class="savedDetails addresDe">
-                        <h6 class="addressTitle">Ananya Singh</h6>
-                        <p class="addressCaption">Office</p>
-                        <p class="addressDetails">182 M|6k|2 Edursnd Streat</p>
-                        <p class="statePin">Noida - <span class="pinCode">210210</span></p>
-                        <div class="cardButtons">
-                            <button type="button" class="btn btn1">EDIT</button>
-                            <button type="button" class="btn btn2">REMOVE</button>
-                        </div>
-                    </div>
-
-                    
+                        <h6 class="savedCTitle">Your Addresses</h6>
+                        <button type="button" class="savedCButton" onclick="openAddressModal()">Add <Address></Address></button>
+                        <div class="savedDetails addresDe" id="adddd">
+                            <div style="display: flex;justify-content: space-between; align-items: center; padding: 0 .4rem 0 0;">
+                                <h6 class="addressTitle" id="adName">Ananya Singh</h6>
+                                <p style="font-size: .79rem" id="adMob">903040593</p>
+                            </div>
+                            <p class="addressCaption" id="adOffice">Office</p>
+                            <p class="addressDetails" id="adAddres">182 M|6k|2 Edursnd Streat</p>
+                            <div style="display: flex;justify-content: space-between;align-items: center;">
+                                <p class="statePin" id="adState">Noida - <span id="adPin" class="pinCode">210210</span></p>
+                                <p style="font-size: .88rem; padding-right: .5rem;" id="cc">Uttar Pradesh</p>
+                            </div>
+                            <div class="cardButtons">
+                                <button type="button" class="btn btn1" onclick="openAddressModal1()">EDIT</button>
+                                <button type="button" class="btn btn2">REMOVE</button>
+                            </div>
+                        </div>                    
                 </div>
 
                 <!-- Credit Cards Section -->
@@ -171,7 +175,67 @@
 
     </main>
 
-    <!-- Address Card Modal  -->
+    <div class="addressCard" id="addresModalCardd">
+        <div class="addressCardInner">
+            <h6 class="addressTitle">UPDATE PROFILE DETAILS</h6>
+            <form class="formCardContainerr">
+                <div class="formItems">
+                    <label class="formLabel labe">Full Name *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="numm" name="fullName" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel labe">Mobile *</label>
+                    <div class="formInput">
+                        <input type="tel" class="formfield" id="namm" name="mobile" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    
+                    <div class="formItems" >
+                        <label class="formLabel labe">Emaild Id *</label>
+                        <div class="formInput">
+                            <input type="text" class="formfield" id="statee" name="emailId" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="formItems">
+                    
+                    <div class="formItems" >
+                        <label class="formLabel labe">Gender *</label>
+                        <div class="formInput">
+                            <input type="text" class="formfield" id="gende" name="gender" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel labe">Date Of Birth *</label>
+                    <div class="formInput">
+                        <input type="date" class="formfield" id="dooob" name="dateOfBirth" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel labe">Location  *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="locan" name="Locality" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel labe">Hint Name  *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="hintn" name="hintName" required />
+                    </div>
+                </div>
+            </form>
+            <div class="cardButtons addresBtn">
+                <button type="button" class="btn bttn1 btn1" style="padding: .76rem 0rem" onclick="closePersonalModal()">SUBMIT</button>
+                <button type="button" class="btn bttn2 btn2" style="padding: .76rem 0rem" onclick="closePersonalModal()">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Address Card Modal One -->
     <div class="addressCard" id="addresModalCard">
         <div class="addressCardInner">
             <h6 class="addressTitle">ADD NEW ADDRESS</h6>
@@ -198,7 +262,7 @@
                     <div class="formItems" style="width: 48%;">
                         <label class="formLabel labe">State *</label>
                         <div class="formInput">
-                            <input type="text" class="formfield" id="state" name="state" required />
+                            <input type="text" class="formfield" id="stte" name="state" required />
                         </div>
                     </div>
                 </div>
@@ -209,21 +273,65 @@
                     </div>
                 </div>
                 <div class="formItems">
-                    <label class="formLabel labe">Locality/ Town  *</label>
-                    <div class="formInput">
-                        <input type="text" class="formfield" id="town" name="Locality/town" required />
-                    </div>
-                </div>
-                <div class="formItems">
                     <label class="formLabel labe">City/ District  *</label>
                     <div class="formInput">
-                        <input type="text" class="formfield" id="city" name="city/District" required />
+                        <input type="text" class="formfield" id="cit" name="city/District" required />
                     </div>
                 </div>
             </form>
             <div class="cardButtons addresBtn">
                 <button type="button" class="btn bttn1 btn1" style="padding: .76rem 0rem" onclick="closeAddressModal()">SUBMIT</button>
-                <button type="button" class="btn bttn2 btn2" style="padding: .76rem 0rem" onclick="closeAddressModal()">CLOSE</button>
+                <button type="button" class="btn bttn2 btn2" style="padding: .76rem 0rem" onclick="closeAddressModal3()">CLOSE</button>
+            </div>
+        </div>
+    </div>
+    <!-- Address Card Modal Two  -->
+    <div class="addressCardddd" id="addresModalCarddd">
+        <div class="addressCardInner">
+            <h6 class="addressTitle">ADD NEW ADDRESS</h6>
+            <form class="formCardContainerr">
+                <div class="formItems">
+                    <label class="formLabel labe">Name *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="numo" name="name" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel labe">Mobile *</label>
+                    <div class="formInput">
+                        <input type="tel" class="formfield" id="namo" name="mobile" required />
+                    </div>
+                </div>
+                <div style="display: flex; width: 100%;">
+                    <div class="formItems" style="width: 48%;margin-right: auto;">
+                        <label class="formLabel labe">Pincode *</label>
+                        <div class="formInput">
+                            <input type="text" class="formfield" id="pino" name="pin code" required />
+                        </div>
+                    </div>
+                    <div class="formItems" style="width: 48%;">
+                        <label class="formLabel labe">State *</label>
+                        <div class="formInput">
+                            <input type="text" class="formfield" id="stteo" name="state" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel labe">Address (House No, Building, Street, Area) *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="addro" name="address" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel labe">City/ District  *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="cityo" name="city/District" required />
+                    </div>
+                </div>
+            </form>
+            <div class="cardButtons addresBtn">
+                <button type="button" class="btn bttn1 btn1" style="padding: .76rem 0rem" onclick="updateAddresModal1()">SUBMIT</button>
+                <button type="button" class="btn bttn2 btn2" style="padding: .76rem 0rem" onclick="closeAddressModal2()">CLOSE</button>
             </div>
         </div>
     </div>
@@ -234,29 +342,84 @@
             <h6 class="cardTitlee">Add New Credit/Debit Card</h6>
             <form class="formCardContainer">
                 <div class="formItems">
+                    <label class="formLabel">Bank Name *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="bName" name="bankName" required />
+                    </div>
+                </div>
+                <div class="formItems">
                     <label class="formLabel">Card Number *</label>
                     <div class="formInput">
-                        <input type="text" class="formfield" id="num" name="cardNumber" required />
+                        <input type="text" class="formfield" id="bNum" name="cardNumber" required />
                     </div>
                 </div>
                 <div class="formItems">
                     <label class="formLabel">Card Name *</label>
                     <div class="formInput">
-                        <input type="text" class="formfield" id="nam" name="cardName" required />
+                        <input type="text" class="formfield" id="bCName" name="cardName" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel">Card Holder Name *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="bcHnam" name="cardName" required />
                     </div>
                 </div>
                 <div class="formItems">
                     <label class="formLabel">Expire Month & Year *</label>
                     <div class="formInput">
-                        <input type="month" class="formfield" id="mon" name="month" value="Expiry Month & Year" required />
+                        <input type="text" class="formfield" id="bmon" name="month" placeholder="MM/YYYY" value="Expiry Month & Year" required />
                     </div>
                 </div>
             </form>
             <div class="cardButtons ">
                 <button type="button" class="btn bttn1 btn1" onclick="closeCardModal()">SUBMIT</button>
-                <button type="button" class="btn bttn2 btn2" onclick="closeCardModal()">CLOSE</button>
+                <button type="button" class="btn bttn2 btn2" onclick="closeCardModal1()">CLOSE</button>
             </div>
         </div>
+    </div>
+    <!-- Save Card Modal -->
+    <div class="cardModall" id="cardModalContainerr">
+        <div class="cardInner">
+            <h6 class="cardTitlee">Add New Credit/Debit Card</h6>
+            <form class="formCardContainer">
+                <div class="formItems">
+                    <label class="formLabel">Bank Name *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="bNamee" name="bankName" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel">Card Number *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="bNume" name="cardNumber" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel">Card Name *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="bCNamee" name="cardName" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel">Card Holder Name *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="bcHname" name="cardName" required />
+                    </div>
+                </div>
+                <div class="formItems">
+                    <label class="formLabel">Expire Month & Year *</label>
+                    <div class="formInput">
+                        <input type="text" class="formfield" id="bmone" name="month" placeholder="MM/YYYY" value="Expiry Month & Year" required />
+                    </div>
+                </div>
+            </form>
+            <div class="cardButtons ">
+                <button type="button" class="btn bttn1 btn1" onclick="closeCarddModal()">SUBMIT</button>
+                <button type="button" class="btn bttn2 btn2" onclick="closeCarddModal()">CLOSE</button>
+            </div>
+        </div>
+
     </div>
     <footer class="footer" id="footer" style="clear: left;">
         <div class="containers">
