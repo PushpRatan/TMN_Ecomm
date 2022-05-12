@@ -2,7 +2,7 @@
 products = [
     {
         brand_name: "Puma",
-        img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/5500201/2018/4/24/11524569424344-na-5221524569424114-1.jpg",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/5500201/2018/4/24/11524569424344-na-5221524569424114-1.jpg",
         product_name: "Kids Black Kent V JR Sneakers",
         price: 1889,
         discount: 30,
@@ -10,7 +10,7 @@ products = [
     },
     {
         brand_name: "Hopscotch",
-        img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16334330/2021/12/2/5eb31306-337b-4db9-9089-ef45e0ed1f751638417222084ClothingSet1.jpg",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16334330/2021/12/2/5eb31306-337b-4db9-9089-ef45e0ed1f751638417222084ClothingSet1.jpg",
         product_name: " Hopscotch Boys Blue & Red Shirt with Pyjamas & Blazer",
         price: 680,
         discount: 54,
@@ -102,7 +102,7 @@ products = [
         brand_name: "BonOrganik",
         img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15334348/2021/9/1/d784aa9b-15a9-41e0-86d1-a9cba85591e71630509125052BonOrganikBoysWhitePrintedV-NeckAppliqueT-shirt1.jpg",
         product_name: "Boys White Graphic Printed Round-Neck T-shirt",
-        price:299,
+        price: 299,
         discount: 40,
         oldprice: 499,
 
@@ -308,14 +308,14 @@ products = [
         discount: 0,
         oldprice: 2499,
     },
-    {
-        brand_name: "Stylo Bug",
-        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15396092/2021/9/7/415faca5-7b3c-41c5-8e95-11c4f411f8f81631020548440StyloBugGirlsBlueFloralEmbroideredTieredKurtiwithShararaWith1.jpg",
-        product_name: "Girls Blue Floral Embroidered Tiered Kurti with Sharara",
-        price: 2499,
-        discount: 0,
-        oldprice: 2499,
-    },
+    // {
+    //     brand_name: "Stylo Bug",
+    //     img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15396092/2021/9/7/415faca5-7b3c-41c5-8e95-11c4f411f8f81631020548440StyloBugGirlsBlueFloralEmbroideredTieredKurtiwithShararaWith1.jpg",
+    //     product_name: "Girls Blue Floral Embroidered Tiered Kurti with Sharara",
+    //     price: 2299,
+    //     discount: 0,
+    //     oldprice: 2499,
+    // },
 
 ]
 
