@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="./styles/homestyle.css">
+    <link rel="stylesheet" href="./styles/login1.css">
     <title>TMN</title>
 </head>
 <body>
@@ -47,12 +48,101 @@
                     <div class="fa-solid fa-user dropdown" id="user"></div>
                 </a>
                 <div class="dropdown-content user-drop" id="user-drop">
-                  <a href="#">LogIn / SignUp</a>
+                  <a onclick="on()">LogIn / SignUp</a>
                   <a href="#">Account</a>
                   <a href="#">orders</a>
                 </div>
             </div>
         </div>
+
+<div class="login1" id="overlay">
+      <div class="container" id="container">
+        <div class="form-container sign-up-container">
+          <form action="#">
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password" id="password2">
+            <button onclick="matchPassword()">Sign Up</button>
+          </form>
+        </div>
+        <div class="form-container sign-in-container">
+          <form action="#">
+            <h1>Sign in</h1>
+            <div class="social-container">
+              <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="text" placeholder="username" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <a href="fpassword.html">Forgot your password?</a>
+            <button type="button" id="submit" onclick="validate()">Sign In</button>
+          </form>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <p>To keep shopping please login with your personal info</p>
+              <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <h1>Hello, Customer!</h1>
+              <p>Enter your personal details and start shopping.</p>
+              <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="smallscreencontainer">
+
+        <div class="form-container sign-in-container" id="smallsignin">
+          <form action="#">
+            <h1>Sign in</h1>
+            <div class="social-container">
+              <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="text" placeholder="username" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <a href="fpassword.html">Forgot your password?</a>
+            <button type="button" id="submit" onclick="validate()">Sign In</button>
+            <button class="ghost" onclick="toggletosignUp()">Sign Up</button>
+          </form>
+        </div>
+
+        <div class="form-container sign-up-container" id="smallsignup">
+          <form action="#">
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password" id="password2">
+            <button class="md" onclick="matchPassword()">Sign Up</button>
+            <button class="ghost" onclick="toggletosignIn()">Sign In</button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>        
 
         <div class="menu-sec">
             <ul class="menu">
@@ -441,12 +531,33 @@
 
            }
 
+var overlay = document.getElementById("overlay");
 
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == overlay) {
+        overlay.style.display = "none";
+      }
+    }
+
+
+    function toggletosignIn()
+    {
+      document.getElementById("smallsignin").style.display = "block";
+      document.getElementById("smallsignup").style.display = "none";
+    }
+    function toggletosignUp()
+    {
+      document.getElementById("smallsignin").style.display = "none";
+      document.getElementById("smallsignup").style.display = "block";
+    }
 
 
 
         // navbar script end
     </script>
+
+    <script src="scripts/login1.js"></script>
 
 
 </body>
