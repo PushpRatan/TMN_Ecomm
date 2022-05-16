@@ -136,6 +136,10 @@ function closeCardModal(){
 function closeCardModal1(){
     document.getElementById('cardModalContainer').classList.remove('cardActive');
 }
+function removeCardModal(){
+    document.getElementById('game').innerHTML=" ";
+    document.getElementById('game').style.border="none";
+}
 
 
 //Saved Card Modal Script2
@@ -170,12 +174,12 @@ function addNewCardModal(){
             </div>
             <div class="cardButtons">
                 <button type="button" class="btn btn1" onclick="openCarddModal()">EDIT</button>
-                <button type="button" class="btn btn2">REMOVE</button>
+                <button type="button" class="btn btn2" onclick="removeCardModal()">REMOVE</button>
             </div>
         </div>
     `;
     const di = document.getElementById('game');
-    di.insertAdjacentHTML('beforebegin',newCar);
+    di.insertAdjacentHTML('afterend',newCar);
 }
 
 //Get Saved Card Details Script
@@ -220,6 +224,10 @@ function updateAddresModal1(){
 function closeAddressModal2(){
     document.getElementById('addresModalCarddd').classList.remove('addressCardActiveee');
 }
+function removeAddressModal(){
+    document.getElementById('adddd').innerText = " ";
+    document.getElementById('adddd').style.border = "none";
+}
 
 //add address modal to html
 function addAddressModal(){
@@ -243,12 +251,12 @@ function addAddressModal(){
             </div>
             <div class="cardButtons">
                 <button type="button" class="btn btn1" onclick="openAddressModal1()">EDIT</button>
-                <button type="button" class="btn btn2">REMOVE</button>
+                <button type="button" class="btn btn2" onclick="removeAddressModal()">REMOVE</button>
             </div>
         </div>
     `;
     const addi = document.getElementById('adddd');
-    addi.insertAdjacentHTML('beforebegin',addresCard);
+    addi.insertAdjacentHTML('afterend',addresCard);
 }
 
 function getAddressDetails(){
