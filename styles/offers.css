@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font: normal 1 rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.profile
+{
+    /* padding-top: 2rem; */
+    margin-top: 4rem;
+}
+
+.profile img
+{
+    border-radius: 10rem;
+    height: 8rem;
+}
+
+.name
+{
+    margin: 0;
+    margin-bottom: 2.5rem;
+    font-size: 1.2rem;
+    /* font-family: Nunito Sans; */
+}
+
+.buttons a
+{
+    background-color: #FBF9F7;
+    /* width: 65%; */
+    width: 15rem;
+    height: 3.2rem;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: row;
+    /* text-align: center; */
+    margin: 1.3rem auto;
+    text-decoration: none;
+    color: black;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: .5rem;
+    box-shadow: 0px 40px 60px 0px #2B353E26;
+
+}
+
+.buttons a:hover
+{
+    background-color: black;
+    color: #E4F4F3;
+}
+
+.icons
+{
+    width: 1.3rem;
+    margin: 1rem;
+}
+
+.container {
+    height: 100vh;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* border: solid;
+    border-color: black; */    
+}
+
+.left-side {     
+    /* background-color: #E4F4F3; */
+    width: 24rem;
+    text-align: center;
+    height: 100vh;
+    position: absolute;
+    left:0;
+    /* width: clamp(18rem, 28%, 24rem); */
+}
+
+.left-side::before {
+    content:"";
+    background-color: #E4F4F3;
+    position: fixed;
+    width: 24rem;
+    height: 100vh;
+    left:0;
+    z-index: -5;    
+    /* width: clamp(18rem, 28%, 24rem); */
+}
+
+.right-side {
+    /* flex:1;
+    display: flex;  
+    flex-direction: column; */
+    /* background: #FBF9F7; */
+    height: 100vh;       
+    position: absolute;
+    left: 24rem;        
+    width: calc(100% - 24rem);    
+    /* overflow-x: hidden; */
+}
+
+.right-side::before {
+    content: "";
+    background-color: #FBF9F7;
+    position: fixed;
+    left: 24rem;
+    overflow-x: hidden;
+    width: calc(100% - 24rem);
+    height: 100vh;
+    z-index: -5;
+}
+
+.top {
+    text-align: center;
+    align-self: stretch;
+    margin-top: 3rem;
+}
+
+hr {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    background: #C5BDBD80;
+    opacity: 0.4;
+    border: 0.01rem solid rgba(0, 0, 0, 0.2);
+}
+
+.bottom{
+    /* display: flex; */
+    /* border: solid 3px yellow; */
+    display: grid;        
+    grid-template-columns: 1fr 1fr 1fr;    
+    gap: 1rem;
+    justify-content: center;
+    width: 50%;
+    margin: auto;        
+}
+
+.item {
+    /* width: 123px; */
+    width: 11rem;
+    height: 12rem;
+    line-height: 12rem;
+    background-color: #E2F2F1;
+    margin: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0px 40px 60px rgba(43, 53, 62, 0.15);
+    text-align: center;    
+}
+
+.offer {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* for tablet devices */
+@media screen and (min-width:669px) and (max-width:850px) {
+
+    .container {
+        height: 100vh;
+        /* display: flex; */
+        /* flex-direction: row; */
+    }
+    
+    .left-side {     
+        background-color: #E4F4F3;
+        width: 18rem;
+        text-align: center;
+    }
+
+    .left-side::before {
+        width: 18rem;        
+    }
+
+    .right-side {
+        min-width: calc(100% - 18rem);
+        left: 18rem;
+    }
+
+    .right-side::before {
+        left: 18rem;
+        min-width: calc(100% - 18rem);
+    }
+
+    .profile {
+    /* padding-top: 2rem; */
+    margin-top: 4rem;
+    }
+
+    .profile img {
+    border-radius: 10rem;
+    height: 9rem;
+    /* width: 35%; */
+    }
+
+    .name {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    font-size: 1.4rem;
+    /* font-family: Nunito Sans; */
+    }
+
+    .buttons a {
+    background-color: #FBF9F7;
+    width: 13rem;
+    height: 3.2rem;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    /* text-align: center; */
+    margin: auto;
+    margin-bottom: 1.6rem;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    border-radius: .5rem;
+    }
+
+    .buttons a:hover {
+    background-color: black;
+    color: #E4F4F3;
+    }
+
+    .icons {
+    width: 1rem;
+    margin: 1rem;
+    }
+
+    .top {
+        text-align: center;
+        align-self: stretch;
+        margin-top: 3rem;
+    }
+    
+    hr {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        background: #C5BDBD80;
+        opacity: 0.4;
+        border: 0.01rem solid rgba(0, 0, 0, 0.2);
+    }
+    
+    .bottom{
+        display: flex;
+        /* border: solid 3px yellow; */
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 30rem;
+        /* margin: auto;         */
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .item {
+        /* width: 123px; */
+        width: 11rem;
+        height: 10rem;
+        line-height: 10rem;
+        background-color: #E2F2F1;
+        margin: 1rem;
+        border-radius: .5rem;
+        box-shadow: 0px 40px 60px rgba(43, 53, 62, 0.15);
+        text-align: center;    
+    }
+    
+    .offer {
+        font-size: 1.3rem;
+        margin: 0;
+        padding: 0;
+    }
+}
