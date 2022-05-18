@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/seller.css">
+    <title>Seller Dashboard</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+
+
+
+                <div class="menu-items">
+
+                    <a href="#">
+                        <img src="./images/Seller_Profile_Picture.png" alt="Seller_Profile_Picture">
+                    </a>
+                    <h2>Alexander Hipp</h2>
+
+                    <li><a href="#" onclick="Profile()">Your Profile</a></li>
+                    <li><a href="#" onclick="Product()">Product List</a></li>
+                    <li><a href="#" onclick="offers()">Offers Available</a></li>
+                    <li><a href="#" onclick="current_order()">Current Orders</a></li>
+                    <li><a href="#" onclick="completed_order()">Completed Orders</a></li>
+                </div>
+            </div>
+        </div>
+
+        <div class="leftside">
+
+            <div class="profile">
+                <a href="#">
+                    <img src="./images/Seller_Profile_Picture.png" alt="Seller_Profile_Picture">
+                </a>
+                <h2>Alexander Hipp</h2>
+            </div>
+
+            <div class="buttons">
+                <a href="#" onclick="Profile()"> <img src="./images/profile_icon.svg" class="icons"> Your Profile </a>
+                <a href="#" onclick="Product()"> <img src="./images/product_icon.svg" class="icons"> Product List </a>
+                <a href="#" onclick="offers()"> <img src="./images/offers_icon.svg" class="icons" style="transform: scaleX(-1);">
+                    Offers Available
+                </a>
+                <a href="#" class="jk" onclick="current_order()"> <img src="./images/current_icon.svg" class="icons"
+                        onclick="currentorder()"> Current
+                    Orders </a>
+                <a href="#" onclick="completed_order()"> <img src="./images/completed_icon.svg" class="icons"
+                        onclick="completedorder()"> Completed Orders
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="rightside" id="profile">
+            <h1>
+                Your Profile
+            </h1>
+            <hr>
+
+            <div class="profile-info">
+                <div class="left">
+                    <p>Full Name</p>
+                    <p>Profile Id</p>
+                    <p>Email Id</p>
+                    <p>Mobile No</p>
+                    <p>Location</p>
+                    <p>Password</p>
+                </div>
+                <div class="right">
+                    <p><input type="text" name=""></p>
+                    <p><input type="text" name=""></p>
+                    <p><input type="text" name=""></p>
+                    <p><input type="text" name=""></p>
+                    <p><input type="text" name=""></p>
+                    <p><input type="text" name=""></p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="rightside" id="product">
+            <h1>
+                Product List
+            </h1>
+            <hr>
+
+            <div class="order-cards" id="procart">
+                <div class="Products">
+                    <img src="./images/product2.jpg" alt="Product2">
+                    <div class="Productdetails">
+                        <h2 class="font-Nunito-Sans">BIBA</h2>
+                        <h3 class="font-Nunito-Sans">Women White Pochu</h3>
+                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans">₹ 400/-</h2>
+                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans">400 pieces available</h4>
+                        <div class="rating">
+                            <span class="fa-solid fa-star"></span>
+                            <sppan class="fa-solid fa-star"></span>
+                                <span class="fa-solid fa-star"></span>
+                                <span class="fa-solid fa-star"></span>
+                                <span class="fa-solid fa-star"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Products">
+                    <img src="./images/Ponchu.jpg" alt="Product2">
+                    <div class="Productdetails">
+                        <h2 class="font-Nunito-Sans">BIBA</h2>
+                        <h3 class="font-Nunito-Sans">Women White Pochu</h3>
+                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans">₹ 400/-</h2>
+                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans">400 pieces available</h4>
+                        <div class="rating">
+                            <span class="fa-solid fa-star"></span>
+                            <sppan class="fa-solid fa-star"></span>
+                                <span class="fa-solid fa-star"></span>
+                                <span class="fa-solid fa-star"></span>
+                                <span class="fa-solid fa-star"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Products">
+                    <img src="./images/Ponchu.jpg" alt="Product2">
+                    <div class="Productdetails">
+                        <h2 class="font-Nunito-Sans">BIBA</h2>
+                        <h3 class="font-Nunito-Sans">Women White Pochu</h3>
+                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans">₹ 400/-</h2>
+                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans">400 pieces available</h4>
+                        <div class="rating">
+                            <span class="fa-solid fa-star"></span>
+                            <sppan class="fa-solid fa-star"></span>
+                                <span class="fa-solid fa-star"></span>
+                                <span class="fa-solid fa-star"></span>
+                                <span class="fa-solid fa-star"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="updateitems">
+                <a href="#" class="font-Nunito-Sans"> + Add Items </a>
+                <a href="#" class="font-Nunito-Sans"> - Delete Items </a>
+            </div>
+
+        </div>
+
+        <div class="rightside" id="offers">
+            <h1>
+                Offers Available
+            </h1>
+            <hr>
+
+            <div class="bottom">
+
+                <div class="item">
+                    <p class="offer">Offer 1</p>
+                </div>
+                <div class="item">
+                    <p class="offer">Offer 2</p>
+                </div>
+                <div class="item">
+                    <p class="offer">Offer 3</p>
+                </div>
+                <div class="item">
+                    <p class="offer">Offer 4</p>
+                </div>
+                <div class="item">
+                    <p class="offer">Offer 5</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="rightside" id="current">
+
+            <h1> Current Orders </h1>
+            <hr>
+
+            <div class="order-cards">
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="rightside" id="completed">
+            <h1> Completed Orders </h1>
+            <hr>
+
+            <div class="order-cards">
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+
+        function Profile() {
+            document.getElementById("profile").style.display = "block";
+            document.getElementById("product").style.display = "none";
+            document.getElementById("offers").style.display = "none";
+            document.getElementById("current").style.display = "none";
+            document.getElementById("completed").style.display = "none";
+        }
+
+        function Product() {
+            document.getElementById("profile").style.display = "none";
+            document.getElementById("product").style.display = "block";
+            document.getElementById("offers").style.display = "none";
+            document.getElementById("current").style.display = "none";
+            document.getElementById("completed").style.display = "none";
+        }
+
+        function offers() {
+            document.getElementById("profile").style.display = "none";
+            document.getElementById("product").style.display = "none";
+            document.getElementById("offers").style.display = "block";
+            document.getElementById("current").style.display = "none";
+            document.getElementById("completed").style.display = "none";
+        }
+
+        function current_order() {
+            document.getElementById("profile").style.display = "none";
+            document.getElementById("product").style.display = "none";
+            document.getElementById("offers").style.display = "none";
+            document.getElementById("current").style.display = "block";
+            document.getElementById("completed").style.display = "none";
+        }
+        function completed_order() {
+            // document.getElementsByClassName("rightside").innerHTML = document.getElementById("completed").innerHTML;
+            document.getElementById("profile").style.display = "none";
+            document.getElementById("product").style.display = "none";
+            document.getElementById("offers").style.display = "none";
+            document.getElementById("current").style.display = "none";
+            document.getElementById("completed").style.display = "block";
+        }
+
+    </script>
+    <script src="https://kit.fontawesome.com/50fcb25c1f.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
