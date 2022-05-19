@@ -426,7 +426,7 @@ body {
     }
 
     .navbar .menu-items {
-        height: 81vh !important;
+        height: 85.5vh !important;
         width: 10rem;
         /* align-items: center; */
         /* justify-content: center; */
@@ -724,7 +724,7 @@ body {
 .navbar .menu-items {
     padding-top: 120px;
     /* box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5); */
-    height: 84vh;
+    height: 89.5vh;
     width: 20rem;
     transform: translate(-150%);
     display: flex;
