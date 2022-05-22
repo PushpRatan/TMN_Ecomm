@@ -23,6 +23,11 @@
     font-size: 2rem;
     color: #551A88;
 }
+
+.logoTitle > a{
+    text-decoration: none;
+}
+
 .navMiddleLinks{
     display: flex;
 }
@@ -41,6 +46,9 @@
 }
 .navIc{
     margin-right: .7rem;
+    text-decoration: none;
+    color: #202020;
+    margin-left: 20px;
 }
 /* Navbar code end */
 .userContainer{
