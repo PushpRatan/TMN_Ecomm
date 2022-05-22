@@ -3,6 +3,21 @@ function addFirst(){
     document.getElementById('on').classList.add('active');
 
 }
+//code for navbar
+function navbarrr(){
+    document.getElementById('navvvv').classList.add('navvSideNavActive');
+}
+function closeNavbarr(){
+    document.getElementById('navvvv').classList.remove('navvSideNavActive');
+}
+//code for side nav
+function displaySideNav(){
+    document.getElementById('sdd').classList.add('sideNavActive');
+    // document.body.style.backgroundColor='rgba(0,0,0,0.8)';
+}
+function closeeeSideNav(){
+    document.getElementById('sdd').classList.remove('sideNavActive');
+}
 function displayy(idd){
     if(idd===1){
         document.getElementById('one').classList.add('personalCardActive');
@@ -17,6 +32,7 @@ function displayy(idd){
         document.getElementById('four').classList.remove('savedCardActive');
         document.getElementById('five').classList.remove('savedsCardActive');
         document.getElementById('six').classList.remove('creditCardActive');
+        closeeeSideNav();
     }else if(idd===2) {
         document.getElementById('one').classList.remove('personalCardActive');
         document.getElementById('two').classList.add('wishlistCardActive');
@@ -30,6 +46,7 @@ function displayy(idd){
         document.getElementById('four').classList.remove('savedCardActive');
         document.getElementById('five').classList.remove('savedsCardActive');
         document.getElementById('six').classList.remove('creditCardActive');
+        closeeeSideNav();
     }else if(idd===3){
         document.getElementById('one').classList.remove('personalCardActive');
         document.getElementById('two').classList.remove('wishlistCardActive');
@@ -43,6 +60,7 @@ function displayy(idd){
         document.getElementById('four').classList.remove('savedCardActive');
         document.getElementById('five').classList.remove('savedsCardActive');
         document.getElementById('six').classList.remove('creditCardActive');
+        closeeeSideNav();
     }else if(idd===4){
         document.getElementById('one').classList.remove('personalCardActive');
         document.getElementById('two').classList.remove('wishlistCardActive');
@@ -56,6 +74,7 @@ function displayy(idd){
         document.getElementById('si').classList.remove('active');
         document.getElementById('five').classList.remove('savedsCardActive');
         document.getElementById('six').classList.remove('creditCardActive');
+        closeeeSideNav();
     }else if(idd===5){
         document.getElementById('one').classList.remove('personalCardActive');
         document.getElementById('two').classList.remove('wishlistCardActive');
@@ -70,6 +89,7 @@ function displayy(idd){
         document.getElementById('si').classList.remove('active');
 
         document.getElementById('six').classList.remove('creditCardActive');
+        closeeeSideNav();
     }else if(idd===6){
         document.getElementById('one').classList.remove('personalCardActive');
         document.getElementById('two').classList.remove('wishlistCardActive');
@@ -83,6 +103,7 @@ function displayy(idd){
         document.getElementById('fu').classList.remove('active');
         document.getElementById('fi').classList.remove('active');
         document.getElementById('si').classList.add('active');
+        closeeeSideNav();
     }
 
 }
