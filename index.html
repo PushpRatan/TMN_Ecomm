@@ -47,7 +47,7 @@
         <a href="#" class="wishlist">
           <i class="fa-solid fa-heart" id="wish"></i>
         </a>
-        <a href="#" class="cart">
+        <a href="cart-item.html" class="cart">
           <i class="fa-solid fa-bag-shopping" id="cart"></i>
         </a>
         <a href="#" class="user">
@@ -55,8 +55,8 @@
         </a>
         <div class="dropdown-content user-drop" id="user-drop">
           <a onclick="on()">LogIn / SignUp</a>
-          <a href="#">Account</a>
-          <a href="#">orders</a>
+          <a href="userDashboard.html">Account</a>
+          <a href="product.html">orders</a>
         </div>
       </div>
     </div>
@@ -170,16 +170,16 @@
         <li class="dropdown">
           <a href="#">TEENS</a>
           <div class="dropdown-content">
-            <a href="#">Teen Boy</a>
-            <a href="#">Teen Girls</a>
+            <a href="kids.html">Teen Boy</a>
+            <a href="kids.html">Teen Girls</a>
           </div>
         </li>
         <li class="dropdown">
           <a href="#">KIDS</a>
           <div class="dropdown-content">
-            <a href="#">Girls</a>
-            <a href="#">Boys</a>
-            <a href="#">New Born</a>
+            <a href="kids.html">Girls</a>
+            <a href="kids.html">Boys</a>
+            <a href="kids.html">New Born</a>
           </div>
         </li>
       </ul>
@@ -433,6 +433,7 @@
   <script>
     var slideIndex = 0;
     showSlides();
+
     function showSlides() {
       var i;
       var slides = document.getElementsByClassName("mySlides");
@@ -472,24 +473,31 @@
     function MDrop() {
       document.getElementById("MDrop").classList.add("drp");
     }
+
     function CMDrop() {
       document.getElementById("MDrop").classList.remove("drp");
     }
+
     function WDrop() {
       document.getElementById("WDrop").classList.add("drp");
     }
+
     function CWDrop() {
       document.getElementById("WDrop").classList.remove("drp");
     }
+
     function TDrop() {
       document.getElementById("TDrop").classList.add("drp");
     }
+
     function CTDrop() {
       document.getElementById("TDrop").classList.remove("drp");
     }
+
     function KDrop() {
       document.getElementById("KDrop").classList.add("drp");
     }
+
     function CKDrop() {
       document.getElementById("KDrop").classList.remove("drp");
     }
@@ -516,8 +524,7 @@
     document.querySelector("#user").addEventListener("click", function () {
       if (document.getElementById("user-drop").classList.contains("dropdis")) {
         window.onclick = document.getElementById("user-drop").classList.remove("dropdis");
-      }
-      else {
+      } else {
         document.getElementById("user-drop").classList.add("dropdis");
       }
     });
@@ -559,17 +566,15 @@
     }
 
 
-    function toggletosignIn()
-    {
+    function toggletosignIn() {
       document.getElementById("smallsignin").style.display = "block";
       document.getElementById("smallsignup").style.display = "none";
     }
-    function toggletosignUp()
-    {
+
+    function toggletosignUp() {
       document.getElementById("smallsignin").style.display = "none";
       document.getElementById("smallsignup").style.display = "block";
     }
-
   </script>
 
   <script src="scripts/login1.js"></script>
