@@ -94,6 +94,7 @@ body {
 
 .order-card {
     width: 45%;
+    height: 10.5rem;
     background-color: white;
     display: flex;
     flex-direction: row;
