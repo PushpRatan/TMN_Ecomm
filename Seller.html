@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/seller.css">
-    <!-- <link rel="stylesheet" href="./navbar and footer/footer/footer.css"> -->
-
     <title>Seller Dashboard</title>
 </head>
 
@@ -24,8 +22,6 @@
                     <span class="line line2"></span>
                     <span class="line line3"></span>
                 </div>
-
-
 
                 <div class="menu-items">
 
@@ -55,7 +51,8 @@
             <div class="buttons">
                 <a href="#" onclick="Profile()"> <img src="./images/profile_icon.svg" class="icons"> Your Profile </a>
                 <a href="#" onclick="Product()"> <img src="./images/product_icon.svg" class="icons"> Product List </a>
-                <a href="#" onclick="offers()"> <img src="./images/offers_icon.svg" class="icons" style="transform: scaleX(-1);">
+                <a href="#" onclick="offers()"> <img src="./images/offers_icon.svg" class="icons"
+                        style="transform: scaleX(-1);">
                     Offers Available
                 </a>
                 <a href="#" class="jk" onclick="current_order()"> <img src="./images/current_icon.svg" class="icons"
@@ -65,7 +62,6 @@
                         onclick="completedorder()"> Completed Orders
                 </a>
             </div>
-
         </div>
 
 
@@ -92,10 +88,7 @@
                     <p><input type="text" name=""></p>
                     <p><input type="text" name=""></p>
                 </div>
-
             </div>
-
-
         </div>
 
         <div class="rightside" id="product">
@@ -105,97 +98,182 @@
             <hr>
 
             <div class="order-cards" id="procart">
+
+                <div id="kj" style="display: none">
+                    <h3>No Products Available</h3>
+                </div>
+
+
                 <div class="Products">
-                    <img src="./images/Ponchu.jpg" alt="Product2">
+                    <img id="output" src="./images/Ponchu.jpg" alt="Product2">
                     <div class="Productdetails">
-                        <h2 class="font-Nunito-Sans">BIBA</h2>
-                        <h3 class="font-Nunito-Sans">Women White Pochu</h3>
-                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans">₹ 400/-</h2>
-                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans">400 pieces available</h4>
+                        <p onclick="removeProduct(this)">x</p>
+                        <h2 class="font-Nunito-Sans" id="bNme">BIBA 1</h2>
+                        <h3 class="font-Nunito-Sans" id="bcNme">Women White Pochu</h3>
+                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans" id="bNm">₹ 400/-</h2>
+                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans" id="bcHnum">400 pieces
+                            available</h4>
                         <div class="rating">
+                            <span class="fa-solid fa-star" id="rate"></span>
                             <span class="fa-solid fa-star"></span>
-                            <sppan class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
                         </div>
                     </div>
                 </div>
-
                 <div class="Products">
-                    <img src="./images/Ponchu.jpg" alt="Product2">
+                    <img id="output" src="./images/Ponchu.jpg" alt="Product2">
                     <div class="Productdetails">
-                        <h2 class="font-Nunito-Sans">BIBA</h2>
-                        <h3 class="font-Nunito-Sans">Women White Pochu</h3>
-                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans">₹ 400/-</h2>
-                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans">400 pieces available</h4>
+                        <p onclick="removeProduct(this)">x</p>
+                        <h2 class="font-Nunito-Sans" id="bNme">BIBA 2</h2>
+                        <h3 class="font-Nunito-Sans" id="bcNme">Women White Pochu</h3>
+                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans" id="bNm">₹ 400/-</h2>
+                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans" id="bcHnum">400 pieces
+                            available</h4>
                         <div class="rating">
+                            <span class="fa-solid fa-star" id="rate"></span>
                             <span class="fa-solid fa-star"></span>
-                            <sppan class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
                         </div>
                     </div>
                 </div>
-
                 <div class="Products">
-                    <img src="./images/Ponchu.jpg" alt="Product2">
+                    <img id="output" src="./images/Ponchu.jpg" alt="Product2">
                     <div class="Productdetails">
-                        <h2 class="font-Nunito-Sans">BIBA</h2>
-                        <h3 class="font-Nunito-Sans">Women White Pochu</h3>
-                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans">₹ 400/-</h2>
-                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans">400 pieces available</h4>
+                        <p onclick="removeProduct(this)">x</p>
+                        <h2 class="font-Nunito-Sans" id="bNme">BIBA 3</h2>
+                        <h3 class="font-Nunito-Sans" id="bcNme">Women White Pochu</h3>
+                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans" id="bNm">₹ 400/-</h2>
+                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans" id="bcHnum">400 pieces
+                            available</h4>
                         <div class="rating">
+                            <span class="fa-solid fa-star" id="rate"></span>
                             <span class="fa-solid fa-star"></span>
-                            <sppan class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
                         </div>
                     </div>
                 </div>
-
                 <div class="Products">
-                    <img src="./images/Ponchu.jpg" alt="Product2">
+                    <img id="output" src="./images/Ponchu.jpg" alt="Product2">
                     <div class="Productdetails">
-                        <h2 class="font-Nunito-Sans">BIBA</h2>
-                        <h3 class="font-Nunito-Sans">Women White Pochu</h3>
-                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans">₹ 400/-</h2>
-                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans">400 pieces available</h4>
+                        <p onclick="removeProduct(this)">x</p>
+                        <h2 class="font-Nunito-Sans" id="bNme">BIBA 4</h2>
+                        <h3 class="font-Nunito-Sans" id="bcNme">Women White Pochu</h3>
+                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans" id="bNm">₹ 400/-</h2>
+                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans" id="bcHnum">400 pieces
+                            available</h4>
                         <div class="rating">
+                            <span class="fa-solid fa-star" id="rate"></span>
                             <span class="fa-solid fa-star"></span>
-                            <sppan class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
                         </div>
                     </div>
                 </div>
-
                 <div class="Products">
-                    <img src="./images/Ponchu.jpg" alt="Product2">
+                    <img id="output" src="./images/Ponchu.jpg" alt="Product2">
                     <div class="Productdetails">
-                        <h2 class="font-Nunito-Sans">BIBA</h2>
-                        <h3 class="font-Nunito-Sans">Women White Pochu</h3>
-                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans">₹ 400/-</h2>
-                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans">400 pieces available</h4>
+                        <p onclick="removeProduct(this)">x</p>
+                        <h2 class="font-Nunito-Sans" id="bNme">BIBA 5</h2>
+                        <h3 class="font-Nunito-Sans" id="bcNme">Women White Pochu</h3>
+                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans" id="bNm">₹ 400/-</h2>
+                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans" id="bcHnum">400 pieces
+                            available</h4>
                         <div class="rating">
+                            <span class="fa-solid fa-star" id="rate"></span>
                             <span class="fa-solid fa-star"></span>
-                            <sppan class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
-                                <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Products">
+                    <img id="output" src="./images/Ponchu.jpg" alt="Product2">
+                    <div class="Productdetails">
+                        <p onclick="removeProduct(this)">x</p>
+                        <h2 class="font-Nunito-Sans" id="bNme">BIBA 6</h2>
+                        <h3 class="font-Nunito-Sans" id="bcNme">Women White Pochu</h3>
+                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans" id="bNm">₹ 400/-</h2>
+                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans" id="bcHnum">400 pieces
+                            available</h4>
+                        <div class="rating">
+                            <span class="fa-solid fa-star" id="rate"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
+                            <span class="fa-solid fa-star"></span>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
             <div class="updateitems">
-                <a href="#" class="font-Nunito-Sans"> + Add Items </a>
-                <a href="#" class="font-Nunito-Sans"> - Delete Items </a>
+                <a href="#" class="font-Nunito-Sans" onclick="openCardModal()"> + Add Items </a>
+                <!-- <a href="#" class="font-Nunito-Sans"> - Delete Items </a> -->
             </div>
 
+            <div class="addressCard" id="ProductModalCardd">
+                <div class="addressCardInner">
+                    <h6 class="addressTitle">ADD PRODUCT</h6>
+                    <form class="formCardContainerr">
+                        <div class="formItems">
+                            <label class="formLabel labe">Product Name</label>
+                            <div class="formInput">
+                                <input type="text" class="formfield" id="bName" name="ProductName" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Product Description</label>
+                            <div class="formInput">
+                                <input type="text" class="formfield" id="bNum" name="proDescription" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Price</label>
+                            <div class="formInput">
+                                <input type="text" class="formfield" id="bCName" name="price" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Quantity Available</label>
+                            <div class="formInput">
+                                <input type="text" class="formfield" id="bcHnam" name="quanAvl" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Ratings</label>
+                            <div class="formInput">
+                                <input type="rating" class="formfield" id="rating" name="rating" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Image</label>
+                            <div class="formInput">
+                                <input type="file" accept="image/gif, image/jpeg, image/jpg, image/png"
+                                    class="formfield" id="pimg" name="Image" required />
+                            </div>
+                        </div>
+
+                    </form>
+                    <div class="cardButtons addresBtn">
+                        <button type="button" class="btn bttn1 btn1" style="padding: .76rem 0rem"
+                            onclick="closeProductModal()">SUBMIT</button>
+                        <button type="button" class="btn bttn2 btn2" style="padding: .76rem 0rem"
+                            onclick="closeModal()">CLOSE</button>
+                    </div>
+                </div>
+            </div>
         </div>
+
 
         <div class="rightside" id="offers">
             <h1>
@@ -203,48 +281,86 @@
             </h1>
             <hr>
 
-            <div class="bottom">
+            <div class="bottom" id="box">
 
-                <div class="item">
-                    <p class="offer">Offer 1</p>
+                <div id="jk" style="display: none;">
+                    <h3>
+                        No offers Available
+                    </h3>
                 </div>
                 <div class="item">
-                    <p class="offer">Offer 2</p>
+                    <div class="offerContent">
+                        <p class="flex-item" onclick="removeOffer(this)">x</p>
+                        <p class="offer">Offer 1</p>
+                    </div>
                 </div>
                 <div class="item">
-                    <p class="offer">Offer 3</p>
+                    <div class="offerContent">
+                        <p class="flex-item" onclick="removeOffer(this)">x</p>
+                        <p class="offer">Offer 2</p>
+                    </div>
                 </div>
                 <div class="item">
-                    <p class="offer">Offer 4</p>
+                    <div class="offerContent">
+                        <p class="flex-item" onclick="removeOffer(this)">x</p>
+                        <p class="offer">Offer 3</p>
+                    </div>
                 </div>
                 <div class="item">
-                    <p class="offer">Offer 5</p>
+                    <div class="offerContent">
+                        <p class="flex-item" onclick="removeOffer(this)">x</p>
+                        <p class="offer">Offer 4</p>
+                    </div>
                 </div>
-                <div class="item">
-                    <p class="offer">Offer 6</p>
-                </div>
-                <div class="item">
-                    <p class="offer">Offer 7</p>
-                </div>
-                <div class="item">
-                    <p class="offer">Offer 8</p>
-                </div>
-                <div class="item">
-                    <p class="offer">Offer 9</p>
-                </div>
-                <div class="item">
-                    <p class="offer">Offer 10</p>
-                </div>
-                <div class="item">
-                    <p class="offer">Offer 11</p>
-                </div>
-                <div class="item">
-                    <p class="offer">Offer 12</p>
-                </div>
-                <div class="item">
-                    <p class="offer">Offer 13</p>
-                </div>
+            </div>
 
+            <div class="updateitems">
+                <a href="#" class="font-Nunito-Sans" onclick="openOffersModal()"> + Add Offer </a>
+            </div>
+
+            <div class="addressCard" id="addresModalCardd">
+                <div class="addressCardInner">
+                    <h6 class="addressTitle">ADD OFFER</h6>
+                    <form class="formCardContainerr">
+                        <div class="formItems">
+                            <label class="formLabel labe">Offer Name *</label>
+                            <div class="formInput">
+                                <input type="text" class="formfield" id="bOffer" name="OfferName" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Type</label>
+                            <div class="formInput">
+                                <input type="tel" class="formfield" id="type" name="type" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Description</label>
+                            <div class="formInput">
+                                <input type="text" class="formfield" id="description" name="description" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Applied On</label>
+                            <div class="formInput">
+                                <input type="text" class="formfield" id="appOn" name="appOn" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Valid Till</label>
+                            <div class="formInput">
+                                <input type="date" class="formfield" id="valid" name="valid" required />
+                            </div>
+                        </div>
+
+                    </form>
+                    <div class="cardButtons addresBtn">
+                        <button type="button" class="btn bttn1 btn1" style="padding: .76rem 0rem"
+                            onclick="closeOffer1Modal()">SUBMIT</button>
+                        <button type="button" class="btn bttn2 btn2" style="padding: .76rem 0rem"
+                            onclick="closeOfferModal()">CLOSE</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -254,14 +370,19 @@
             <h1> Current Orders </h1>
             <hr>
 
-            <div class="order-cards">
+            <div class="order-cards" id="remove">
+                <div id="pk" style="display: none;">
+                    <h3>
+                        No Current Orders
+                    </h3>
+                </div>
                 <div class="order-card">
                     <div class="product-img">
                         <img src="./images/watchimg.png">
                     </div>
                     <div class="product-info">
                         <h2>
-                            White Digital Watch
+                            White Digital Watch 1
                         </h2>
                         <h3> <strong> ₹ 400/- </strong></h3>
                         <p>
@@ -270,6 +391,94 @@
                         <p>
                             Product ID: A12P90182
                         </p>
+                        <div class="btns">
+                            <a class="btnn success" href="#" onclick="openCurrentModal()">Approve ✔</a>
+                            <a class="btnn danger" href="#" id="dec" onclick="removeCard(this)">Decline ✘</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch 2
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                        <div class="btns">
+                            <a class="btnn success" href="#" onclick="openCurrentModal()">Approve ✔</a>
+                            <a class="btnn danger" href="#" id="dec" onclick="removeCard(this)">Decline ✘</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch 3
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                        <div class="btns">
+                            <a class="btnn success" href="#" onclick="openCurrentModal()">Approve ✔</a>
+                            <a class="btnn danger" href="#" id="dec" onclick="removeCard(this)">Decline ✘</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-card" >
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch 4
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                        <div class="btns">
+                            <a class="btnn success" href="#" onclick="openCurrentModal()">Approve ✔</a>
+                            <a class="btnn danger" href="#" id="dec" onclick="removeCard(this)">Decline ✘</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch 5
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                        <div class="btns">
+                            <a class="btnn success" href="#" onclick="openCurrentModal()">Approve ✔</a>
+                            <a class="btnn danger" href="#" id="dec" onclick="removeCard(this)">Decline ✘</a>
+                        </div>
                     </div>
                 </div>
 
@@ -279,7 +488,7 @@
                     </div>
                     <div class="product-info">
                         <h2>
-                            White Digital Watch
+                            White Digital Watch 5
                         </h2>
                         <h3> <strong> ₹ 400/- </strong></h3>
                         <p>
@@ -288,162 +497,144 @@
                         <p>
                             Product ID: A12P90182
                         </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: In Transit
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: In Transit
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: In Transit
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: In Transit
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: In Transit
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: In Transit
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: In Transit
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: In Transit
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: In Transit
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
+                        <div class="btns">
+                            <a class="btnn success" href="#" onclick="openCurrentModal()">Approve ✔</a>
+                            <a class="btnn danger" href="#" id="dec" onclick="removeCard(this)">Decline ✘</a>
+                        </div>
                     </div>
                 </div>
 
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch 5
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                        <div class="btns">
+                            <a class="btnn success" href="#" onclick="openCurrentModal()">Approve ✔</a>
+                            <a class="btnn danger" href="#" id="dec" onclick="removeCard(this)">Decline ✘</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch 5
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                        <div class="btns">
+                            <a class="btnn success" href="#" onclick="openCurrentModal()">Approve ✔</a>
+                            <a class="btnn danger" href="#" id="dec" onclick="removeCard(this)">Decline ✘</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch 5
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                        <div class="btns">
+                            <a class="btnn success" href="#" onclick="openCurrentModal()">Approve ✔</a>
+                            <a class="btnn danger" href="#" id="dec" onclick="removeCard(this)">Decline ✘</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch 5
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: In Transit
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                        <div class="btns">
+                            <a class="btnn success" href="#" onclick="openCurrentModal()">Approve ✔</a>
+                            <a class="btnn danger" href="#" id="dec" onclick="removeCard(this)">Decline ✘</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="addressCard" id="currentModalCardd">
+                <div class="addressCardInner">
+                    <h6 class="addressTitle">Customer Details</h6>
+                    <form class="formCardContainerr">
+                        <div class="formItems">
+                            <label class="formLabel labe">Customer Name</label>
+                            <div class="formInput">
+                                <input type="text" class="formfield" id="OfferName" name="OfferName" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Mobile No</label>
+                            <div class="formInput">
+                                <input type="tel" class="formfield" id="mobile" name="mobile" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Address</label>
+                            <div class="formInput">
+                                <input type="text" class="formfield" id="address" name="address" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Product Id</label>
+                            <div class="formInput">
+                                <input type="text" class="formfield" id="Product" name="Product" required />
+                            </div>
+                        </div>
+                        <div class="formItems">
+                            <label class="formLabel labe">Quantity</label>
+                            <div class="formInput">
+                                <input type="text" class="formfield" id="quan" name="quan" required />
+                            </div>
+                        </div>
+
+                    </form>
+                    <div class="cardButtons addresBtn">
+                        <button type="button" class="btn bttn1 btn1" style="padding: .76rem 0rem"
+                            onclick="closeCurrentModal()">SUBMIT</button>
+                        <button type="button" class="btn bttn2 btn2" style="padding: .76rem 0rem"
+                            onclick="closeCurrentModal()">CLOSE</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -505,149 +696,96 @@
                         </p>
                     </div>
                 </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: Delivered
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: Delivered
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: Delivered
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: Delivered
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: Delivered
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: Delivered
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: Delivered
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
-                <div class="order-card">
-                    <div class="product-img">
-                        <img src="./images/watchimg.png">
-                    </div>
-                    <div class="product-info">
-                        <h2>
-                            White Digital Watch
-                        </h2>
-                        <h3> <strong> ₹ 400/- </strong></h3>
-                        <p>
-                            Status: Delivered
-                        </p>
-                        <p>
-                            Product ID: A12P90182
-                        </p>
-                    </div>
-                </div>
 
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="product-img">
+                        <img src="./images/watchimg.png">
+                    </div>
+                    <div class="product-info">
+                        <h2>
+                            White Digital Watch
+                        </h2>
+                        <h3> <strong> ₹ 400/- </strong></h3>
+                        <p>
+                            Status: Delivered
+                        </p>
+                        <p>
+                            Product ID: A12P90182
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
-
     </div>
-
 
     <script>
 
@@ -690,6 +828,239 @@
             document.getElementById("current").style.display = "none";
             document.getElementById("completed").style.display = "block";
         }
+
+
+        function closeOffer1Modal() {
+            document.getElementById('addresModalCardd').classList.remove('addressCardActive');
+            addNewOfferModal();
+        }
+
+        function closeOfferModal() {
+            document.getElementById('addresModalCardd').classList.remove('addressCardActive');
+        }
+
+        function openOffersModal() {
+            document.getElementById('addresModalCardd').classList.add('addressCardActive');
+            document.getElementById('bOffer').value = "";
+        }
+
+        function addNewOfferModal() {
+            let offerName = document.getElementById('bOffer').value;
+            let newCar = `
+            <div class="item">
+                    <div class="offerContent">
+                        <p class="flex-item" onclick="removeOffer(this)">x</p>
+                        <p class="offer">${offerName}</p>
+                    </div>
+                </div>
+            `;
+            document.getElementById('jk').style.display = "none";
+            const di = document.getElementById('jk');
+            di.insertAdjacentHTML('afterend', newCar);
+        }
+
+
+
+
+
+        function openCurrentModal() {
+            document.getElementById('currentModalCardd').classList.add('addressCardActive');
+            getProfileDetails();
+        }
+        function closeCurrentModal() {
+            document.getElementById('currentModalCardd').classList.remove('addressCardActive');
+            updateProfileDetails();
+        }
+
+        function closeProductModal() {
+            document.getElementById('ProductModalCardd').classList.remove('addressCardActive');
+            addNewCardModal();
+        }
+
+        function closeModal() {
+            document.getElementById('ProductModalCardd').classList.remove('addressCardActive');
+        }
+
+        function openCardModal() {
+            document.getElementById('ProductModalCardd').classList.add('addressCardActive');
+            document.getElementById('bName').value = "";
+            document.getElementById('bNum').value = "";
+            document.getElementById("bCName").value = "";
+            document.getElementById("bcHnam").value = "";
+            document.getElementById("rating").value = "";
+            document.getElementById("pimg").value = "";
+        }
+
+        function addNewCardModal() {
+            let bankName = document.getElementById("bName").value;
+            let cardNumber = document.getElementById("bNum").value;
+            let cardName = document.getElementById("bCName").value;
+            let cardHolderName = document.getElementById("bcHnam").value;
+            let Rating = document.getElementById("rating").value;
+            let Productimg = document.getElementById("pimg").value;
+            let newCard = `
+                            
+                                <div class="Products">
+                                    <img id="output" src="${Productimg}" alt="Product2">
+                                    
+                                    <div class="Productdetails">
+                                        <p onclick="removeProduct(this)">x</p>
+                                        <h2 class="font-Nunito-Sans" id="bNme">${bankName}</h2>
+                                        <h3 class="font-Nunito-Sans" id="bcNme">${cardNumber}</h3>
+                                        <h2 style="color: #07306E;opacity: 80%;" class="font-Nunito-Sans" id="bNm">₹ ${cardName}/-</h2>
+                                        <h4 style="color: #000000;opacity: 60%;" class="font-Nunito-Sans" id="bcHnum">${cardHolderName} pieces available</h4>
+                                        <div class="rating">
+                                            <span class="fa-solid fa-star" id="rate">${Rating}</span>
+                                            <span class="fa-solid fa-star" id="rate">${Rating}</span>
+                                            <span class="fa-solid fa-star" id="rate">${Rating}</span>
+                                            <span class="fa-solid fa-star" id="rate">${Rating}</span>
+                                            <span class="fa-solid fa-star" id="rate">${Rating}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                          
+            `;
+            document.getElementById("kj").style.display = "none";
+            const di = document.getElementById("kj");
+            di.insertAdjacentHTML("afterend", newCard);
+        }
+
+        function getProductsDetails() {
+            document.getElementById('numm').value = document.getElementById('ProductName').innerText;
+            document.getElementById('namm').value = document.getElementById('proDescription').innerText;
+            document.getElementById('statee').value = document.getElementById('price').innerText;
+            document.getElementById('gende').value = document.getElementById('quanAvl').innerText;
+        }
+
+
+        function removeProduct(ele) {
+            // var element = document.getElementById("del");
+            // element.innerHTML = "";
+            // element.remove();
+            if (confirm("Are you sure you want to Delete this Product?") == true) {
+                console.log(ele.parentElement.className);
+                const att = document.createAttribute("id");
+                att.value = "del";
+                // document.getElementsByTagName("h1")[0].setAttributeNode(att);
+                ele.parentElement.parentElement.setAttributeNode(att);
+                console.log(ele.parentElement.parentElement.id);
+
+                const box = document.getElementById("procart");
+
+                // addid();
+
+                var el = document.getElementById("del");
+                el.innerHTML = "";
+                el.remove();
+
+                if (box.children.length === 1) {
+                    // console.log('✅ Element is empty');
+                    console.log(box.children.length);
+                    document.getElementById("kj").style.display = "block";
+                } else {
+                    // console.log('⛔ Element is NOT empty');
+                    console.log(box.children.length);
+                    document.getElementById("kj").style.display = "none";
+                }
+
+                // const isEmpty = document.querySelector('div').innerHTML === "";
+                // console.log(isEmpty)
+            }
+        }
+
+        function removeCard(ele) {
+            if (confirm("Are you sure you want to Decline this Order?") == true) {
+                console.log(ele.parentElement.className);
+                const att = document.createAttribute("id");
+                att.value = "decline"
+                // document.getElementsByTagName("h1")[0].setAttributeNode(att);
+                ele.parentElement.parentElement.parentElement.setAttributeNode(att);
+                console.log(ele.parentElement.parentElement.id);
+
+                const box = document.getElementById('remove');
+
+
+                // addid();
+
+                var el = document.getElementById('decline');
+                el.innerHTML = '';
+                el.remove();
+
+                if (((box.children.length) === 1)) {
+                    // console.log('✅ Element is empty');
+                    console.log((box.children.length));
+                    document.getElementById('pk').style.display = "block";
+
+                } else {
+                    // console.log('⛔ Element is NOT empty');
+                    console.log((box.children.length));
+                    document.getElementById('pk').style.display = "none";
+                }
+
+
+                // const isEmpty = document.querySelector('div').innerHTML === "";
+                // console.log(isEmpty)
+
+            }
+        
+        }
+
+        function removeOffer(ele) {
+            if (confirm("Are you sure you want to Delete this Offer?") == true) {
+                console.log(ele.parentElement.className);
+                const att = document.createAttribute("id");
+                att.value = "delete"
+                // document.getElementsByTagName("h1")[0].setAttributeNode(att);
+                ele.parentElement.parentElement.setAttributeNode(att);
+                console.log(ele.parentElement.parentElement.id);
+
+                const box = document.getElementById('box');
+
+
+                // addid();
+
+                var el = document.getElementById('delete');
+                el.innerHTML = '';
+                el.remove();
+
+                if (((box.children.length) === 1)) {
+                    // console.log('✅ Element is empty');
+                    console.log((box.children.length));
+                    document.getElementById('jk').style.display = "block";
+
+                } else {
+                    // console.log('⛔ Element is NOT empty');
+                    console.log((box.children.length));
+                    document.getElementById('jk').style.display = "none";
+                }
+
+
+                // const isEmpty = document.querySelector('div').innerHTML === "";
+                // console.log(isEmpty)
+
+            }
+        }
+
+
+
+
+
+
+//         function on() {
+//       document.getElementById("overlay").style.display = "block";
+//     }
+
+//     function off() {
+//       document.getElementById("overlay").style.display = "none";
+//     }
+
+
+//     Edit Profile Details Script
+// function openPersonalModal(){
+//     document.getElementById('addresModalCardd').classList.add('addressCardActive');
+//     getProfileDetails();
+// }
+
 
     </script>
     <script src="https://kit.fontawesome.com/50fcb25c1f.js" crossorigin="anonymous"></script>

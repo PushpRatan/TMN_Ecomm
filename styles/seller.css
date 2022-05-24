@@ -127,13 +127,50 @@ body {
 }
 
 .product-info h3 {
-    margin-top: 0;
+    margin: 0;
     font-weight: bold;
 }
 
 .product-info p {
     margin: 0;
 
+}
+
+.btns{
+    margin-top: .5rem;
+}
+
+.btnn {
+    font-size: .9rem;
+    /*border: none;*/
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 1rem;
+    background-color: transparent;
+    font-weight: bold;
+    padding: 0 .2rem;
+}
+
+.success{
+    color: green;
+    border-color: green;
+}
+
+.danger{
+    color: red;
+    border-color: red;
+}
+
+.btnn:hover {
+    color: white;
+}
+
+.success:hover{
+    background-color: green;
+}
+
+.danger:hover{
+    background-color: red;
 }
 
 
@@ -172,10 +209,10 @@ body {
 
 .bottom {
     justify-content: center;
+    height: 65vh;
 }
 
-.item {
-    /* width: 123px; */
+/*.item {
     width: 25%;
     height: 40%;
     line-height: 12rem;
@@ -186,11 +223,229 @@ body {
     text-align: center;
 }
 
+.item p {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+}*/
+
 .offer {
     font-size: 1.3rem;
     margin: 0;
     padding: 0;
+    text-align: center;
+    line-height: 8rem;
 }
+
+
+.offerContent {
+    display: flex;
+    flex-direction: column;   
+}
+
+.flex-item {
+    text-align:right;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.item {
+    /* width: 123px; */
+    width: 25%;
+    height: 40%;
+    background-color: #E2F2F1;
+    margin: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0px 40px 60px rgba(43, 53, 62, 0.15);    
+}
+
+
+/*.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+#overlay{
+    display: none;
+}
+
+.overlay {
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #FFFFFF;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+*/
+
+
+/* Address Card Modal Styles */
+.addressCard, .addressCardddd, .cardModal, .cardModall{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    /* background-color: white; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.addressCard.addressCardActive{
+    display: block;
+}
+.addressCardddd.addressCardActiveee{
+    display: block;
+}
+.addressCardInner, .cardInner{
+    width: 25%;
+    /* margin: auto; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: .4rem .6rem .2rem .6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* justify-content: flex-end; */
+}
+.addressCardInner{
+    background-color: whitesmoke;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.addressTitle{
+    background-color: white;
+    padding: .9rem .6rem;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}
+.labe{
+    opacity: .7;
+    font-size: .83rem;
+    margin-bottom: .2rem;
+}
+.formCardContainerr{
+    display: flex;
+    flex-direction: column;
+    margin: .9rem 0rem;
+    /*width: 93%;*/
+    height: 46vh;
+    overflow-y: scroll;
+    background-color: white;
+    padding: .9rem .6rem;
+}
+.addresBtn{
+    margin-top: .3rem;
+}
+
+.formCardContainer{
+    display: flex;
+    flex-direction: column;
+    margin: .9rem 0rem;
+    /* padding: 0 1rem; */
+}
+.formItems{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .9rem;
+}
+.formLabel{
+    font-size: .88rem;
+
+}
+.formInput{
+    width: 100%;
+    height: 5vh;
+    position: relative;
+}
+.formfield{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0 .5rem;
+    
+
+}
+.formfield:focus{
+    border: 1px solid rgba(0,0,0,1);
+}
+
+.cardButtons{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    width: 49%;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: .4rem ;
+    border-radius: 1px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn1:hover{
+    background-color: black;
+    color: white;
+}
+.btn2:hover{
+    background-color: orangered;
+    color: white;
+}
+/* card modal styles */
+.bttn1{
+    background-color:forestgreen;
+    color: white;
+    width: 60%;
+}
+.bttn2{
+    background-color: red;
+    color: white;
+    width: 38%;
+}
+
+
 
 
 /* Profile */
@@ -232,17 +487,25 @@ body {
 
 .Products {
     display: inline-flex;
+    margin: 1rem;
     /* margin-left: 5rem; */
 
 }
 
 .Products img {
-    margin-top: 2rem;
-    margin-left: 10rem;
+    /*margin-top: 2rem;*/
+    /*margin-left: 10rem;*/
     width: 12rem;
     height: 12rem;
     border-radius: .4rem;
 
+}
+
+.Productdetails p{
+    float: right;
+    margin: 0;
+    margin-top: -1rem;
+    cursor: pointer;
 }
 
 .Productdetails h2 {
@@ -264,7 +527,7 @@ body {
 .Productdetails {
     padding: 1rem;
     background-color: white;
-    margin-top: 2rem;
+    /*margin-top: 2rem;*/
     height: 10rem;
     width: 33rem;
     box-shadow: rgba(228, 244, 243, 1) 0px 5px;
@@ -308,6 +571,7 @@ body {
 
 #procart {
     height: 65vh;
+    justify-content: center;
 }
 
 
