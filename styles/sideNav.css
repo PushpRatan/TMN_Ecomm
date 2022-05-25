@@ -52,7 +52,6 @@
 }
 /* Navbar code end */
 .dddfffd{
-    background-color: #E4F4F3;
     padding: 1.3rem 0;
 }
 .userContainer{
@@ -64,7 +63,6 @@
     /* margin: 3rem 0; */
     flex-direction: column;
     justify-content: flex-start;
-    background-color: #FBF9F7;
     /* justify-content: center; */
 }
 .header{
