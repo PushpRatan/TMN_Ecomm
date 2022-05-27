@@ -1,5 +1,6 @@
 let plusBtn = document.getElementById("plsBtn");
 let toDsiplayProducts= document.getElementById("productBtn");
+// window.onload = updateProductDetails(8,'onnload');
 function displayProductDetails(){
     toDsiplayProducts.classList.toggle("active");
 }
@@ -183,7 +184,7 @@ const products = [
 
 
 //Update product details
-function updateProductDetails(productId){
+function updateProductDetails(productId, typeMethoood){
     var product = products.find(function(item,index){
         return item.id === productId
     });
@@ -198,8 +199,14 @@ function updateProductDetails(productId){
     document.getElementById("prSM").innerText = product.soleMaterial;
     document.getElementById("prPO").innerText = product.packOf;
     
-    updateRecentlyViewed(product);
-    updateCart(product);
+    if(typeMethoood!=="onnload"){
+        updateRecentlyViewed(product);
+    }
+    if(typeMethoood==="onnload"){
+        updateCartItemAlso(product);
+    }else{
+        updateCartItemAlso(product);
+    }
 }
 
 function changeImage(obj){
@@ -310,31 +317,7 @@ function updateRecentlyViewed(currViewed){
 
 }
 
-//Update Cart
-function updateCart(curProduct){
-    let currentProduct = `
-    <div class="psCartContainerInner" id="cartId" >
-        <div class="psCartImgConter">
-            <img class="psCartImg" src="${curProduct.image}" alt="fila"/>
-        </div>
-        <div class="psCartContent">
-            <p class="psCartTittle">${curProduct.title}</p>
-            <p class="psCartTitleDescription">${curProduct.description}</p>
-            <p class="psCartSize">Size : <span class="psSize">8</span></p>
-            <div class="productDetails">
-                <h5 class="pPrice">${curProduct.Discountprice}</h5>
-                <p class="pDup" style="text-decoration: line-through;">${curProduct.OriginalPrice}</p>
-                <small class="pDiscount">${curProduct.discount}</small>
-            </div>
-            <div class="psCartBottom">
-                <p class="psLinkeOne">SAVE FOR LATER</p>
-                <p class="psLinkeOne" onclick="closeCart()">REMOVE</p>
-            </div>
-        </div>
-    </div>
-    `;
-    document.getElementById("cartId").innerHTML = currentProduct;
-}
+
 
 //Give rating and review for products
 let reviewModal = document.getElementById("cRModl");
@@ -421,13 +404,74 @@ window.onload = function(){
 
 
 //product cart
-let productCartModal = document.getElementById("ggg");
-function openCart(){
-    productCartModal.classList.add("cdal");
-}
-function closeCart(){
-    productCartModal.classList.remove("cdal");
-}
+// let productCartModal = document.getElementById("ggg");
+// function openCart(){
+//     productCartModal.classList.add("cdal");
+// }
+// function closeCart(){
+//     productCartModal.classList.remove("cdal");
+// }
 function displayColor(obj){
     obj.classList.toggle("sizeActive");
 }
+
+function letMeDownSlowly(){
+    document.getElementById("dddddd").classList.toggle("ohmylady");
+}
+const toAddCart = document.getElementById("ohmggod");
+var newCartProduct;
+// const volumem = "hi";
+function updateCartItemAlso(productt){
+    console.log(productt.title)
+    newCartProduct = `
+        <div class="cartsssContainer">
+            <div class="imgCartContainer">
+                <img class="imggggggfff" src="${productt.image}" alt="pumaTwo" />
+            </div>
+            <div class="rightContentContainer">
+                <div>
+                    <p class="cartContentTitle">${productt.title}</p>
+                    <p class="cartContentDescription"><span>${productt.reviews}</span> reviews</p>
+                    <p class="cartContentPrice">${productt.Discountprice}</p>
+                    <p class="cartContentSize">Size <small>8</small></p>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                    <button class="cartBuyButton" type="button"><a href="./cart-item.html" style="text-decoration:none;color:white;">BUY NOW</a></button>
+                    <button class="cartDeleteButton" type="button" onclick="removeeeCartProduct('cartsssContainer')">DELETE</button>
+                </div>
+            
+            </div>
+        </div>
+    `
+    console.log(newCartProduct)
+    // toAddCart.insertAdjacentElement('beforebegin', originalProdct);
+    updateOriginalCart( 'notClicked');
+}
+function updateOriginalCart(status){
+    if(status==="clicked"){
+        toAddCart.insertAdjacentHTML('afterbegin', newCartProduct);;
+        console.log(newCartProduct);
+        incrementCartUpValue();
+    }
+}
+let vala = -1;
+let cartDeleteVal = 0;
+function removeeeCartProduct(et){
+    console.log(et);
+    if(et==='cartsssContainer'){
+        document.getElementsByClassName('cartsssContainer')[vala+1].innerText="";
+    }
+    vala = vala + 1;
+    decrementCartValue();
+    
+}
+let defaultVal = 0;
+function incrementCartUpValue(){
+    defaultVal = defaultVal + 1;
+    document.getElementById('increaseValue').innerText = defaultVal;
+}
+function decrementCartValue(){
+    defaultVal = defaultVal - 1;
+    document.getElementById('increaseValue').innerText = defaultVal;
+}
+window.onload = updateProductDetails(8,'onnload');
