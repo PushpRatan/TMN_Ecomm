@@ -18,7 +18,7 @@ body {
   align-items: center;
   padding: .9rem 1.3rem;
   box-shadow: 1px 1px rgba(0,0,0,0.14);
-  height: 4vh;
+  height: 7vh;
 }
 .logoTitle{
   font-size: 2rem;
@@ -80,7 +80,7 @@ body {
   background-color: #202020;
   padding: 70px 0;
   height: max-content;
-  font-family: "poppins", sans-serif;
+  /*font-family: "poppins", sans-serif;*/
   font-size: 1em;
 
 }
@@ -368,7 +368,7 @@ img, svg{
 .leftside {
     background-color: #E4F4F3;
     width: 28%;
-    height: 100vh;
+    /*height: 100vh;*/
     text-align: center;
 }
 
@@ -378,23 +378,23 @@ img, svg{
 
 .profile img {
     border-radius: 8rem;
-    width: 40%;
+    width: 35%;
 }
 
 
 .buttons {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .buttons a {
     background-color: #FAF9F6;
-    width: 75%;
-    height: 3.5rem;
-    font-size: 1.45rem;
+    width: 70%;
+    height: 2.5rem;
+    font-size: 1.3rem;
     display: flex;
     flex-direction: row;
     /* text-align: center; */
-    margin: 1.6rem auto;
+    margin: 1.5rem auto;
     text-decoration: none;
     color: black;
     /* justify-content: center; */
@@ -409,7 +409,7 @@ img, svg{
 }
 
 .icons {
-    width: 2rem;
+    width: 1.5rem;
     margin: 1rem;
 }
 
@@ -418,8 +418,8 @@ img, svg{
 }
 
 .rightside {
-    padding: 2rem 4rem;
-    padding-top: 1rem;
+    padding: 1rem 4rem;
+    /*padding-top: 1rem;*/
     width: 72%;
     background-color: #FAF9F6;
     color: black;
@@ -428,7 +428,7 @@ img, svg{
 .rightside h1 {
     font-family: 'Mulish';
     letter-spacing: 2.5px;
-    font-size: 2.5rem;
+    /*font-size: 2.5rem;*/
     text-align: center;
     margin-top: 0.5rem;
 }
@@ -442,18 +442,18 @@ img, svg{
     /* justify-content: center; */
     /* overflow: scroll; */
     flex: 1;
-    height: 75vh;
+    height: 70vh;
     overflow: auto;
 }
 
 .order-card {
     width: 45%;
-    height: 10.5rem;
+    height: 10rem;
     background-color: white;
     display: flex;
     flex-direction: row;
     border-radius: 1rem;
-    margin: .5rem 1.5rem;
+    margin: .5rem 1rem;
     box-shadow: rgba(228, 244, 243, 1) 0px 5px;
 }
 
@@ -478,7 +478,7 @@ img, svg{
 .product-info h2 {
     margin-bottom: 0;
     font-weight: 100;
-    /* font-size: 150%; */
+    font-size: 1.3rem; 
 }
 
 .product-info h3 {
@@ -564,7 +564,7 @@ img, svg{
 
 .bottom {
     justify-content: center;
-    height: 62vh;
+    height: 58vh;
 }
 
 /*.item {
@@ -589,7 +589,7 @@ img, svg{
     margin: 0;
     padding: 0;
     text-align: center;
-    line-height: 8rem;
+    line-height: 5rem;
 }
 
 
@@ -600,14 +600,15 @@ img, svg{
 
 .flex-item {
     text-align:right;
-    margin-right: 1rem;
+    margin-right: .4rem;
+    margin-top: 0;
     cursor: pointer;
 }
 
 .item {
     /* width: 123px; */
     width: 25%;
-    height: 40%;
+    height: 10rem;
     background-color: #E2F2F1;
     margin: 1.5rem;
     border-radius: .5rem;
@@ -814,7 +815,7 @@ img, svg{
 }
 
 .left {
-    font-size: 2rem;
+    font-size: 1.6rem;
     width: 25%;
 }
 
@@ -823,14 +824,14 @@ img, svg{
     flex-direction: column;
     /*flex: 1;*/
     width: 70%;
-    margin-top: 1.2rem;
+    margin-top: .6rem;
 
 }
 
 .right input {
     /*margin: 1rem 0;*/
     /*font-size: 2rem;*/
-    height: 40px;
+    height: 1.7rem;
     width: 90%;
     border: none;
     box-shadow: rgb(228, 244, 243) 0px 5px;
@@ -842,7 +843,7 @@ img, svg{
 
 .Products {
     display: inline-flex;
-    margin: 1rem;
+    margin: .8rem;
     /* margin-left: 5rem; */
 
 }
@@ -850,8 +851,8 @@ img, svg{
 .Products img {
     /*margin-top: 2rem;*/
     /*margin-left: 10rem;*/
-    width: 12rem;
-    height: 12rem;
+    width: 10rem;
+    height: 10rem;
     border-radius: .4rem;
 
 }
@@ -866,24 +867,27 @@ img, svg{
 .Productdetails h2 {
     margin: 0em;
     padding: 0rem;
+    font-size: 1.2rem;
 }
 
 .Productdetails h3 {
     margin: 0em;
     font-weight: lighter;
-    padding: 0rem 0rem .5rem 0rem;
+    font-size: 1rem;
+    /*padding: 0rem 0rem .5rem 0rem;*/
 }
 
 .Productdetails h4 {
     margin: 0em;
     padding: 0rem 0rem .5rem 0rem;
+    font-size: .9rem;
 }
 
 .Productdetails {
     padding: 1rem;
     background-color: white;
     /*margin-top: 2rem;*/
-    height: 10rem;
+    /*height: 10rem;*/
     width: 33rem;
     box-shadow: rgba(228, 244, 243, 1) 0px 5px;
     margin-left: 3rem;
@@ -898,8 +902,8 @@ img, svg{
 }
 
 .updateitems {
-    margin-top: 2rem;
-    margin-left: 10rem;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
 }
 
 .updateitems a {
@@ -925,7 +929,7 @@ img, svg{
 }
 
 #procart {
-    height: 62vh;
+    height: 58vh;
     justify-content: center;
 }
 
@@ -967,7 +971,7 @@ img, svg{
     .Products img {
         margin: auto;
         width: 30%;
-        height: 127%;
+        height: 8.5rem;
     }
 
     .Productdetails {
@@ -987,7 +991,7 @@ img, svg{
     }
 
     #procart{
-        height: 72vh;
+        height: 67vh;
     }
 
     .updateitems{
@@ -1008,7 +1012,7 @@ img, svg{
         font-size: 1rem;
         margin: 0em;
         font-weight: lighter;
-        padding: 0rem 0rem .5rem 0rem;
+        /*padding: 0rem 0rem .5rem 0rem;*/
     }
 
     .Productdetails h4 {
@@ -1026,7 +1030,7 @@ img, svg{
     }
 
     .bottom{
-        height: 70vh;
+        height: 67vh;
     }
 
     .item{
@@ -1051,6 +1055,7 @@ img, svg{
     .navbar .menu-items {
         height: 83.5vh !important;
         width: 10rem;
+        padding-top: 40px !important;
         /* align-items: center; */
         /* justify-content: center; */
 
@@ -1063,7 +1068,7 @@ img, svg{
     .rightside {
         padding: 0rem;
         width: 100%;
-        height: 100vh;
+        height: 89vh;
     }
 
     .rightside h1 {
@@ -1182,7 +1187,7 @@ img, svg{
 
     .container {
         flex-direction: row;
-        height: 100vh;
+        height: 90vh;
     }
 
     .leftside {
@@ -1198,7 +1203,7 @@ img, svg{
     .rightside {
         width: 100%;
         padding: 0rem;
-        height: 100vh;
+        height: 90vh;
     }
 
     .rightside h1 {
@@ -1211,7 +1216,7 @@ img, svg{
         flex-wrap: wrap;
         /* width: 75%; */
         margin: .75rem;
-        height: 85vh;
+        height: 80vh;
         overflow: auto;
     }
 
@@ -1354,7 +1359,7 @@ img, svg{
 .navbar .menu-items {
     padding-top: 120px;
     /* box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5); */
-    height: 89.5vh;
+    height: 79.8vh;
     width: 20rem;
     transform: translate(-150%);
     display: flex;
