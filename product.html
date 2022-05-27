@@ -13,7 +13,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./navbar and footer/navbar/navbar.css" />
+    <link rel="stylesheet" href="./styles/sideNav.css" />
+    <link rel="stylesheet" href="./styles//productStyles/cardProductsView.css" />
     <link rel="stylesheet" href="./styles/productStyles/productImageSlider.css" />
     <link rel="stylesheet" href="./styles/productStyles/products.css" />
     <link rel="stylesheet" href="./styles/productStyles/similarProductts.css" />
@@ -28,71 +29,56 @@
     </style>
 </head>
 
-<body>
+<body >
 
-    <nav class="navigation">
-        <div class="wrap">
-            <div class="navLogo">
-                <i class="fa fa-bars ba" id="open" onclick="openSideNav()"></i>
-                <i class="fa fa-times ca" id="close" onclick="closeSideNav()"></i>
-                <a href="./index.html" class="logo">LOGO</a>
-            </div>
-
-            <ul class="menu">
-                <li class="dropdown">
-                    <a href="#">MEN</a>
-                    <div class="dropdown-content">
-                        <a href="#">New Now</a>
-                        <a href="#">Clothing</a>
-                        <a href="#">Accesories</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">WOMEN</a>
-                    <div class="dropdown-content">
-                        <a href="#">New Now</a>
-                        <a href="#">Clothing</a>
-                        <a href="#">Accesories</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">TEENS</a>
-                    <div class="dropdown-content">
-                        <a href="kids.html">Teen Boy</a>
-                        <a href="kids.html">Teen Girls</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">KIDS</a>
-                    <div class="dropdown-content">
-                        <a href="kids.html">Girls</a>
-                        <a href="kids.html">Boys</a>
-                        <a href="kids.html">New Born</a>
-                    </div>
-                </li>
-            </ul>
-
-            <div class="right-elements">
-                <a href="./cart-item.html" class="wishlist">
-                    <i class="fa fa-heart"></i>
-                </a>
-                <a href="cart-item.html" class="cart">
-                    <i class="fa fa-shopping-bag"></i>
-                </a>
-                <a href="userDashboard.html" class="user">
-                    <i class="fa fa-user"></i>
-                </a>
-            </div>
+    <nav class="navbarContainer" style="position: sticky;top: 0;z-index:5;background-color:white;">
+        <div style="display: flex;align-items:center;">
+            <i class="fa fa-bars navBarIcon" style="font-size:20px;margin-right: .5rem;" onclick="navbarrr()"></i>
+            <h6 class="logoTitle"><a href="index.html">LOGO</a></h6>
         </div>
-        <div class="searchbox">
-            <div class="search">
-                <input type="search" placeholder="search" id="search" />
-                <div><label for="search" class="fa fa-search" style="margin-left: 10px;"></label></div>
+        <div class="navMiddleLinks">
+            <a href="#" class="navItems">MEN</a>
+            <a href="#" class="navItems">WOMEN</a>
+            <a href="kids.html" class="navItems">TEENS</a>
+            <a href="kids.html" class="navItems">KIDS</a>
+        </div>
+        <div class="navIcons">
+            <a href="#" class="fa fa-heart navIc" id="wish"></a> 
+            <div class="cartsssSize">
+                <a href="#" class="fa fa-shopping-bag navIc" onclick="letMeDownSlowly()"></a>
+                <span class="cartsValll" id="increaseValue">0</span>
             </div>
+            <a href="#" class="fa fa-user navIc"></a>
         </div>
     </nav>
+    <div class="navvSideNav" id="navvvv">
+        <i class="fa fa-times closeIcon" style="font-size:24px" onclick ="closeNavbarr()"></i>
+        <p class="navItemss">MEN</p>
+        <p class="navItemss">WOMEN</p>
+        <p class="navItemss"><a href="kids.html">TEENS</a></p>
+        <p class="navItemss"><a href="kids.html">KIDS</a></p>
+    </div>
 
-    <main class="productsMain" style="padding-top: 7rem;">
+    <!-- Cart products view -->
+    <div class="mainCarts" id="dddddd">
+    <section  class="cartsViewwContainer" id="ohmggod">
+        <!-- <div class="cartsssContainer"  id="toAddeHero" >
+            <div class="imgCartContainer">
+                <img class="imggggggfff" src="./images/pumaTwo.jpeg" alt="pumaTwo" />
+            </div>
+            <div class="rightContentContainer">
+                <p class="cartContentTitle">PUMA</p>
+                <p class="cartContentDescription"><span>96</span> reviews</p>
+                <p class="cartContentPrice">₹  2,399</p>
+                <p class="cartContentSize">Size <small>8</small></p>
+                <button class="cartBuyButton" type="button">BUY NOW</button>
+                <button class="cartDeleteButton" type="button">DELETE</button>
+            </div>
+        </div> -->
+        
+    </section>
+    </div>
+    <main class="productsMain" style="padding-top: .6rem;">
 
         <section class="imageSlider">
             <div class="imgCont">
@@ -106,7 +92,6 @@
                 </div>
             </div>
         </section>
-
 
         <section class="prodctsMainContainer" >
             <div class="productsLeftSection">
@@ -140,34 +125,34 @@
                         <h3 class="pdhTitle">Product Details</h3>
                         <p class="pdhPlus" id="plsBtn" onclick="displayProductDetails()">+</p>
                     </div>
-                    <div class="productDetailsInformation " id="productBtn">
+                    <div class="productDetailsInformation " id="productBtn" style="background-color: white;">
                         <div class="pColorConer">
                             <p class="pColor">Color</p>
-                            <p class="pGrey" id="prColor">Grey</p>
+                            <p class="pGrey" id="prColor" style="color: black;">Grey</p>
                         </div>
                         <div class="pColorConer">
                             <p class="pColor">Outer material</p>
-                            <p class="pGrey" id="prOM">PU</p>
+                            <p class="pGrey" id="prOM" style="color: black;">PU</p>
                         </div>
                         <div class="pColorConer">
                             <p class="pColor">Model name</p>
-                            <p class="pGrey" id="prMN">IZUNA</p>
+                            <p class="pGrey" id="prMN" style="color: black;">IZUNA</p>
                         </div>
                         <div class="pColorConer">
                             <p class="pColor">Ideal for</p>
-                            <p class="pGrey" id="prIF">Men</p>
+                            <p class="pGrey" id="prIF" style="color: black;">Men</p>
                         </div>
                         <div class="pColorConer">
                             <p class="pColor">Occasion</p>
-                            <p class="pGrey" id="prO">Sports</p>
+                            <p class="pGrey" id="prO" style="color: black;">Sports</p>
                         </div>
                         <div class="pColorConer">
                             <p class="pColor">Sole material</p>
-                            <p class="pGrey" id="prSM">IM EVA</p>
+                            <p class="pGrey" id="prSM" style="color: black;">IM EVA</p>
                         </div>
                         <div class="pColorConer">
                             <p class="pColor">Pack of</p>
-                            <p class="pGrey" id="prPO">1</p>
+                            <p class="pGrey" id="prPO" style="color: black;">1</p>
                         </div>
 
                     </div>
@@ -268,7 +253,7 @@
             </div>
             <div class="productsRightSection" style="position:sticky">
                 <!-- Product Description -->
-                <div class="productDetailsContainer">
+                <div class="productDetailsContainer" >
                     <h4 class="productDetailTitle" id="productTitle">PUMA</h4>
                     <p class="productDetailDescription" id="pDescription">ZOD Runner NM Running Shoes For Men (Blue)</p>
                     <h5 class="productDetailPrice" id="pDicPrice">₹2,399</h5>
@@ -342,7 +327,7 @@
                 <div class="productBagContainer">
                     <div class="productBagContnerInner">
                         <div class="productBagCTop">
-                            <h5 class="productBagTitle" onclick="openCart()">ADD TO BAG</h5>
+                            <h5 class="productBagTitle" onclick="updateOriginalCart('clicked')">ADD TO BAG</h5>
                         </div>
                         <div class="productBagBottom">
                             <div class="productBagLogo">
@@ -380,14 +365,14 @@
         <!-- Similar Products Cards -->
         <section class="similarProducts" >
             <h3 class="spTitle">Similar Products</h3>
-            <div class=" owl-carousel owl-theme">
-                <a href="#" style="text-decoration: none;">
-                    <div class=" item" onclick="updateProductDetails(1)" id="1">
+            <div class=" owl-carousel owl-theme" >
+                <a href="#" style="text-decoration: none;" >
+                    <div class=" item" onclick="updateProductDetails(1, 'notOnload')" id="1" style="background-color: white;">
                         <div class="productImgContainer">
                             <img class="productImage" id="CDD" onclick="changeImage(this)" src="./images/adidas.jpeg"
                                 alt="adidas""/>
                     </div>
-                    <div class=" productDetails">
+                    <div class=" productDetails" style="padding: 0 0 0 .4rem;">
                             <h4 class="productTitle">ADIDAS</h4>
                             <p class="productDescription">Glarus M Running Sports Shoes For Men (Blue)</p>
                             <div class="productPrices">
@@ -399,13 +384,13 @@
                     </div>
                 </a>
 
-                <a href="#" style="text-decoration:none;">
-                    <div class="item" onclick="updateProductDetails(2)" id="2">
+                <a href="#" style="text-decoration:none;" >
+                    <div class="item" onclick="updateProductDetails(2, 'notOnload')" id="2" style="background-color: white;">
                         <div class="productImgContainer">
                             <img class="productImage" onclick="changeImage(this)" src="./images/ciffraStumper.jpeg"
                                 alt="adidas" />
                         </div>
-                        <div class="productDetails">
+                        <div class="productDetails" style="padding: 0 0 0 .4rem;">
                             <h4 class="productTitle">Ciffra</h4>
                             <p class="productDescription">STUMPER Rnning Shoes For Men (Blue)</p>
                             <div class="productPrices">
@@ -417,13 +402,13 @@
                     </div>
                 </a>
 
-                <a href="#" style="text-decoration: none;">
-                    <div class="item" onclick="updateProductDetails(3)" id="3">
+                <a href="#" style="text-decoration: none;" >
+                    <div class="item" onclick="updateProductDetails(3, 'notOnload')" id="3" style="background-color: white;">
                         <div class="productImgContainer">
                             <img class="productImage" onclick="changeImage(this)" src="./images/filaTwo.jpeg"
                                 alt="adidas" />
                         </div>
-                        <div class="productDetails">
+                        <div class="productDetails" style="padding: 0 0 0 .4rem;">
                             <h4 class="productTitle">FILA</h4>
                             <p class="productDescription">KARTO Sports Running Shoes For Men (Red)</p>
                             <div class="productPrices">
@@ -435,13 +420,13 @@
                     </div>
                 </a>
 
-                <a href="#" style="text-decoration: none;">
-                    <div class="item" onclick="updateProductDetails(4)" id="4">
+                <a href="#" style="text-decoration: none;" >
+                    <div class="item" onclick="updateProductDetails(4, 'notOnload')" id="4" style="background-color: white;">
                         <div class="productImgContainer">
                             <img class="productImage" onclick="changeImage(this)" src="./images/puma.jpeg"
                                 alt="adidas" />
                         </div>
-                        <div class="productDetails">
+                        <div class="productDetails" style="padding: 0 0 0 .4rem;">
                             <h4 class="productTitle">PUMA</h4>
                             <p class="productDescription">Softride Enzo NXT Running Shoes For Men (Black)</p>
                             <div class="productPrices">
@@ -453,13 +438,13 @@
                     </div>
                 </a>
 
-                <a href="#" style="text-decoration: none;">
-                    <div class=" item" onclick="updateProductDetails(5)" id="5">
+                <a href="#" style="text-decoration: none;" >
+                    <div class=" item" onclick="updateProductDetails(5, 'notOnload')" id="5" style="background-color: white;">
                         <div class="productImgContainer">
                             <img class="productImage" onclick="changeImage(this)" src="./images/wrognactivetwo.jpeg"
                                 alt="adidas" />
                         </div>
-                        <div class="productDetails">
+                        <div class="productDetails" style="padding: 0 0 0 .4rem;">
                             <h4 class="productTitle">WROGN ACTIVE</h4>
                             <p class="productDescription">Running Sports Shoes For Men (Maroon)</p>
                             <div class="productPrices">
@@ -472,12 +457,12 @@
                 </a>
 
                 <a href="#" style="text-decoration: none;">
-                    <div class=" item" onclick="updateProductDetails(6)" id="6">
+                    <div class=" item" onclick="updateProductDetails(6, 'notOnload')" id="6" style="background-color: white;">
                         <div class="productImgContainer">
                             <img class="productImage" onclick="changeImage(this)" src="./images/sketchers.jpeg"
                                 alt="adidas" />
                         </div>
-                        <div class="productDetails">
+                        <div class="productDetails" style="padding: 0 0 0 .4rem;">
                             <h4 class="productTitle">SKETCHERS</h4>
                             <p class="productDescription">EQUALIZER 4.0 - GENERATION Casuals For Men (Navy)</p>
                             <div class="productPrices">
@@ -490,12 +475,12 @@
                 </a>
 
                 <a href="#" style="text-decoration: none;">
-                    <div class=" item" onclick="updateProductDetails(7)" id="7">
+                    <div class=" item" onclick="updateProductDetails(7, 'notOnload')" id="7" style="background-color: white;">
                         <div class="productImgContainer">
                             <img class="productImage" onclick="changeImage(this)" src="./images/pumaThree.jpeg"
                                 alt="puma tree" />
                         </div>
-                        <div class="productDetails">
+                        <div class="productDetails" style="padding: 0 0 0 .4rem;">
                             <h4 class="productTitle">PUMA</h4>
                             <p class="productDescription">Supertec Zero Running Shoes For Men (Green)</p>
                             <div class="productPrices">
@@ -508,12 +493,12 @@
                 </a>
 
                 <a href="#" style="text-decoration: none;">
-                    <div class=" item" onclick="updateProductDetails(8)" id="8">
+                    <div class=" item" onclick="updateProductDetails(8, 'notOnload')" id="8" style="background-color: white;">
                         <div class="productImgContainer">
                             <img class="productImage" onclick="changeImage(this)" src="./images/pumaTwo.jpeg"
                                 alt="puma Two" />
                         </div>
-                        <div class="productDetails">
+                        <div class="productDetails" style="padding: 0 0 0 .4rem;">
                             <h4 class="productTitle">PUMA</h4>
                             <p class="productDescription">Zod Runner NM Running Shoes For Men (Blue)</p>
                             <div class="productPrices">
@@ -657,32 +642,7 @@
             </div>
         </section>
 
-        <!-- Product cart Modal -->
-        <section class="psCart" id="ggg">
-            <div class="psCartContainer" id="change">
-                <div class="psCartContainerInner" id="cartId">
-                    <div class="psCartImgConter">
-                        <img class="psCartImg" src="./images/pumaTwo.jpeg" alt="fila" />
-                    </div>
-                    <div class="psCartContent">
-                        <p class="psCartTittle">PUMA</p>
-                        <p class="psCartTitleDescription">ZOD Runner NM Running Shoes For Men (Blue)
-                        </p>
-                        <p class="psCartSize">Size : <span class="psSize">8</span></p>
-                        <div class="productDetails">
-                            <h5 class="pPrice">₹2,399</h5>
-                            <p class="pDup" style="text-decoration: line-through;">₹3,999</p>
-                            <small class="pDiscount">40% off</small>
-                        </div>
-                        <div class="psCartBottom">
-                            <p class="psLinkeOne" onclick="closeCart()">REMOVE</p>
-                        </div>
-                    </div>
-                </div>
-                <p class="psCartTitle">The product is succesfully added to cart.</p>
-                <a class="psCartLink" href="./cart-item.html">View Cart</a>
-            </div>
-        </section>
+        
     </main>
     <footer class="footer" id="footer" style="clear: left;">
         <div class="containers">
