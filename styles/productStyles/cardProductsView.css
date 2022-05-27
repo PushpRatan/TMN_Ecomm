@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s linear;
+}
+body{
+    background-color: whitesmoke;
+}
+.mainCarts{
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    margin-top: 4rem;
+    /* background-color: whitesmoke; */
+    border-left: 5px solid white;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    padding: .4rem .3rem .4rem 0;
+    background-color: rgba(0,0,0,0.5);
+    transform: translateX(100%);
+    overflow-y:scroll;
+}
+.cartsViewwContainer{
+    /* position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 100vh;
+    margin-top: 4rem;
+    background-color: whitesmoke;
+    /* border-left: 5px solid white; */
+    /* z-index: 4; */
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: .1rem .3rem .4rem .2rem; 
+    align-items: flex-end;
+    width: 30%;
+    margin-left: auto;
+    height: 100vh;
+
+    /* transform: translateX(450px);
+    overflow-y:scroll;
+    background-color: white;
+    width: 30%;
+    box-shadow: 14px 55px rgba(0,0,0,0.4); */
+}
+.cartsViewwContainer::-webkit-scrollbar{
+    width: 1px;
+}
+.mainCarts.ohmylady{
+    transform: translateX(0);
+}
+.cartsssContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: .8rem;
+    background-color: white;
+}
+.imgCartContainer{
+    width: 28%;
+    height: 160px;
+    /* width: 30%; */
+    /* margin-right: auto; */
+    position: relative;
+}
+.imggggggfff{
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* overflow: hidden; */
+}
+.rightContentContainer{
+    width: 70%;
+    padding-left: .3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.cartContentTitle{
+    font-size: .95rem;
+    padding-top: 0;
+    margin-top: 0;
+    letter-spacing: .11rem;
+}
+.cartContentDescription{
+    font-size: .87rem;
+    opacity: 0.8;
+    padding: 0;
+    margin: 0;
+    word-spacing: .1rem;
+}
+.cartContentPrice{
+    font-size: 1rem;
+    padding-top: .4rem;
+    letter-spacing: .06rem;
+}
+.cartContentSize{
+    font-size: .89rem;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: .2rem;
+    word-spacing: .6rem;
+    letter-spacing: .12rem;
+}
+.cartBuyButton{
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: .92rem;
+    font-weight: bold;
+    padding: .3rem;
+    word-spacing: .1rem;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+.cartBuyButton:hover{
+    background-color: green;
+    color: white;
+}
+.cartDeleteButton{
+    margin-top: .2rem;
+    background-color:darkorange;
+    color: white;
+    font-size: .91rem;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    padding: .2rem;
+    word-spacing: .1rem;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+.cartDeleteButton:hover{
+    background-color: red;
+    color: white;
+}
+.cartsssSize{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.navIc{
+    position: relative;
+}
+.cartsValll{
+    position: absolute;
+    top: -180;
+    right: 0;
+    background-color: red;
+    color: white;
+    padding: 0rem .32rem;
+    border-radius: 50px;
+    font-size: .77rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width:300px) and (max-width:600px) {
+    .cartsViewwContainer{
+        width: 96%;
+        /* transform: translateX(650px); */
+
+    }
+}
+@media (min-width:601px) and (max-width:760px){
+    .cartsViewwContainer{
+        width: 88%;
+        /* transform: translateX(750px); */
+
+    }
+}
+@media (min-width:761px) and (max-width:980px){
+    .cartsViewwContainer{
+        width: 70%;
+        /* transform: translateX(900px); */
+    }
+}
+@media (min-width: 981px) and (max-width:1200px){
+    .cartsViewwContainer{
+        width: 49%;
+        /* transform: translateX(900px); */
+    }
+}
