@@ -366,10 +366,15 @@ img, svg{
 }
 
 .leftside {
-    background-color: #E4F4F3;
+    background-color:black;
+    border-right: 1.5px solid rgba(0,0,0,0.14);
     width: 28%;
     /*height: 100vh;*/
     text-align: center;
+}
+
+.leftside h2{
+    color: white;
 }
 
 .profile {
@@ -379,6 +384,7 @@ img, svg{
 .profile img {
     border-radius: 8rem;
     width: 35%;
+    border: 3px solid white;
 }
 
 
@@ -387,7 +393,8 @@ img, svg{
 }
 
 .buttons a {
-    background-color: #FAF9F6;
+    background-color:black;
+    border: 2px solid white;
     width: 70%;
     height: 2.5rem;
     font-size: 1.3rem;
@@ -396,19 +403,20 @@ img, svg{
     /* text-align: center; */
     margin: 1.5rem auto;
     text-decoration: none;
-    color: black;
+    color: white;
     /* justify-content: center; */
     align-items: center;
-    border-radius: .8rem;
+    border-radius: .4rem;
 
 }
 
 .buttons a:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
+    border: 2px solid white;
 }
 
-.icons {
+.buttons a i {
     width: 1.5rem;
     margin: 1rem;
 }
@@ -454,7 +462,7 @@ img, svg{
     flex-direction: row;
     border-radius: 1rem;
     margin: .5rem 1rem;
-    box-shadow: rgba(228, 244, 243, 1) 0px 5px;
+    box-shadow: #ececec 0px 5px;
 }
 
 .product-img {
@@ -564,7 +572,7 @@ img, svg{
 
 .bottom {
     justify-content: center;
-    height: 58vh;
+    height: 62vh;
 }
 
 /*.item {
@@ -609,9 +617,11 @@ img, svg{
     /* width: 123px; */
     width: 25%;
     height: 10rem;
-    background-color: #E2F2F1;
+    background-color: white;
+    /* border: 1px solid black; */
     margin: 1.5rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
+    /* box-shadow: #ececec 0px 5px; */
     box-shadow: 0px 40px 60px rgba(43, 53, 62, 0.15);    
 }
 
@@ -810,6 +820,7 @@ img, svg{
     display: flex;
     margin-top: 5%;
     margin-left: 5%;
+    height: 70vh;
     /*justify-content: center;*/
     /*border: 2px solid red;*/
 }
@@ -834,7 +845,7 @@ img, svg{
     height: 1.7rem;
     width: 90%;
     border: none;
-    box-shadow: rgb(228, 244, 243) 0px 5px;
+    box-shadow: #ececec 0px 5px;
     border-radius: 5px 5px 5px 5px;
 }
 
@@ -889,7 +900,7 @@ img, svg{
     /*margin-top: 2rem;*/
     /*height: 10rem;*/
     width: 33rem;
-    box-shadow: rgba(228, 244, 243, 1) 0px 5px;
+    box-shadow: #ececec 0px 5px;
     margin-left: 3rem;
     border-radius: .4rem
 }
@@ -929,7 +940,7 @@ img, svg{
 }
 
 #procart {
-    height: 58vh;
+    height: 62vh;
     justify-content: center;
 }
 
