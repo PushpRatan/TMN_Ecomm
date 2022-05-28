@@ -886,6 +886,7 @@ input[type="search" i]{
 
 img, svg{
   vertical-align:  middle;
+  width: 100%;
 }
 
 .botLogo{
