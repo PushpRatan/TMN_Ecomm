@@ -29,7 +29,7 @@ h3{
   font-weight: 400;
 }
 
-#overlay {
+#overlay, #seller-overlay{
   position: fixed; /* Sit on top of the page content */
   display: none; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
@@ -84,7 +84,7 @@ input[type="search" i]{
     appearance: none;
 }
 
-.searchbox input{
+.search input{
     box-sizing: border-box;
     border: 2px solid black;
     width: 200px;
@@ -113,10 +113,10 @@ input[type="search" i]{
         display: none;
     }
 }
-.min-search{
+/*.min-search{
     margin-right:-100px;
     display: inline-block;
-}
+}*/
 
 .navLogo{
   display: flex;
@@ -218,6 +218,10 @@ input[type="search" i]{
 }
 
 .right-elements a:hover i{
+  transform: scale(1.5);
+}
+
+#user:hover{
   transform: scale(1.5);
 }
 

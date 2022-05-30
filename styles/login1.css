@@ -58,6 +58,12 @@
     cursor: pointer;
 }
 
+#seller-overlay button{
+	background-color: #7081E4;
+	/*border: #7081E4;*/
+	border: 1px solid #7081E4;
+}
+
 .login1 button:active {
 	transform: scale(0.95);
 }
@@ -70,6 +76,12 @@
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
+
+#seller-overlay button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
 
 .login1 form {
 	background-color: #FFFFFF;
@@ -178,6 +190,12 @@
 	width: 200%;
   	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
+}
+
+#seller-overlay .overlay{
+	background: #7081E4;
+	background: -webkit-linear-gradient(to right, #7081E4, #7081E4);
+	background: linear-gradient(to right, #7081E4, #7081E4);
 }
 
 .login1 .container.right-panel-active .overlay {

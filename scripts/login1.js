@@ -1,6 +1,9 @@
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
+const signUpButton1 = document.getElementById('sellersignUp');
+const signInButton2 = document.getElementById('sellersignIn');
 const container = document.getElementById('container');
+const container1 = document.getElementById('container1');
 
 signUpButton.addEventListener('click', () => {
 	container.classList.add("right-panel-active");
@@ -8,6 +11,14 @@ signUpButton.addEventListener('click', () => {
 
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
+});
+
+signUpButton1.addEventListener('click', () => {
+    container1.classList.add("right-panel-active");
+});
+
+signInButton2.addEventListener('click', () => {
+    container1.classList.remove("right-panel-active");
 });
 var maxTry = 3;
 

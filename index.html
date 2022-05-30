@@ -37,13 +37,13 @@
 
 
       <div class="right-elements" id="right">
-        <a href="#" class="searchbox" id="searchbox">
-          <div class="search" id="searching">
+        <!-- <a href="#" class="searchbox" id="searchbox"> -->
+          <div class="search" id="searchbox">
             <input type="search" placeholder="search" />
             <!-- <label for="search" class="fa fa-search"></label> -->
           </div>
-          <i class="fa fa-search" id="search"></i>
-        </a>
+          <!-- <i class="fa fa-search" id="search"></i> -->
+        <!-- </a> -->
         <a href="#" class="wishlist">
           <i class="fa-solid fa-heart" id="wish"></i>
         </a>
@@ -57,7 +57,7 @@
           <a href="#" id="user1">&laquo; LogIn / SignUp</a>
             <div class="dropdown-content login-drop" id="login-drop">
               <a onclick="on()">User</a>
-              <a href="#">Seller</a>
+              <a onclick="seller_on()">Seller</a>
             </div>
           <a href="userDashboard.html">Account</a>
           <a href="product.html">orders</a>
@@ -146,6 +146,97 @@
             <input type="password" placeholder="Confirm Password" id="password2">
             <button class="md" onclick="matchPassword()">Sign Up</button>
             <button class="ghost" onclick="toggletosignIn()">Sign In</button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="login1" id="seller-overlay">
+      <div class="container" id="container1">
+        <div class="form-container sign-up-container">
+          <form action="#">
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password" id="password2">
+            <button onclick="matchPassword()">Sign Up</button>
+          </form>
+        </div>
+        <div class="form-container sign-in-container">
+          <form action="#">
+            <h1>Sign in</h1>
+            <div class="social-container">
+              <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="text" placeholder="username" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <a href="fpassword.html">Forgot your password?</a>
+            <button type="button" id="submit" onclick="validate()">Sign In</button>
+          </form>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>The best offer for your business</h1>
+              <p>Sell with us. Earn profit with everything at ease. Maintain and track orders, receive payments
+                        and manage your business</p>
+              <button class="ghost" id="sellersignIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <h1>The best offer for your business</h1>
+              <p>Sell with us. Earn profit with everything at ease. Maintain and track orders, receive payments
+                        and manage your business</p>
+              <button class="ghost" id="sellersignUp">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="smallscreencontainer">
+
+        <div class="form-container sign-in-container" id="smallsellersignin">
+          <form action="#">
+            <h1>Sign in</h1>
+            <div class="social-container">
+              <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="text" placeholder="username" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <a href="fpassword.html">Forgot your password?</a>
+            <button type="button" id="submit" onclick="validate()">Sign In</button>
+            <button class="ghost" onclick="toggletosellersignUp()">Sign Up</button>
+          </form>
+        </div>
+
+        <div class="form-container sign-up-container" id="smallsellersignup">
+          <form action="#">
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password" id="password2">
+            <button class="md" onclick="matchPassword()">Sign Up</button>
+            <button class="ghost" onclick="toggletosellersignIn()">Sign In</button>
           </form>
         </div>
 
@@ -587,11 +678,13 @@
     // navbar script end
 
     var overlay = document.getElementById("overlay");
+    var seller_overlay = document.getElementById("seller-overlay");
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-      if (event.target == overlay) {
-        overlay.style.display = "none";
+      if (event.target == overlay || event.target == seller_overlay) {
+        overlay.style.display = "none"
+        seller_overlay.style.display = "none";
       }
     }
 
@@ -605,6 +698,26 @@
       document.getElementById("smallsignin").style.display = "none";
       document.getElementById("smallsignup").style.display = "block";
     }
+
+    function toggletosellersignIn() {
+      document.getElementById("smallsellersignin").style.display = "block";
+      document.getElementById("smallsellersignup").style.display = "none";
+    }
+
+    function toggletosellersignUp() {
+      document.getElementById("smallsellersignin").style.display = "none";
+      document.getElementById("smallsellersignup").style.display = "block";
+    }
+
+    function seller_on() {
+      document.getElementById("seller-overlay").style.display = "block";
+    }
+
+    function seller_off() {
+      document.getElementById("seller-overlay").style.display = "none";
+    }
+
+
   </script>
 
   <script src="scripts/login1.js"></script>
