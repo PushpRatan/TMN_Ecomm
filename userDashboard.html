@@ -6,152 +6,256 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/db77a28369.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@400;600;700&display=swap"
+    rel="stylesheet">
     <link rel="stylesheet" href="./styles/sideNav.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./styles/homestyle.css"> -->
 </head>
 <body onload="addFirst()">
-    <div class="navbarContainer">
-        <div style="display: flex;align-items:center;">
-            <i class="fa fa-bars navBarIcon" style="font-size:20px;margin-right: .5rem;" onclick="navbarrr()"></i>
-            <h6 class="logoTitle"><a href="index.html">LOGO</a></h6>
+
+    <!-- navbar -->
+    <nav class="navigation">
+        <div class="wrap">
+            <div class="navLogo">
+                <i class="fa fa-bars ba" id="open" onclick="openSideNav()"></i>
+                <i class="fa fa-times ca" id="close" onclick="closeSideNav()"></i>
+                <a href="#" class="logo">LOGO</a>
+            </div>
+
+
+
+            <div class="right-elements" id="right">
+                <!-- <a href="#" class="searchbox" id="searchbox"> -->
+                <div class="search" id="searchbox">
+                    <input type="search" placeholder="search" />
+                    <!-- <label for="search" class="fa fa-search"></label> -->
+                </div>
+                <!-- <i class="fa fa-search" id="search"></i> -->
+                <!-- </a> -->
+                <a href="#" class="wishlist">
+                    <i class="fa-solid fa-heart" id="wish"></i>
+                </a>
+                <a href="cart-item.html" class="cart">
+                    <i class="fa-solid fa-bag-shopping" id="cart"></i>
+                </a>
+                <a href="#" class="user">
+                    <div class="fa-solid fa-user dropdown" id="user"></div>
+                </a>
+                <div class="dropdown-content user-drop" id="user-drop">
+                    <a href="cart-item.html">Your Cart</a>
+                    <a href="userDashboard.html">Account</a>
+                    <a href="product.html">Orders</a>
+                </div>
+            </div>
         </div>
-        <div class="navMiddleLinks">
-            <a href="#" class="navItems">MEN</a>
-            <a href="#" class="navItems">WOMEN</a>
-            <a href="kids.html" class="navItems">TEENS</a>
-            <a href="kids.html" class="navItems">KIDS</a>
+
+        <div class="menu-sec">
+            <ul class="menu">
+                <li class="dropdown">
+                    <a href="#">MEN</a>
+                    <div class="dropdown-content">
+                        <a href="#">New Now</a>
+                        <a href="#">Clothing</a>
+                        <a href="#">Accesories</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">WOMEN</a>
+                    <div class="dropdown-content">
+                        <a href="#">New Now</a>
+                        <a href="#">Clothing</a>
+                        <a href="#">Accesories</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">TEENS</a>
+                    <div class="dropdown-content">
+                        <a href="teens.html">Teen Boy</a>
+                        <a href="teens.html">Teen Girls</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">KIDS</a>
+                    <div class="dropdown-content">
+                        <a href="kids.html">Girls</a>
+                        <a href="kids.html">Boys</a>
+                        <a href="kids.html">New Born</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="navIcons">
-            <a href="#" class="fa fa-heart navIc" id="wish"></a> 
-            <a href="product.html" class="fa fa-shopping-bag navIc" ></a>
-            <a href="#" class="fa fa-user navIc"></a>
+    </nav>
+
+    <div class="sideNav" id="toggleBar">
+        <div class="navItem">
+            <a class="navLink" id="MDrop" onclick="MDrop()" onblur="CMDrop()" href="#">MEN</a>
+            <div class="sideDrop">
+                <div class="overline"></div>
+                <div class=""><a href="#">New Now</a></div>
+                <div class=""><a href="#">Clothing</a></div>
+                <div class=""><a href="#">Accesories</a></div>
+            </div>
         </div>
+        <div class="navItem">
+            <a class="navLink" id="WDrop" onclick="WDrop()" onblur="CWDrop()" href="#">WOMEN</a>
+            <div class="sideDrop">
+                <div class="overline"></div>
+                <div class=""><a href="#">New Now</a></div>
+                <div class=""><a href="#">Clothing</a></div>
+                <div class=""><a href="#">Accesories</a></div>
+            </div>
+        </div>
+        <div class="navItem">
+            <a class="navLink" id="TDrop" onclick="TDrop()" onblur="CTDrop()" href="#">TEEN</a>
+            <div class="sideDrop">
+                <div class="overline"></div>
+                <div class=""><a href="#">Teen Boys</a></div>
+                <div class=""><a href="#">Teen Girls</a></div>
+            </div>
+        </div>
+        <div class="navItem">
+            <a class="navLink" id="KDrop" onclick="KDrop()" onblur="CKDrop()" href="#">KIDS</a>
+            <div class="sideDrop">
+                <div class="overline"></div>
+                <div class=""><a href="#">Girls</a></div>
+                <div class=""><a href="#">Boys</a></div>
+                <div class=""><a href="#">New Born</a></div>
+            </div>
+        </div>
+        <div class="underline"></div>
+        <div class="sidebtn">
+            <a href="#">LogIn/SignUp</a>
+            <a href="#">About Us</a>
+        </div>
+        <div class="sideLogo"><a href="#" class="logo">LOGO</a></div>
     </div>
-    <div class="navvSideNav" id="navvvv">
-        <i class="fa fa-times closeIcon" style="font-size:24px" onclick ="closeNavbarr()"></i>
-        <p class="navItemss">MEN</p>
-        <p class="navItemss">WOMEN</p>
-        <p class="navItemss"><a href="kids.html">TEENS</a></p>
-        <p class="navItemss"><a href="kids.html">KIDS</a></p>
-    </div>
+
+
+
     <div class="dddfffd">
-    <main class="userContainer" style="padding-bottom: 7.3rem;">
-        <div style="display: flex;align-items: center;">
-            <i class="fa fa-bars barIcon" style="font-size:20px" onclick="displaySideNav()"></i>
-            <div class="header" style="margin-left:2rem;">
-                <h6 class="headerTitle">Account</h6>
-                <p class="userName">Chirs Hemsworth</p>
+        <div class="userContainer">
+            <div style="display: flex;align-items: center;">
+                <i class="fa fa-bars barIcon" style="font-size:20px" onclick="displaySideNav()"></i>
+                <div class="header" style="margin-left:2rem;">
+                    <h6 class="headerTitle">Account</h6>
+                    <p class="userName">Chirs Hemsworth</p>
+                </div>
             </div>
-        </div>
 
-        <div class="mainnContainer">
-            <div class="sideNav" id="sdd">
-                <i class="fa fa-times closeIcon" style="font-size:24px" onclick="closeeeSideNav()"></i>
-                <p class="navLink" onclick="displayy(1)" id="on">Personal Details</p>
-                <p class="navLink" onclick="displayy(2)" id="tw">Wishlist</p>
-                <p class="navLink" onclick="displayy(3)" id="th">Your Orders</p>
-                <p class="navLink" onclick="displayy(4)" id="fu">Saved Cards</p>
-                <p class="navLink" onclick="displayy(5)" id="fi">Addresses</p>
-                <p class="navLink" onclick="displayy(6)" id="si">Coupons & Credits</p>
-                <p class="navLink" >Contact Us</p>
-                <p class="navLink">Terms and Policies</p>
-            </div>
-            <div class="navContent">
-                <!-- Personal Details  -->
-                <div class="personalCard" id="one">
-                    <h5 class="pCardTitle">Profile Details</h5>
-                    <div class="personalCardInner">
-                        <div class="pCardLeft">
-                            <p class="profileField">Full Name <span class="profileItem" id="pName">Chris Hemsworth</span></p>
-                            <p class="profileField">Mobile Number <span class="profileItem" id="pPhone">9032536576</span></p>
-                            <p class="profileField">Email ID <span class="profileItem" id="pEmail">chirshemsworth1@gmail.com</span></p>
-                            <p class="profileField">Gender <span class="profileItem" id="pGender">Male</span></p>
-                            <p class="profileField">Date of Birth <span class="profileItem" id="pDob">23-08-1899</span></p>
-                            <p class="profileField">Location <span class="profileItem" id="pLocation">Australia</span></p>
-                            <p class="profileField">Hint Name <span class="profileItem" id="pHint">God of Thunder</span></p>
-                            <button type="button" class="profileBtn" onclick="openPersonalModal()">EDIT</button>
-                        </div>
-                        <div class="pCardRight">
-                            <div class="pCardRImg">
-                                <img class="profilePic" src="./images/user.jpg" alt="user" />
+            <div class="mainnContainer">
+                <div class="sideNavv" id="sdd">
+                    <i class="fa fa-times closeIcon" style="font-size:24px" onclick="closeeeSideNav()"></i>
+                    <p class="navLinkk" onclick="displayy(1)" id="on">Personal Details</p>
+                    <p class="navLinkk" onclick="displayy(2)" id="tw">Wishlist</p>
+                    <p class="navLinkk" onclick="displayy(3)" id="th">Your Orders</p>
+                    <p class="navLinkk" onclick="displayy(4)" id="fu">Saved Cards</p>
+                    <p class="navLinkk" onclick="displayy(5)" id="fi">Addresses</p>
+                    <p class="navLinkk" onclick="displayy(6)" id="si">Coupons & Credits</p>
+                    <p class="navLinkk" >Contact Us</p>
+                    <p class="navLinkk">Terms and Policies</p>
+                </div>
+                <div class="navContent">
+                    <!-- Personal Details  -->
+                    <div class="personalCard" id="one">
+                        <h5 class="pCardTitle">Profile Details</h5>
+                        <div class="personalCardInner">
+                            <div class="pCardLeft">
+                                <p class="profileField">Full Name <span class="profileItem" id="pName">Chris Hemsworth</span></p>
+                                <p class="profileField">Mobile Number <span class="profileItem" id="pPhone">9032536576</span></p>
+                                <p class="profileField">Email ID <span class="profileItem" id="pEmail">chirshemsworth1@gmail.com</span></p>
+                                <p class="profileField">Gender <span class="profileItem" id="pGender">Male</span></p>
+                                <p class="profileField">Date of Birth <span class="profileItem" id="pDob">23-08-1899</span></p>
+                                <p class="profileField">Location <span class="profileItem" id="pLocation">Australia</span></p>
+                                <p class="profileField">Hint Name <span class="profileItem" id="pHint">God of Thunder</span></p>
+                                <button type="button" class="profileBtn" onclick="openPersonalModal()">EDIT</button>
+                            </div>
+                            <div class="pCardRight">
+                                <div class="pCardRImg">
+                                    <img class="profilePic" src="./images/user.jpg" alt="user" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Wishlist Section  -->
-                <div class="wishlistCard" id="two">
-                    <h5 class="wishCardTitle">Your Wishlist</h5>
-                    <div class="wishCard">
-                        <div class="wishCardTop">
-                            <div class="wishCardImg">
-                                
-                                <img class="wishCardImgg" src="./images/sketchers.jpeg" alt="productImg" />
-                            </div>
-                            <div class="wishCardContent">
-                                <h6 class="wishTitle">Nike</h6>
-                                <p class="wishTag">A Sports  Shoes for Men</p>
-                                <h6 class="price"> ₹2,599</h6>
-                                <h6 class="rating">3.8 * rating</h6>
-                                <p class="items">Size M <span class="items">items(1)</span></p>
-                            </div>
-                        </div>
-                        <button type="button" class="wishButton">Order Now</button>
-                    </div>
-                    
-                </div>
-
-                <!-- Your orders Section -->
-                <div class="ordersCard" id="three">
-                    <h5 class="orderTitle">Your Orders</h5>
-                    <div class="ordersInner">
-                        <div class="orderTop">
-                            <p class="date">20-04-2022</p>
-                            <p ₹2,999 class="total">₹2,999 </p>
-                            <p class="orderId">Order Id - O4938030498</p>
-                        </div>
-                        <div class="wishCard" style="width: 100%;">
+                    <!-- Wishlist Section  -->
+                    <div class="wishlistCard" id="two">
+                        <h5 class="wishCardTitle">Your Wishlist</h5>
+                        <div class="wishCard">
                             <div class="wishCardTop">
                                 <div class="wishCardImg">
-                                    
+
                                     <img class="wishCardImgg" src="./images/sketchers.jpeg" alt="productImg" />
                                 </div>
                                 <div class="wishCardContent">
                                     <h6 class="wishTitle">Nike</h6>
                                     <p class="wishTag">A Sports  Shoes for Men</p>
+                                    <h6 class="price"> ₹2,599</h6>
                                     <h6 class="rating">3.8 * rating</h6>
                                     <p class="items">Size M <span class="items">items(1)</span></p>
                                 </div>
                             </div>
+                            <button type="button" class="wishButton">Order Now</button>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Saved Cards Section -->
-                <div class="savedCards" id="four">
-                    <h6 class="savedCTitle">Your Saved Cards</h6>
-                    <button type="button" class="savedCButton" onclick="openCardModal()">Add Card</button>
-                    <div class="savedDetails" id="game" style="margin-top: .8rem;">
-                        <div class="savedCardHeader">
-                            <h6 class="sCNae" id="bNme">SBI Bank</h6>
-                            <p class="scType" id="bcNme">Debit Card</p>
-                        </div>
-                        <p class="scNumber" id="bNm">5106 38XX XXXX 4163</p>
-                        <div class="scUserDetails">
-                            <h6 class="scUserName" id="bcHnum">ANANYA SINGH</h6>
-                            <div class="cardValidity">
-                                <p class="val">Validity</p>
-                                <p class="va" id="bmn">07/39</p>
+                    </div>
+
+                    <!-- Your orders Section -->
+                    <div class="ordersCard" id="three">
+                        <h5 class="orderTitle">Your Orders</h5>
+                        <div class="ordersInner">
+                            <div class="orderTop">
+                                <p class="date">20-04-2022</p>
+                                <p ₹2,999 class="total">₹2,999 </p>
+                                <p class="orderId">Order Id - O4938030498</p>
+                            </div>
+                            <div class="wishCard" style="width: 100%;">
+                                <div class="wishCardTop">
+                                    <div class="wishCardImg">
+
+                                        <img class="wishCardImgg" src="./images/sketchers.jpeg" alt="productImg" />
+                                    </div>
+                                    <div class="wishCardContent">
+                                        <h6 class="wishTitle">Nike</h6>
+                                        <p class="wishTag">A Sports  Shoes for Men</p>
+                                        <h6 class="rating">3.8 * rating</h6>
+                                        <p class="items">Size M <span class="items">items(1)</span></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="cardButtons">
-                            <button type="button" class="btn btn1" onclick="openCarddModal()">EDIT</button>
-                            <button type="button" class="btn btn2" onclick="removeCardModal()">REMOVE</button>
+                    </div>
+
+                    <!-- Saved Cards Section -->
+                    <div class="savedCards" id="four">
+                        <h6 class="savedCTitle">Your Saved Cards</h6>
+                        <button type="button" class="savedCButton" onclick="openCardModal()">Add Card</button>
+                        <div class="savedDetails" id="game" style="margin-top: .8rem;">
+                            <div class="savedCardHeader">
+                                <h6 class="sCNae" id="bNme">SBI Bank</h6>
+                                <p class="scType" id="bcNme">Debit Card</p>
+                            </div>
+                            <p class="scNumber" id="bNm">5106 38XX XXXX 4163</p>
+                            <div class="scUserDetails">
+                                <h6 class="scUserName" id="bcHnum">ANANYA SINGH</h6>
+                                <div class="cardValidity">
+                                    <p class="val">Validity</p>
+                                    <p class="va" id="bmn">07/39</p>
+                                </div>
+                            </div>
+                            <div class="cardButtons">
+                                <button type="button" class="btn btn1" onclick="openCarddModal()">EDIT</button>
+                                <button type="button" class="btn btn2" onclick="removeCardModal()">REMOVE</button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Address Section -->
-                <div class="savedCardss" id="five">
+                    <!-- Address Section -->
+                    <div class="savedCardss" id="five">
                         <h6 class="savedCTitle">Your Addresses</h6>
                         <button type="button" class="savedCButton" onclick="openAddressModal()">Add <Address></Address></button>
                         <div class="savedDetails addresDe" id="adddd">
@@ -170,39 +274,39 @@
                                 <button type="button" class="btn btn2" onclick="removeAddressModal()">REMOVE</button>
                             </div>
                         </div>                    
-                </div>
-
-                <!-- Credit Cards Section -->
-                <div class="creditCards" id="six">
-                    <div class="creditCard">
-                        <h6 class="cardTitle">Your Credit!</h6>
-                        <p class="price">₹200.00</p>
-                        <h6 class="descp">Have a gift card ?</h6>
-                        <p class="code">GIFT CARD</p>
                     </div>
-                    <div class="creditOffers">
-                        <div class="creditOfferContainer">
-                            <h5 class="offerPrice">10% <span class="offPrice">off</span></h5>
-                            <div class="offersOptions">
-                                <p class="offerTitle">Minimum purchase offer 2000</p>
-                                <h6 class="offerExpire">Expire : <span class="offerDesc">April-30-2022</span></h6>
-                            </div>
+
+                    <!-- Credit Cards Section -->
+                    <div class="creditCards" id="six">
+                        <div class="creditCard">
+                            <h6 class="cardTitle">Your Credit!</h6>
+                            <p class="price">₹200.00</p>
+                            <h6 class="descp">Have a gift card ?</h6>
+                            <p class="code">GIFT CARD</p>
                         </div>
-                        <div class="creditOfferContainer">
-                            <h5 class="offerPrice">Rs.200 <span class="offPrice">off</span></h5>
-                            <div class="offersOptions">
-                                <p class="offerTitle"> On Minimum purchase of Rs 0</p>
-                                <h6 class="offerExpire">Code :<span class="offerDesc">56106</span></h6>
-                                <h6 class="offerExpire">Expire : <span class="offerDesc">April-30-2022</span></h6>
+                        <div class="creditOffers">
+                            <div class="creditOfferContainer">
+                                <h5 class="offerPrice">10% <span class="offPrice">off</span></h5>
+                                <div class="offersOptions">
+                                    <p class="offerTitle">Minimum purchase offer 2000</p>
+                                    <h6 class="offerExpire">Expire : <span class="offerDesc">April-30-2022</span></h6>
+                                </div>
+                            </div>
+                            <div class="creditOfferContainer">
+                                <h5 class="offerPrice">Rs.200 <span class="offPrice">off</span></h5>
+                                <div class="offersOptions">
+                                    <p class="offerTitle"> On Minimum purchase of Rs 0</p>
+                                    <h6 class="offerExpire">Code :<span class="offerDesc">56106</span></h6>
+                                    <h6 class="offerExpire">Expire : <span class="offerDesc">April-30-2022</span></h6>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
-
-
-    </main>
     </div>
     <div class="addressCard" id="addresModalCardd">
         <div class="addressCardInner">
@@ -221,7 +325,7 @@
                     </div>
                 </div>
                 <div class="formItems">
-                    
+
                     <div class="formItems" >
                         <label class="formLabel labe">Emaild Id *</label>
                         <div class="formInput">
@@ -230,7 +334,7 @@
                     </div>
                 </div>
                 <div class="formItems">
-                    
+
                     <div class="formItems" >
                         <label class="formLabel labe">Gender *</label>
                         <div class="formInput">
@@ -451,114 +555,114 @@
 
     </div>
     <!-- footer starts -->
-<footer class="footer" id="footer" style="clear: left;">
-    <div class="containers">
-        <div class="rows">
-            <div class="footer-col">
-                <h4 class="left-align"><span>SHOP</span></h4>
-                <div class="company">
-                    <ul>
-                        <li><a href="#" id="footer-about">Ladies</a></li>
-                        <li><a href="#" id="footer-service">Men</a></li>
-                        <li><a href="#" id="footer-policy">Baby</a></li>
-                        <li><a href="#" id="footer-terms">Kids</a></li>
-                        <li><a href="#" id="footer-terms">Ecomm Home</a></li>
+    <footer class="footer" id="footer" style="clear: left;">
+        <div class="containers">
+            <div class="rows">
+                <div class="footer-col">
+                    <h4 class="left-align"><span>SHOP</span></h4>
+                    <div class="company">
+                        <ul>
+                            <li><a href="#" id="footer-about">Ladies</a></li>
+                            <li><a href="#" id="footer-service">Men</a></li>
+                            <li><a href="#" id="footer-policy">Baby</a></li>
+                            <li><a href="#" id="footer-terms">Kids</a></li>
+                            <li><a href="#" id="footer-terms">Ecomm Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="left-align"><span>Corporate Info</span></h4>
+                    <div class="company">
+                        <ul>
+                            <li><a href="#" id="footer-test">Career at TMN</a></li>
+                            <li><a href="#" id="footer-career">About TMN group</a></li>
+                            <li><a href="#" id="footer-blogs">Sustainability</a></li>
+                            <li><a href="#" id="footer-blogs">Press</a></li>
+                            <li><a href="#" id="footer-blogs">Investor relations</a></li>
+                            <li><a href="#" id="footer-blogs">Corporate governance</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="left-align"><span>Get help</span></h4>
+                    <ul class="contact-us">
+                        <li class="email breakWord"><a href="#">Customer service</a></li>
+                        <li class="email breakWord"><a href="#">My TMN</a></li>
+                        <li class="email breakWord"><a href="#">Find a store</a></li>
+                        <li class="email breakWord"><a href="#">Legal & Privacy</a></li>
+                        <li class="email breakWord"><a href="#">Contact</a></li>
                     </ul>
                 </div>
-            </div>
 
-            <div class="footer-col">
-                <h4 class="left-align"><span>Corporate Info</span></h4>
-                <div class="company">
+                <div class="footer-col news">
+                    <h4 class="left-align"><span>newsletter</span></h4>
                     <ul>
-                        <li><a href="#" id="footer-test">Career at TMN</a></li>
-                        <li><a href="#" id="footer-career">About TMN group</a></li>
-                        <li><a href="#" id="footer-blogs">Sustainability</a></li>
-                        <li><a href="#" id="footer-blogs">Press</a></li>
-                        <li><a href="#" id="footer-blogs">Investor relations</a></li>
-                        <li><a href="#" id="footer-blogs">Corporate governance</a></li>
+                        <li style="line-height: 1.3"><span>Sign up now and be the first to know about exclusive offers, latest fashion news & style tips!</span></li>
+                        <li><br><a target="_blank" rel="nofollow" href="#"><b>Sign Up</b> <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
                     </ul>
                 </div>
-            </div>
-
-            <div class="footer-col">
-                <h4 class="left-align"><span>Get help</span></h4>
-                <ul class="contact-us">
-                    <li class="email breakWord"><a href="#">Customer service</a></li>
-                    <li class="email breakWord"><a href="#">My TMN</a></li>
-                    <li class="email breakWord"><a href="#">Find a store</a></li>
-                    <li class="email breakWord"><a href="#">Legal & Privacy</a></li>
-                    <li class="email breakWord"><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col news">
-                <h4 class="left-align"><span>newsletter</span></h4>
-                <ul>
-                    <li style="line-height: 1.3"><span>Sign up now and be the first to know about exclusive offers, latest fashion news & style tips!</span></li>
-                    <li><br><a target="_blank" rel="nofollow" href="#"><b>Sign Up</b> <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
-
-                </ul>
-            </div>
-            <div class="footer-col social-list">
-                <h4><span>follow us</span></h4>
-                <div class="social-links">
-                    <a target="_blank" rel="nofollow" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a target="_blank" rel="nofollow" href="#"><i class="fa fa-twitter"></i></a>
-                    <a target="_blank" rel="nofollow" href="#"><i class="fa fa-instagram"></i></a>
-                    <a target="_blank" rel="nofollow" href="#"><i class="fa fa-linkedin"></i></a>
-                    <a target="_blank" rel="nofollow" href="#"><i class="fa fa-youtube"></i></a>
+                <div class="footer-col social-list">
+                    <h4><span>follow us</span></h4>
+                    <div class="social-links">
+                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-instagram"></i></a>
+                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a target="_blank" rel="nofollow" href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                    <div class="botLogo"><a href="#">LOGO</a></div>
                 </div>
-                <div class="botLogo"><a href="#" class="logo">LOGO</a></div>
+            </div>
+            <div class="copyrights">
+                <p>© 2022 Techmihirnaik. All Rights Reserved.</p>
             </div>
         </div>
-        <div class="copyrights">
-            <p>© 2022 Techmihirnaik. All Rights Reserved.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- footer ends -->
+    <!-- footer ends -->
     <script src="./scripts/dashboard.js" ></script>
     <script type="text/javascript">
-        // navbar script
+
         function openSideNav(){
-          document.getElementById("toggleBar").classList.add("activee");
-          document.getElementById("open").classList.add("notActive");
-          document.getElementById("close").classList.add("activeee");
+            document.getElementById("toggleBar").classList.add("activee");
+            document.getElementById("open").classList.add("notActive");
+            document.getElementById("close").classList.add("activeee");
         }
-        
+
         function closeSideNav(){
-          document.getElementById("toggleBar").classList.remove("activee");
-          document.getElementById("close").classList.remove("activeee");
-          document.getElementById("open").classList.remove("notActive");
+            document.getElementById("toggleBar").classList.remove("activee");
+            document.getElementById("close").classList.remove("activeee");
+            document.getElementById("open").classList.remove("notActive");
         }
-        
+
         function MDrop(){
-          document.getElementById("MDrop").classList.add("drp");
+            document.getElementById("MDrop").classList.add("drp");
         }
         function CMDrop(){
-          document.getElementById("MDrop").classList.remove("drp");
+            document.getElementById("MDrop").classList.remove("drp");
         }
         function WDrop(){
-          document.getElementById("WDrop").classList.add("drp");
+            document.getElementById("WDrop").classList.add("drp");
         }
         function CWDrop(){
-          document.getElementById("WDrop").classList.remove("drp");
+            document.getElementById("WDrop").classList.remove("drp");
         }
         function TDrop(){
-          document.getElementById("TDrop").classList.add("drp");
+            document.getElementById("TDrop").classList.add("drp");
         }
         function CTDrop(){
-          document.getElementById("TDrop").classList.remove("drp");
+            document.getElementById("TDrop").classList.remove("drp");
         }
         function KDrop(){
-          document.getElementById("KDrop").classList.add("drp");
+            document.getElementById("KDrop").classList.add("drp");
         }
         function CKDrop(){
-          document.getElementById("KDrop").classList.remove("drp");
+            document.getElementById("KDrop").classList.remove("drp");
         }
-        
+
         document.querySelector("#searchbox").addEventListener("blur", function(){
             document.getElementById("searching").classList.remove("min-search");
             document.getElementById("search").style.display = "inline-block";
@@ -566,7 +670,7 @@
             document.getElementById("cart").style.display = "inline-block";
             document.getElementById("user").style.display = "inline-block";
         });
-        
+
         document.querySelector("#searchbox").addEventListener("click",function(){
             document.getElementById("searching").classList.add("min-search");
             document.getElementById("search").style.display = "none";
@@ -574,40 +678,37 @@
             document.getElementById("cart").style.display = "none";
             document.getElementById("user").style.display = "none";
         });
-        
-        
-        
-        
+
+
+
+
         document.querySelector("#user").addEventListener("click", function(){
             if (document.getElementById("user-drop").classList.contains("dropdis")) {
                 window.onclick=document.getElementById("user-drop").classList.remove("dropdis");
             }
             else{
-            document.getElementById("user-drop").classList.add("dropdis");
+                document.getElementById("user-drop").classList.add("dropdis");
             }
         });
-        
+
         window.onclick = function(event) {
-        
-        
-           if (event.target.id !=='user') {
-        
-               var dropdowns =
-               document.getElementById("user-drop");
-        
-                   if (dropdowns.classList.contains('dropdis')) {
-                       dropdowns.classList.remove('dropdis');
-                   }
-                   console.log(event.target.id)
-               }
-        
-           }
-        
-        
-        
-        
-        
-        // navbar script end
-        </script>
-    </body>
+
+
+            if (event.target.id !=='user') {
+
+                var dropdowns =
+                document.getElementById("user-drop");
+
+                if (dropdowns.classList.contains('dropdis')) {
+                    dropdowns.classList.remove('dropdis');
+                }
+                console.log(event.target.id)
+            }
+
+        }
+
+
+// navbar script end
+</script>
+</body>
 </html>
