@@ -171,6 +171,12 @@ input[type="search" i]{
     right: 15px;
 }
 
+.login-drop{
+    top: 0;
+    right: 178px;
+    /*z-index: 2;*/
+}
+
 .dropdis{
     display: block;
 }

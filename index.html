@@ -53,8 +53,12 @@
         <a href="#" class="user">
           <div class="fa-solid fa-user dropdown" id="user"></div>
         </a>
-        <div class="dropdown-content user-drop" id="user-drop">
-          <a onclick="on()">LogIn / SignUp</a>
+        <div class="dropdown-content user-drop" id="user-drop" style="text-align: center;">
+          <a href="#" id="user1">&laquo; LogIn / SignUp</a>
+            <div class="dropdown-content login-drop" id="login-drop">
+              <a onclick="on()">User</a>
+              <a href="#">Seller</a>
+            </div>
           <a href="userDashboard.html">Account</a>
           <a href="product.html">orders</a>
         </div>
@@ -544,6 +548,32 @@
       }
 
     }
+
+    document.querySelector("#user1").addEventListener("click", function () {
+      if (document.getElementById("login-drop").classList.contains("dropdis")) {
+        window.onclick = document.getElementById("login-drop").classList.remove("dropdis");
+      } else {
+        document.getElementById("login-drop").classList.add("dropdis");
+      }
+    });
+
+    window.onclick = function (event) {
+
+
+      if (event.target.id !== 'user1') {
+
+        var dropdowns =
+          document.getElementById("login-drop");
+
+        if (dropdowns.classList.contains('dropdis')) {
+          dropdowns.classList.remove('dropdis');
+        }
+        console.log(event.target.id)
+      }
+
+    }
+
+
 
     function on() {
       document.getElementById("overlay").style.display = "block";
