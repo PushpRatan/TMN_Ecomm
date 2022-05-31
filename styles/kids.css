@@ -200,7 +200,8 @@
   }
   
   .content {
-    /* padding: 20px; */
+    padding: 20px;
+    padding-top: 100px; 
   }
   .filter-left {
     width: 15%;
