@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+#overlay, #seller-overlay
+{
+	display: none;
+}
+
 *{
     font-family: 'Nunito', sans-serif;
     padding: 0;
@@ -7,13 +13,28 @@
     outline: none;
     transition: all .2s linear;
 }
+
+#overlay, #seller-overlay{
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
 /* body{
     background-color: whitesmoke;
 } */
 .productsMain{
     overflow: hidden;
     width: 93%;
-    margin: auto;
+    margin:auto;
     display: flex;
     flex-direction: column;
 }
@@ -28,6 +49,7 @@
     background-color: white;
     margin-bottom: .8rem;
     overflow: hidden;
+    margin-top: 6rem;
 }
 .productsMain .prodctsMainContainer .productsLeftSection{
     display: flex;
@@ -167,10 +189,10 @@
 .productsMain .prodctsMainContainer .productsLeftSection .raReviwContainer .customerReviews::-webkit-scrollbar-thumb{
     background-color: rgba(0,0,0,0.3);
 }
-.productsMain .prodctsMainContainer .productsLeftSection .raReviwContainer .customerReviews .crTitle{
+/* .productsMain .prodctsMainContainer .productsLeftSection .raReviwContainer .customerReviews .crTitle{
     
 
-}
+} */
 .productsMain .prodctsMainContainer .productsLeftSection .raReviwContainer .customerReviews .crTitle .crtittle{
     font-size: 1.5rem;
     font-weight: bold;

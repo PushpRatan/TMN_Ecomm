@@ -757,7 +757,7 @@ input[type="search" i]{
 /***** FOOTER ****/
 .footer{
   width: 100%;
-  background-color: #1c1c36;
+  background-color: #202020;
   padding: 70px 0;
   height: max-content;
   font-family: "poppins", sans-serif;
@@ -804,7 +804,8 @@ input[type="search" i]{
 
 .footer-col h4 span {
   padding-bottom: 3px;
-  border-bottom: 3px solid #4a47a3;
+  /*border-bottom: 3px solid ;*/
+  border-bottom: 3px solid #ffffff;
 }
 
 .footer-col .company{
@@ -859,7 +860,8 @@ input[type="search" i]{
   display: inline-block;
   height: 40px;
   width: 40px;
-  background-color: #4a47a3;
+  /*background-color: #4a47a3;*/
+  background-color: #464646;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
@@ -868,7 +870,7 @@ input[type="search" i]{
 }
 
 .footer-col .social-links a:hover{
-    background-color: blue;
+    background-color: rgb(39, 39, 39);
 }
 
 .contact-us{

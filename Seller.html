@@ -12,26 +12,84 @@
 
 <body>
 
-    <nav>
-        <div class="navbarContainer">
-            <div style="display: flex;align-items:center;">
-                <!-- <i class="fa fa-bars navBarIcon" style="font-size:20px;margin-right: .5rem;" onclick="navbarrr()"></i> -->
-                <h6 class="logoTitle"><a href="index.html">LOGO</a></h6>
+    <!-- navbar -->
+    <nav class="navigation">
+        <div class="wrap">
+            <div class="navLogo">
+                <i class="fa fa-bars ba" id="open" onclick="openSideNav()"></i>
+                <i class="fa fa-times ca" id="close" onclick="closeSideNav()"></i>
+                <a href="index.html" class="logo">LOGO</a>
             </div>
-            
-            <div class="navIcons">
-                <a href="#" class="fa fa-heart navIc" id="wish"></a> 
-                <a href="product.html" class="fa fa-shopping-bag navIc" ></a>
-                <a href="#" class="fa fa-user navIc"></a>
+
+
+            <div class="menu-sec">
+                <ul class="menu">
+                    <li class="dropdown">
+                        <a href="#">MEN</a>
+                        <div class="dropdown-content">
+                            <a href="#">New Now</a>
+                            <a href="#">Clothing</a>
+                            <a href="#">Accesories</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">WOMEN</a>
+                        <div class="dropdown-content">
+                            <a href="#">New Now</a>
+                            <a href="#">Clothing</a>
+                            <a href="#">Accesories</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">TEENS</a>
+                        <div class="dropdown-content">
+                            <a href="teens.html">Teen Boy</a>
+                            <a href="teens.html">Teen Girls</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">KIDS</a>
+                        <div class="dropdown-content">
+                            <a href="kids.html">Girls</a>
+                            <a href="kids.html">Boys</a>
+                            <a href="kids.html">New Born</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right-elements" id="right">
+                <!-- <a href="#" class="searchbox" id="searchbox"> -->
+                <!-- <div class="search" id="searchbox">
+                    <input type="search" placeholder="search" /> -->
+                    <!-- <label for="search" class="fa fa-search"></label> -->
+                <!-- </div> -->
+                <!-- <i class="fa fa-search" id="search"></i> -->
+                <!-- </a> -->
+                <a href="#" class="wishlist">
+                    <i class="fa-solid fa-heart" id="wish"></i>
+                </a>
+                <a href="cart-item.html" class="cart">
+                    <i class="fa-solid fa-bag-shopping" id="cart"></i>
+                </a>
+                <a href="#" class="user">
+                    <div class="fa-solid fa-user dropdown" id="user"></div>
+                </a>
+                <div class="dropdown-content user-drop" id="user-drop">
+                    <a href="cart-item.html">Your Cart</a>
+                    <a href="userDashboard.html">Account</a>
+                    <a href="product.html">Orders</a>
+                </div>
             </div>
         </div>
-       
+
+        
     </nav>
 
 
     <div class="container">
 
-        <div class="navbar">
+        <!-- <div class="navbar">
             <div class="container nav-container">
                 <input class="checkbox" type="checkbox" name="" id="" />
                 <div class="hamburger-lines">
@@ -54,7 +112,7 @@
                     <li><a href="#" onclick="completed_order()">Completed Orders</a></li>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="leftside">
 
