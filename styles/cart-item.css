@@ -593,7 +593,7 @@ input[type=number]::-webkit-inner-spin-button{
     cursor: pointer;
 }
 .Product img{
-    width: 250px;
+    width: 240px;
     height: 300px;
     border-radius: 5px;
     transition: 0.3s;
