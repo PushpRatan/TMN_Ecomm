@@ -3,7 +3,7 @@
 *{
     padding: 0px;
     margin: 0px;
-    
+    /*font-family: poppins;*/
     /* overflow: hidden; */
     transition: all linear 0.5s;
 }
@@ -74,7 +74,7 @@ input[type="search" i]{
     appearance: none;
 }
 
-.searchbox input{
+.search input{
     box-sizing: border-box;
     border: 2px solid black;
     width: 200px;
@@ -163,6 +163,12 @@ input[type="search" i]{
     padding-bottom: 7px;
 }
 
+.login-drop{
+    top: 0;
+    right: 178px;
+    /*z-index: 2;*/
+}
+
 
 
 .dropdis{
@@ -207,6 +213,10 @@ input[type="search" i]{
 }
 
 .right-elements a:hover i{
+  transform: scale(1.5);
+}
+
+#user:hover{
   transform: scale(1.5);
 }
 
@@ -341,6 +351,21 @@ input[type="search" i]{
 
 /** Navbar End **/
 
+#overlay, #seller-overlay{
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+
 
 body{
     margin: 0;
@@ -358,9 +383,9 @@ body{
 .header-1{
     width: 98% !important;
 }
-::-webkit-scrollbar{
+/*::-webkit-scrollbar{
     display: none;
-}
+}*/
 .Flex{
     display: flex;
     width: 100%;
@@ -389,7 +414,7 @@ body{
     border-color: black; */
     background: rgba(250,249,245,255);
     justify-content: space-between;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     margin-top: 90px;
 }
 
@@ -558,7 +583,7 @@ input[type=number]::-webkit-inner-spin-button{
 
 .Product-List{
     display: flex;
-    overflow-x:scroll ;
+    /*overflow-x:scroll ;*/
 }
 
 .Product{

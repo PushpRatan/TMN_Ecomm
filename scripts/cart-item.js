@@ -130,26 +130,104 @@
         }, true);
           
           
-          
-          document.querySelector("#user").addEventListener("click", function(){
-              if (document.getElementById("user-drop").classList.contains("dropdis")) {
-                  window.onclick=document.getElementById("user-drop").classList.remove("dropdis");
-              }
-              else{
-              document.getElementById("user-drop").classList.add("dropdis");
-              }
-          });
-          
-          window.onclick = function(event) {
-             if (event.target.id !=='user') {
-          
-                 var dropdowns =
-                 document.getElementById("user-drop");
-          
-                     if (dropdowns.classList.contains('dropdis')) {
-                         dropdowns.classList.remove('dropdis');
-                     }
-                 }
-          
-             }
+        document.querySelector("#user").addEventListener("click", function () {
+      if (document.getElementById("user-drop").classList.contains("dropdis")) {
+        window.onclick = document.getElementById("user-drop").classList.remove("dropdis");
+      } else {
+        document.getElementById("user-drop").classList.add("dropdis");
+      }
+    });
+
+    window.onclick = function (event) {
+
+
+      if (event.target.id !== 'user') {
+
+        var dropdowns =
+        document.getElementById("user-drop");
+
+        if (dropdowns.classList.contains('dropdis')) {
+          dropdowns.classList.remove('dropdis');
+        }
+        console.log(event.target.id)
+      }
+
+    }
+
+    document.querySelector("#user1").addEventListener("click", function () {
+      if (document.getElementById("login-drop").classList.contains("dropdis")) {
+        window.onclick = document.getElementById("login-drop").classList.remove("dropdis");
+      } else {
+        document.getElementById("login-drop").classList.add("dropdis");
+      }
+    });
+
+    window.onclick = function (event) {
+
+
+      if (event.target.id !== 'user1') {
+
+        var dropdowns =
+        document.getElementById("login-drop");
+
+        if (dropdowns.classList.contains('dropdis')) {
+          dropdowns.classList.remove('dropdis');
+        }
+        console.log(event.target.id)
+      }
+
+    }
+
+
+
+    function on() {
+      document.getElementById("overlay").style.display = "block";
+    }
+
+    function off() {
+      document.getElementById("overlay").style.display = "none";
+    }
+
+
+    // navbar script end
+
+    var overlay = document.getElementById("overlay");
+    var seller_overlay = document.getElementById("seller-overlay");
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == overlay || event.target == seller_overlay) {
+        overlay.style.display = "none"
+        seller_overlay.style.display = "none";
+      }
+    }
+
+
+    function toggletosignIn() {
+      document.getElementById("smallsignin").style.display = "block";
+      document.getElementById("smallsignup").style.display = "none";
+    }
+
+    function toggletosignUp() {
+      document.getElementById("smallsignin").style.display = "none";
+      document.getElementById("smallsignup").style.display = "block";
+    }
+
+    function toggletosellersignIn() {
+      document.getElementById("smallsellersignin").style.display = "block";
+      document.getElementById("smallsellersignup").style.display = "none";
+    }
+
+    function toggletosellersignUp() {
+      document.getElementById("smallsellersignin").style.display = "none";
+      document.getElementById("smallsellersignup").style.display = "block";
+    }
+
+    function seller_on() {
+      document.getElementById("seller-overlay").style.display = "block";
+    }
+
+    function seller_off() {
+      document.getElementById("seller-overlay").style.display = "none";
+    }
             // navbar script end
