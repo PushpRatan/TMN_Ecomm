@@ -20,14 +20,41 @@
 
     <!-- navbar -->
     <nav class="navigation">
-        <div class="wrap">
-            <div class="navLogo">
-                <i class="fa fa-bars ba" id="open" onclick="openSideNav()"></i>
-                <i class="fa fa-times ca" id="close" onclick="closeSideNav()"></i>
-                <a href="index.html" class="logo">LOGO</a>
-            </div>
+    <div class="wrap">
+      <div class="navLogo">
+        <i class="fa fa-bars ba" id="open" onclick="openSideNav()"></i>
+        <i class="fa fa-times ca" id="close" onclick="closeSideNav()"></i>
+        <a href="index.html" class="logo">LOGO</a>
+      </div>
 
-            <div class="menu-sec">
+
+
+      <div class="right-elements" id="right">
+        <a href="#" class="searchbox" id="searchbox">
+          <div class="search" id="searching">
+              <input id = "searchbox" type="search" placeholder="search"/>
+          </div>
+          <i class="fa fa-search search-icon" id="search"></i>
+      </a>
+      <a href="#" class="wishlist">
+        <i class="fa-solid fa-heart" id="wish"></i>
+    </a>
+    <a href="cart-item.html" class="cart">
+        <i class="fa-solid fa-bag-shopping" id="cart"></i>
+    </a>
+    <a href="#" class="user">
+        <div class="fa-solid fa-user dropdown" id="user"></div>
+    </a>
+    <div class="dropdown-content user-drop" id="user-drop">
+                    <a href="cart-item.html">Your Cart</a>
+                    <a href="userDashboard.html">Account</a>
+                    <a href="product.html">Orders</a>
+                </div>
+</div>
+</div>
+      
+
+      <div class="menu-sec">
         <ul class="menu">
           <li class="dropdown">
             <a href="#">MEN</a>
@@ -63,77 +90,50 @@
         </ul>
       </div>
 
-
-            <div class="right-elements" id="right">
-                <!-- <a href="#" class="searchbox" id="searchbox"> -->
-                    <!-- <div class="search" id="searchbox"> -->
-                        <!-- <input type="search" placeholder="search" /> -->
-                        <!-- <label for="search" class="fa fa-search"></label> -->
-                        <!-- </div> -->
-                        <!-- <i class="fa fa-search" id="search"></i> -->
-                        <!-- </a> -->
-                        <a href="#" class="wishlist">
-                            <i class="fa-solid fa-heart" id="wish"></i>
-                        </a>
-                        <a href="cart-item.html" class="cart">
-                            <i class="fa-solid fa-bag-shopping" id="cart"></i>
-                        </a>
-                        <a href="#" class="user">
-                            <div class="fa-solid fa-user dropdown" id="user"></div>
-                        </a>
-                        <div class="dropdown-content user-drop" id="user-drop">
-                            <a href="cart-item.html">Your Cart</a>
-                            <a href="userDashboard.html">Account</a>
-                            <a href="product.html">Orders</a>
-                        </div>
-                    </div>
-                </div>
-
-                
-            </nav>
+    </nav>
 
     <div class="sideNav" id="toggleBar">
-        <div class="navItem">
-            <a class="navLink" id="MDrop" onclick="MDrop()" onblur="CMDrop()" href="#">MEN</a>
-            <div class="sideDrop">
-                <div class="overline"></div>
-                <div class=""><a href="#">New Now</a></div>
-                <div class=""><a href="#">Clothing</a></div>
-                <div class=""><a href="#">Accesories</a></div>
-            </div>
+      <div class="navItem">
+        <a class="navLink" id="MDrop" onclick="MDrop(),CWDrop(),CTDrop(),CKDrop()" href="#">MEN</a>
+        <div class="sideDrop">
+          <div class="overline"></div>
+          <div class=""><a href="teens.html">New Now</a></div>
+          <div class=""><a href="teens.html">Clothing</a></div>
+          <div class=""><a href="teens.html">Accesories</a></div>
         </div>
-        <div class="navItem">
-            <a class="navLink" id="WDrop" onclick="WDrop()" onblur="CWDrop()" href="#">WOMEN</a>
-            <div class="sideDrop">
-                <div class="overline"></div>
-                <div class=""><a href="#">New Now</a></div>
-                <div class=""><a href="#">Clothing</a></div>
-                <div class=""><a href="#">Accesories</a></div>
-            </div>
+      </div>
+      <div class="navItem">
+        <a class="navLink" id="WDrop" onclick="WDrop(),CMDrop(),CTDrop(),CKDrop()" href="#">WOMEN</a>
+        <div class="sideDrop">
+          <div class="overline"></div>
+          <div class=""><a href="teens.html">New Now</a></div>
+          <div class=""><a href="teens.html">Clothing</a></div>
+          <div class=""><a href="teens.html">Accesories</a></div>
         </div>
-        <div class="navItem">
-            <a class="navLink" id="TDrop" onclick="TDrop()" onblur="CTDrop()" href="#">TEEN</a>
-            <div class="sideDrop">
-                <div class="overline"></div>
-                <div class=""><a href="#">Teen Boys</a></div>
-                <div class=""><a href="#">Teen Girls</a></div>
-            </div>
+      </div>
+      <div class="navItem">
+        <a class="navLink" id="TDrop" onclick="TDrop(),CWDrop(),CMDrop(),CKDrop()" href="#">TEEN</a>
+        <div class="sideDrop">
+          <div class="overline"></div>
+          <div class=""><a href="teens.html">Teen Boys</a></div>
+          <div class=""><a href="teens.html">Teen Girls</a></div>
         </div>
-        <div class="navItem">
-            <a class="navLink" id="KDrop" onclick="KDrop()" onblur="CKDrop()" href="#">KIDS</a>
-            <div class="sideDrop">
-                <div class="overline"></div>
-                <div class=""><a href="#">Girls</a></div>
-                <div class=""><a href="#">Boys</a></div>
-                <div class=""><a href="#">New Born</a></div>
-            </div>
+      </div>
+      <div class="navItem">
+        <a class="navLink" id="KDrop" onclick="KDrop(),CWDrop(),CMDrop(),CTDrop()" href="#">KIDS</a>
+        <div class="sideDrop">
+          <div class="overline"></div>
+          <div class=""><a href="teens.html">Girls</a></div>
+          <div class=""><a href="teens.html">Boys</a></div>
+          <div class=""><a href="teens.html">New Born</a></div>
         </div>
-        <div class="underline"></div>
-        <div class="sidebtn">
-            <a href="#">LogIn/SignUp</a>
-            <a href="#">About Us</a>
-        </div>
-        <div class="sideLogo"><a href="#" class="logo">LOGO</a></div>
+      </div>
+      <div class="underline"></div>
+      <div class="sidebtn">
+        <!-- <a href="#">LogIn/SignUp</a> -->
+        <a href="#">About Us</a>
+      </div>
+      <div class="sideLogo"><a href="index.html" class="logo">LOGO</a></div>
     </div>
 
 
@@ -664,21 +664,21 @@
             document.getElementById("KDrop").classList.remove("drp");
         }
 
-        // document.querySelector("#searchbox").addEventListener("blur", function(){
-        //     document.getElementById("searching").classList.remove("min-search");
-        //     document.getElementById("search").style.display = "inline-block";
-        //     document.getElementById("wish").style.display = "inline-block";
-        //     document.getElementById("cart").style.display = "inline-block";
-        //     document.getElementById("user").style.display = "inline-block";
-        // });
+        document.querySelector("#searchbox").addEventListener("blur", function(){
+            document.getElementById("searching").classList.remove("min-search");
+            document.getElementById("search").style.display = "inline-block";
+            document.getElementById("wish").style.display = "inline-block";
+            document.getElementById("cart").style.display = "inline-block";
+            document.getElementById("user").style.display = "inline-block";
+        });
 
-        // document.querySelector("#searchbox").addEventListener("click",function(){
-        //     document.getElementById("searching").classList.add("min-search");
-        //     document.getElementById("search").style.display = "none";
-        //     document.getElementById("wish").style.display = "none";
-        //     document.getElementById("cart").style.display = "none";
-        //     document.getElementById("user").style.display = "none";
-        // });
+        document.querySelector("#search").addEventListener("click",function(){
+            document.getElementById("searching").classList.add("min-search");
+            document.getElementById("search").style.display = "none";
+            document.getElementById("wish").style.display = "none";
+            document.getElementById("cart").style.display = "none";
+            document.getElementById("user").style.display = "none";
+        });
 
 
 

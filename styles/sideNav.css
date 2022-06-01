@@ -19,6 +19,22 @@ a{
     text-decoration: none;
 }
 
+h3{
+  text-align: center;
+  letter-spacing: .5rem;
+  font-weight: 400;
+}
+
+
+.wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+}
+
 .navigation{
     position: fixed;
     width: 100%;
@@ -26,132 +42,23 @@ a{
     background-color: #ffffff;
     border: 1px solid rgba(0,0,0,0.03);
     margin: auto;
+    margin-top: -10px;
     padding: 10px 5%;
+    font-family: poppins;
+    box-sizing: border-box;
+    transition: all linear 0.5s;
 
-}
-
-.wrap{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-}
-
-.navLogo{
-    display: flex;
-    align-items: center;
-}
-.navLogo .ba{
-    font-size: 1.3rem;
-    margin-right: .8rem;
-    display: none;
-    cursor: pointer;
-}
-.navLogo .ca{
-    font-size: 1.4rem;
-    margin-right:.6rem;
-    cursor:pointer;
-    display: none;
-}
-
-.logo{
-    font-size: 2.1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-}
-
-.right-elements{
-    display: flex;
-    gap: .5em;
-}
-
-.right-elements a{
-    margin: 0px 10px;
-}
-
-.right-elements a{
-    color: black;
-}
-
-.right-elements a:hover i{
-    transform: scale(1.5);
-}
-
-#user:hover{
-    transform: scale(1.5);
 }
 
 .searchbox{
     width: max-content;
-
+    z-index:10;
+    transition: all linear 0.5s;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
 
-.user-drop{
-    top:60px;
-    right: 15px;
-}
 
-.login-drop{
-    top: 0;
-    right: 178px;
-/*z-index: 2;*/
-}
-
-.dropdis{
-    display: block;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover{
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content{
-    display: block;
-}
-
-.menu{
-    display:flex;
-}
-.menu-sec{
-    width: max-content;
-    margin: auto;
-}
-
-.menu li a{
-    margin: 5px;
-    padding: 5px 20px;
-    color: black;
-    font-weight: 500;
-    opacity: 0.6;
-    transition: all ease 0.3s;
-}
-
-.menu li a:hover{
-    cursor: pointer;
-    opacity: 1;
-    transition: all ease 0.3s;
-}
-
-.search{
+ .search{
     display: inline-block;
     margin: auto;
     text-align: center;
@@ -164,7 +71,7 @@ input[type="search" i]{
     appearance: none;
 }
 
-.search input{
+.searchbox input{
     box-sizing: border-box;
     border: 2px solid black;
     width: 200px;
@@ -176,13 +83,128 @@ input[type="search" i]{
 }
 
 /* .search label{
-margin-left: -20px;
+    margin-left: -20px;
 } */
 
 
 
 .searchbox > .fa-search{
     display: none;
+}
+
+@media screen and (max-width:668px) {
+    .searchbox > .fa-search{
+        display: inline;
+    }
+    .search{
+        display: none;
+    }
+}
+.min-search{
+    margin-right:-100px;
+    display: inline-block;
+}
+
+.navLogo{
+  display: flex;
+  align-items: center;
+}
+.navLogo .ba{
+  font-size: 1.3rem;
+  margin-right: .8rem;
+  display: none;
+  cursor: pointer;
+}
+.navLogo .ca{
+  font-size: 1.4rem;
+  margin-right:.6rem;
+  cursor:pointer;
+  display: none;
+}
+.menu{
+  display:flex;
+}
+.menu-sec{
+    width: max-content;
+    margin: auto;
+}
+
+.menu li a{
+  margin: 5px;
+  padding: 5px 20px;
+  color: black;
+  font-weight: 500;
+  opacity: 0.6;
+  transition: all ease 0.3s;
+}
+
+.menu li a:hover{
+  cursor: pointer;
+  opacity: 1;
+  transition: all ease 0.3s;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.user-drop{
+    top:50px;
+    right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+
+
+.dropdis{
+    display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  /* margin: 1px; */
+}
+
+.dropdown-content a:hover{
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+
+.logo{
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.right-elements{
+    display: flex;
+    gap: .5em;
+}
+
+.right-elements a{
+  margin: 0px 10px;
+}
+
+.right-elements a{
+  color: black;
+}
+
+.right-elements a:hover i{
+  transform: scale(1.5);
 }
 
 .sidebtn{
@@ -216,36 +238,36 @@ margin-left: -20px;
 }
 
 .sideNav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin-right: auto;
-/* height: 100vh; */
-z-index: 9;
-background-color: whitesmoke;
-padding: 10rem 0 0 0;
-/* display: none; */
-transform: translateX(-100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-right: auto;
+  /* height: 100vh; */
+  z-index: 9;
+  background-color: whitesmoke;
+  padding: 10rem 0 0 0;
+  /* display: none; */
+  transform: translateX(-100%);
 }
 .sideNav .navItem{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: .9rem;
-    text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+  text-align: center;
 }
 
 .sideDrop{
-/* border: 1px solid black; */
-/* width: 270px;
-margin: auto; */
-text-align: center;
-font-size: 1.2em;
-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-padding-bottom: 10px;
-display: none;
+    /* border: 1px solid black; */
+    /* width: 270px;
+    margin: auto; */
+    text-align: center;
+    font-size: 1.2em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding-bottom: 10px;
+    display: none;
 }
 
 .drp ~ .sideDrop{
@@ -268,17 +290,50 @@ display: none;
 }
 
 .sideNav .navItem .navLink{
-    width: 100%;
-    cursor: pointer;
-    text-decoration: none;
-    padding: .9rem .8rem;
-    padding-bottom: 0;
-    color: black;
-    font-size: 1.5rem;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  padding: .9rem .8rem;
+  padding-bottom: 0;
+  color: black;
+  font-size: 1.5rem;
 }
 .sideNav .navItem a:hover{
-    font-weight: bold;
-    transition: all linear 0.0001s;
+  font-weight: bold;
+  transition: all linear 0.0001s;
+}
+.mySlides {
+  display: none;
+}
+
+@media (min-width: 669px) {
+    .search-icon{
+        display: none !important;
+    }
+}
+
+@media (min-width:300px) and (max-width:668px) {
+    .navLogo .ba{
+      display: block;
+    }
+    .navLogo .ca{
+      display: none;
+    }
+    .navLogo .ca.activeee{
+      display: block;
+    }
+    .navLogo .ba.notActive{
+      display: none;
+    }
+    .sideNav.activee{
+      transform: translateX(0);
+    }
+    .navigation .menu{
+      display: none;
+    }
+    .fa-remove:before, .fa-close:before, .fa-times:before {
+        content: "\f00d" !important;
+    }
 }
 
 
@@ -958,6 +1013,11 @@ transform: translate(-50%,-50%);
 .navvSideNav.navvSideNavActive{
     display: block;
 }
+
+.sideNavActive{
+    display: block;
+}
+
 .navItemss{
     padding-top: .7rem;
     margin-bottom: .7rem;
@@ -1011,6 +1071,11 @@ transform: translate(-50%,-50%);
     background-color: white;
     display: none;
 }
+
+.sideNavActive{
+    display: block;
+}
+
 .navContent{
     width: 100%;
     margin-left: .3rem;
