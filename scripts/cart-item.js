@@ -111,7 +111,7 @@
           
           
           
-          document.querySelector("#searchbox").addEventListener("click",function(){
+          document.querySelector("#search").addEventListener("click",function(){
               document.getElementById("searching").classList.add("min-search");
               document.getElementById("search").style.display = "none";
               document.getElementById("wish").style.display = "none";

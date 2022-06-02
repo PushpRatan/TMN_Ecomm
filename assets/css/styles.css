@@ -116,7 +116,7 @@
    * scrollbar style
    */
   
-  body::-webkit-scrollbar { width: 15px; }
+/*  body::-webkit-scrollbar { width: 15px; }
   
   body::-webkit-scrollbar-track {
     background: var(--white);
@@ -131,7 +131,7 @@
   }
   
   body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
-  
+  */
   
   
   
@@ -243,7 +243,7 @@
        display: block;
    }
    .sl-img{
-       width: 90vw;
+       width: 100vw;
        object-fit: contain;
    }
 }
@@ -498,6 +498,7 @@
       .bar-button{
         display: block !important;
       }
+      
     }
 
   /*-----------------------------------*\

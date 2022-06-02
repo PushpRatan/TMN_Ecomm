@@ -3,15 +3,16 @@
 *{
     padding: 0px;
     margin: 0px;
-    /*font-family: poppins;*/
+    font-family: poppins;
     /* overflow: hidden; */
+    /*overflow-x: hidden;*/
     transition: all linear 0.5s;
 }
 body{
      margin: 0px;
      padding: 0px;
      background-color: #FAF9F6;
-     /* font-family: poppins; */
+    font-family: poppins; 
 }
 
 ul{
@@ -74,7 +75,7 @@ input[type="search" i]{
     appearance: none;
 }
 
-.search input{
+.searchbox input{
     box-sizing: border-box;
     border: 2px solid black;
     width: 200px;

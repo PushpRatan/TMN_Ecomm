@@ -15,10 +15,7 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/styles.css">
-  <!-- <link rel = "stylesheet" href = "./assets/css/nav-footer.css"> -->
-  <link rel="stylesheet" href="./styles/login1.css">
-  <link rel="stylesheet" href="./styles/homestyle.css">
+  
   <script src="https://kit.fontawesome.com/db77a28369.js" crossorigin="anonymous"></script>
   <!--
     - google font link
@@ -36,6 +33,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+  <!-- <link rel = "stylesheet" href = "./assets/css/nav-footer.css"> -->
+  <link rel="stylesheet" href="./styles/login1.css">
+  <link rel="stylesheet" href="./styles/homestyle.css">
 
 </head>
 
@@ -53,13 +54,12 @@
 
 
           <div class="right-elements" id="right">
-              <!-- <a href="#" class="searchbox" id="searchbox"> -->
-              <div class="search" id="searchbox">
-                  <input type="search" placeholder="search" />
-                  <!-- <label for="search" class="fa fa-search"></label> -->
-              </div>
-              <!-- <i class="fa fa-search" id="search"></i> -->
-              <!-- </a> -->
+              <a href="#" class="searchbox" id="searchbox">
+          <div class="search" id="searching">
+              <input id = "searchbox" type="search" placeholder="search"/>
+          </div>
+          <i class="fa fa-search search-icon" id="search"></i>
+      </a>
               <a href="#" class="wishlist">
                   <i class="fa-solid fa-heart" id="wish"></i>
               </a>
@@ -325,64 +325,49 @@
   </nav>
   
   <div class="sideNav" id="toggleBar">
-    <div class="navItem">
-        <a class="navLink" id="MDrop" onclick="MDrop()" onblur="CMDrop()" href="#">MEN</a>
+      <div class="navItem">
+        <a class="navLink" id="MDrop" onclick="MDrop(),CWDrop(),CTDrop(),CKDrop()" href="#">MEN</a>
         <div class="sideDrop">
           <div class="overline"></div>
-          <div class=""><a href="#">New Now</a></div>
-          <div class=""><a href="#">Clothing</a></div>
-          <div class=""><a href="#">Accesories</a></div>
+          <div class=""><a href="teens.html">New Now</a></div>
+          <div class=""><a href="teens.html">Clothing</a></div>
+          <div class=""><a href="teens.html">Accesories</a></div>
         </div>
-    </div>
-    <div class="navItem">
-        <a class="navLink" id="WDrop" onclick="WDrop()" onblur="CWDrop()" href="#">WOMEN</a>
-        <div class="sideDrop">
-          <div class="overline"></div>
-          <div class=""><a href="#">New Now</a></div>
-          <div class=""><a href="#">Clothing</a></div>
-          <div class=""><a href="#">Accesories</a></div>
-        </div>
-    </div>
-    <div class="navItem">
-        <a class="navLink" id="TDrop" onclick="TDrop()" onblur="CTDrop()" href="#">TEEN</a>
-        <div class="sideDrop">
-          <div class="overline"></div>
-          <div class=""><a href="#">Teen Boys</a></div>
-          <div class=""><a href="#">Teen Girls</a></div>
-        </div>
-    </div>
-    <div class="navItem">
-        <a class="navLink" id="KDrop" onclick="KDrop()" onblur="CKDrop()" href="#">KIDS</a>
-        <div class="sideDrop">
-          <div class="overline"></div>
-          <div class=""><a href="#">Girls</a></div>
-          <div class=""><a href="#">Boys</a></div>
-          <div class=""><a href="#">New Born</a></div>
-        </div>
-    </div>
-    <div class="underline"></div>
-    <div class="sidebtn">
-       <a href="#">LogIn/SignUp</a>
-       <a href="#">About Us</a>
-    </div>
-    <div class="sideLogo"><a href="#" class="logo">LOGO</a></div>
-  </div>
-  <!-- <div class="carousel">
-   <div class="slideshow">
-      <div class="mySlides fade">
-        <a href="#"><img src="images/img1.png" style="width:100%"></a>
-  
       </div>
-      <div class="mySlides fade">
-        <a href="#"><img src="images/levis.jpg" style="width:100%"></a>
-  
+      <div class="navItem">
+        <a class="navLink" id="WDrop" onclick="WDrop(),CMDrop(),CTDrop(),CKDrop()" href="#">WOMEN</a>
+        <div class="sideDrop">
+          <div class="overline"></div>
+          <div class=""><a href="teens.html">New Now</a></div>
+          <div class=""><a href="teens.html">Clothing</a></div>
+          <div class=""><a href="teens.html">Accesories</a></div>
+        </div>
       </div>
-      <div class="mySlides fade">
-        <a href="#" ><img src="images/banner1.png" style="width:100%"></a>
-  
+      <div class="navItem">
+        <a class="navLink" id="TDrop" onclick="TDrop(),CWDrop(),CMDrop(),CKDrop()" href="#">TEEN</a>
+        <div class="sideDrop">
+          <div class="overline"></div>
+          <div class=""><a href="teens.html">Teen Boys</a></div>
+          <div class=""><a href="teens.html">Teen Girls</a></div>
+        </div>
       </div>
-  </div> -->
-   </div>
+      <div class="navItem">
+        <a class="navLink" id="KDrop" onclick="KDrop(),CWDrop(),CMDrop(),CTDrop()" href="#">KIDS</a>
+        <div class="sideDrop">
+          <div class="overline"></div>
+          <div class=""><a href="teens.html">Girls</a></div>
+          <div class=""><a href="teens.html">Boys</a></div>
+          <div class=""><a href="teens.html">New Born</a></div>
+        </div>
+      </div>
+      <div class="underline"></div>
+      <div class="sidebtn">
+        <a href="#">LogIn/SignUp</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="sideLogo"><a href="index.html" class="logo">LOGO</a></div>
+    </div>
+  
   
     
   <!-- navbar end -->
@@ -2568,7 +2553,7 @@ document.querySelector("#searchbox").addEventListener("blur", function () {
   document.getElementById("user").style.display = "inline-block";
 });
 
-document.querySelector("#searchbox").addEventListener("click", function () {
+document.querySelector("#search").addEventListener("click", function () {
   document.getElementById("searching").classList.add("min-search");
   document.getElementById("search").style.display = "none";
   document.getElementById("wish").style.display = "none";
