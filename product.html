@@ -14,7 +14,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./styles/sideNav.css" />
+    <!-- <link rel="stylesheet" href="./styles/sideNav.css" /> -->
     <link rel="stylesheet" href="./styles//productStyles/cardProductsView.css" />
     <link rel="stylesheet" href="./styles/productStyles/productImageSlider.css" />
     <link rel="stylesheet" href="./styles/productStyles/products.css" />
@@ -22,8 +22,9 @@
     <link rel="stylesheet" href="./styles/productStyles/customerReview.css" />
     <link rel="stylesheet" href="./styles/productStyles/productSizeChart.css" />
     <link rel="stylesheet" href="./styles/productStyles/productCart.css" />
-    <link rel="stylesheet" href="./navbar and footer/footer/footer.css" />
+    <!-- <link rel="stylesheet" href="./navbar and footer/footer/footer.css" /> -->
     <link rel="stylesheet" href="./styles/login1.css">
+    <link rel="stylesheet" href="./styles/homestyle.css">
     <style>
         html {
             font-size: 16px;
@@ -33,253 +34,225 @@
 
 <body>
 
+    <!-- navbar -->
+  <nav class="navigation">
+    <div class="wrap">
+      <div class="navLogo">
+        <i class="fa fa-bars ba" id="open" onclick="openSideNav()"></i>
+        <i class="fa fa-times ca" id="close" onclick="closeSideNav()"></i>
+        <a href="index.html" class="logo">LOGO</a>
+      </div>
 
 
-    <nav class="navigation">
-        <div class="wrap">
-            <div class="navLogo">
-                <i class="fa fa-bars ba" id="open" onclick="openSideNav()"></i>
-                <i class="fa fa-times ca" id="close" onclick="closeSideNav()"></i>
-                <a href="index.html" class="logo">LOGO</a>
+
+      <div class="right-elements" id="right">
+        <a href="#" class="searchbox" id="searchbox">
+          <div class="search" id="searching">
+              <input id = "searchbox" type="search" placeholder="search"/>
+          </div>
+          <i class="fa fa-search search-icon" id="search"></i>
+      </a>
+          <a href="#" class="wishlist">
+            <i class="fa-solid fa-heart" id="wish"></i>
+          </a>
+          <a href="cart-item.html" class="cart">
+            <i class="fa-solid fa-bag-shopping" id="cart"></i>
+          </a>
+          <a href="#" class="user">
+            <div class="fa-solid fa-user dropdown" id="user"></div>
+          </a>
+          <div class="dropdown-content user-drop" id="user-drop" style="text-align: center;">
+            <a href="#" id="user1">&laquo; LogIn / SignUp</a>
+            <div class="dropdown-content login-drop" id="login-drop">
+              <a onclick="on()">User</a>
+              <a onclick="seller_on()">Seller</a>
             </div>
-
-
-
-            <div class="right-elements" id="right">
-                <!-- <a href="#" class="searchbox" id="searchbox"> -->
-                <div class="search" id="searchbox">
-                    <input type="search" placeholder="search" />
-                    <!-- <label for="search" class="fa fa-search"></label> -->
-                </div>
-                <!-- <i class="fa fa-search" id="search"></i> -->
-                <!-- </a> -->
-                <a href="#" class="wishlist">
-                    <i class="fa-solid fa-heart" id="wish"></i>
-                </a>
-                <a href="cart-item.html" class="cart">
-                    <i class="fa-solid fa-bag-shopping" id="cart"></i>
-                </a>
-                <a href="#" class="user">
-                    <div class="fa-solid fa-user dropdown" id="user"></div>
-                </a>
-                <div class="dropdown-content user-drop" id="user-drop" style="text-align: center;">
-                    <a href="#" id="user1">&laquo; LogIn / SignUp</a>
-                    <div class="dropdown-content login-drop" id="login-drop">
-                        <a onclick="on()">User</a>
-                        <a onclick="seller_on()">Seller</a>
-                    </div>
-                    <a href="userDashboard.html">Account</a>
-                    <a href="product.html">orders</a>
-                </div>
-            </div>
+            <a href="userDashboard.html">Account</a>
+            <a href="product.html">orders</a>
+          </div>
         </div>
-        <div class="login1" id="overlay">
-            <div class="container" id="container">
-                <div class="form-container sign-up-container">
-                    <form action="#">
-                        <h1>Create Account</h1>
-                        <div class="social-container">
-                            <a href="https://www.facebook.com/login/" class="social"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://accounts.google.com/servicelogin" class="social"><i
-                                    class="fab fa-google-plus-g"></i></a>
-                            <a href="https://www.linkedin.com/login" class="social"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span>or use your email for registration</span>
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <input type="password" placeholder="Confirm Password" id="password2">
-                        <button onclick="matchPassword()">Sign Up</button>
-                    </form>
-                </div>
-                <div class="form-container sign-in-container">
-                    <form action="#">
-                        <h1>Sign in</h1>
-                        <div class="social-container">
-                            <a href="https://www.facebook.com/login/" class="social"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://accounts.google.com/servicelogin" class="social"><i
-                                    class="fab fa-google-plus-g"></i></a>
-                            <a href="https://www.linkedin.com/login" class="social"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span>or use your account</span>
-                        <input type="text" placeholder="username" id="username">
-                        <input type="password" placeholder="Password" id="password">
-                        <a href="fpassword.html">Forgot your password?</a>
-                        <button type="button" id="submit" onclick="validate()">Sign In</button>
-                    </form>
-                </div>
-                <div class="overlay-container">
-                    <div class="overlay">
-                        <div class="overlay-panel overlay-left">
-                            <h1>Welcome Back!</h1>
-                            <p>To keep shopping please login with your personal info</p>
-                            <button class="ghost" id="signIn">Sign In</button>
-                        </div>
-                        <div class="overlay-panel overlay-right">
-                            <h1>Hello, Customer!</h1>
-                            <p>Enter your personal details and start shopping.</p>
-                            <button class="ghost" id="signUp">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <div class="login1" id="overlay">
+        <div class="container" id="container">
+          <div class="form-container sign-up-container">
+            <form action="#">
+              <h1>Create Account</h1>
+              <div class="social-container">
+                <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your email for registration</span>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Confirm Password" id="password2">
+              <button onclick="matchPassword()">Sign Up</button>
+            </form>
+          </div>
+          <div class="form-container sign-in-container">
+            <form action="#">
+              <h1>Sign in</h1>
+              <div class="social-container">
+                <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your account</span>
+              <input type="text" placeholder="username" id="username">
+              <input type="password" placeholder="Password" id="password">
+              <a href="fpassword.html">Forgot your password?</a>
+              <button type="button" id="submit" onclick="validate()">Sign In</button>
+            </form>
+          </div>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep shopping please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                <h1>Hello, Customer!</h1>
+                <p>Enter your personal details and start shopping.</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+              </div>
             </div>
-            <div class="smallscreencontainer">
+          </div>
+        </div>
+        <div class="smallscreencontainer">
 
-                <div class="form-container sign-in-container" id="smallsignin">
-                    <form action="#">
-                        <h1>Sign in</h1>
-                        <div class="social-container">
-                            <a href="https://www.facebook.com/login/" class="social"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://accounts.google.com/servicelogin" class="social"><i
-                                    class="fab fa-google-plus-g"></i></a>
-                            <a href="https://www.linkedin.com/login" class="social"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span>or use your account</span>
-                        <input type="text" placeholder="username" id="username">
-                        <input type="password" placeholder="Password" id="password">
-                        <a href="fpassword.html">Forgot your password?</a>
-                        <button type="button" id="submit" onclick="validate()">Sign In</button>
-                        <button class="ghost" onclick="toggletosignUp()">Sign Up</button>
-                    </form>
-                </div>
+          <div class="form-container sign-in-container" id="smallsignin">
+            <form action="#">
+              <h1>Sign in</h1>
+              <div class="social-container">
+                <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your account</span>
+              <input type="text" placeholder="username" id="username">
+              <input type="password" placeholder="Password" id="password">
+              <a href="fpassword.html">Forgot your password?</a>
+              <button type="button" id="submit" onclick="validate()">Sign In</button>
+              <button class="ghost" onclick="toggletosignUp()">Sign Up</button>
+            </form>
+          </div>
 
-                <div class="form-container sign-up-container" id="smallsignup">
-                    <form action="#">
-                        <h1>Create Account</h1>
-                        <div class="social-container">
-                            <a href="https://www.facebook.com/login/" class="social"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://accounts.google.com/servicelogin" class="social"><i
-                                    class="fab fa-google-plus-g"></i></a>
-                            <a href="https://www.linkedin.com/login" class="social"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span>or use your email for registration</span>
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <input type="password" placeholder="Confirm Password" id="password2">
-                        <button class="md" onclick="matchPassword()">Sign Up</button>
-                        <button class="ghost" onclick="toggletosignIn()">Sign In</button>
-                    </form>
-                </div>
-
-            </div>
+          <div class="form-container sign-up-container" id="smallsignup">
+            <form action="#">
+              <h1>Create Account</h1>
+              <div class="social-container">
+                <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your email for registration</span>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Confirm Password" id="password2">
+              <button class="md" onclick="matchPassword()">Sign Up</button>
+              <button class="ghost" onclick="toggletosignIn()">Sign In</button>
+            </form>
+          </div>
 
         </div>
 
-        <div class="login1" id="seller-overlay">
-            <div class="container" id="container1">
-                <div class="form-container sign-up-container">
-                    <form action="#">
-                        <h1>Create Account</h1>
-                        <div class="social-container">
-                            <a href="https://www.facebook.com/login/" class="social"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://accounts.google.com/servicelogin" class="social"><i
-                                    class="fab fa-google-plus-g"></i></a>
-                            <a href="https://www.linkedin.com/login" class="social"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span>or use your email for registration</span>
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <input type="password" placeholder="Confirm Password" id="password2">
-                        <button onclick="matchPassword()">Sign Up</button>
-                    </form>
-                </div>
-                <div class="form-container sign-in-container">
-                    <form action="#">
-                        <h1>Sign in</h1>
-                        <div class="social-container">
-                            <a href="https://www.facebook.com/login/" class="social"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://accounts.google.com/servicelogin" class="social"><i
-                                    class="fab fa-google-plus-g"></i></a>
-                            <a href="https://www.linkedin.com/login" class="social"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span>or use your account</span>
-                        <input type="text" placeholder="username" id="username">
-                        <input type="password" placeholder="Password" id="password">
-                        <a href="fpassword.html">Forgot your password?</a>
-                        <button type="button" id="submit" onclick="validate()">Sign In</button>
-                    </form>
-                </div>
-                <div class="overlay-container">
-                    <div class="overlay">
-                        <div class="overlay-panel overlay-left">
-                            <h1>The best offer for your business</h1>
-                            <p>Sell with us. Earn profit with everything at ease. Maintain and track orders, receive
-                                payments
-                                and manage your business</p>
-                            <button class="ghost" id="sellersignIn">Sign In</button>
-                        </div>
-                        <div class="overlay-panel overlay-right">
-                            <h1>The best offer for your business</h1>
-                            <p>Sell with us. Earn profit with everything at ease. Maintain and track orders, receive
-                                payments
-                                and manage your business</p>
-                            <button class="ghost" id="sellersignUp">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
+      </div>
+
+      <div class="login1" id="seller-overlay">
+        <div class="container" id="container1">
+          <div class="form-container sign-up-container">
+            <form action="#">
+              <h1>Create Account</h1>
+              <div class="social-container">
+                <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your email for registration</span>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Confirm Password" id="password2">
+              <button onclick="matchPassword()">Sign Up</button>
+            </form>
+          </div>
+          <div class="form-container sign-in-container">
+            <form action="#">
+              <h1>Sign in</h1>
+              <div class="social-container">
+                <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your account</span>
+              <input type="text" placeholder="username" id="username">
+              <input type="password" placeholder="Password" id="password">
+              <a href="fpassword.html">Forgot your password?</a>
+              <button type="button" id="submit" onclick="validate()">Sign In</button>
+            </form>
+          </div>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h1>The best offer for your business</h1>
+                <p>Sell with us. Earn profit with everything at ease. Maintain and track orders, receive payments
+                and manage your business</p>
+                <button class="ghost" id="sellersignIn">Sign In</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                <h1>The best offer for your business</h1>
+                <p>Sell with us. Earn profit with everything at ease. Maintain and track orders, receive payments
+                and manage your business</p>
+                <button class="ghost" id="sellersignUp">Sign Up</button>
+              </div>
             </div>
-            <div class="smallscreencontainer">
+          </div>
+        </div>
+        <div class="smallscreencontainer">
 
-                <div class="form-container sign-in-container" id="smallsellersignin">
-                    <form action="#">
-                        <h1>Sign in</h1>
-                        <div class="social-container">
-                            <a href="https://www.facebook.com/login/" class="social"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://accounts.google.com/servicelogin" class="social"><i
-                                    class="fab fa-google-plus-g"></i></a>
-                            <a href="https://www.linkedin.com/login" class="social"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span>or use your account</span>
-                        <input type="text" placeholder="username" id="username">
-                        <input type="password" placeholder="Password" id="password">
-                        <a href="fpassword.html">Forgot your password?</a>
-                        <button type="button" id="submit" onclick="validate()">Sign In</button>
-                        <button class="ghost" onclick="toggletosellersignUp()">Sign Up</button>
-                    </form>
-                </div>
+          <div class="form-container sign-in-container" id="smallsellersignin">
+            <form action="#">
+              <h1>Sign in</h1>
+              <div class="social-container">
+                <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your account</span>
+              <input type="text" placeholder="username" id="username">
+              <input type="password" placeholder="Password" id="password">
+              <a href="fpassword.html">Forgot your password?</a>
+              <button type="button" id="submit" onclick="validate()">Sign In</button>
+              <button class="ghost" onclick="toggletosellersignUp()">Sign Up</button>
+            </form>
+          </div>
 
-                <div class="form-container sign-up-container" id="smallsellersignup">
-                    <form action="#">
-                        <h1>Create Account</h1>
-                        <div class="social-container">
-                            <a href="https://www.facebook.com/login/" class="social"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://accounts.google.com/servicelogin" class="social"><i
-                                    class="fab fa-google-plus-g"></i></a>
-                            <a href="https://www.linkedin.com/login" class="social"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span>or use your email for registration</span>
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <input type="password" placeholder="Confirm Password" id="password2">
-                        <button class="md" onclick="matchPassword()">Sign Up</button>
-                        <button class="ghost" onclick="toggletosellersignIn()">Sign In</button>
-                    </form>
-                </div>
-
-            </div>
+          <div class="form-container sign-up-container" id="smallsellersignup">
+            <form action="#">
+              <h1>Create Account</h1>
+              <div class="social-container">
+                <a href="https://www.facebook.com/login/" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://accounts.google.com/servicelogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.linkedin.com/login" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your email for registration</span>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Confirm Password" id="password2">
+              <button class="md" onclick="matchPassword()">Sign Up</button>
+              <button class="ghost" onclick="toggletosellersignIn()">Sign In</button>
+            </form>
+          </div>
 
         </div>
 
-        <div class="menu-sec">
+      </div>
+
+      <div class="menu-sec">
         <ul class="menu">
           <li class="dropdown">
             <a href="#">MEN</a>
@@ -317,54 +290,50 @@
 
     </nav>
 
-
-    <!-- <nav class="navbarContainer" style="position: sticky;top: 0;z-index:5;background-color:white;">
-        <div style="display: flex;align-items:center;">
-            <i class="fa fa-bars navBarIcon" style="font-size:20px;margin-right: .5rem;" onclick="navbarrr()"></i>
-            <h6 class="logoTitle"><a href="index.html">LOGO</a></h6>
+    <div class="sideNav" id="toggleBar">
+      <div class="navItem">
+        <a class="navLink" id="MDrop" onclick="MDrop(),CWDrop(),CTDrop(),CKDrop()" href="#">MEN</a>
+        <div class="sideDrop">
+          <div class="overline"></div>
+          <div class=""><a href="teens.html">New Now</a></div>
+          <div class=""><a href="teens.html">Clothing</a></div>
+          <div class=""><a href="teens.html">Accesories</a></div>
         </div>
-        <div class="navMiddleLinks">
-            <a href="#" class="navItems">MEN</a>
-            <a href="#" class="navItems">WOMEN</a>
-            <a href="kids.html" class="navItems">TEENS</a>
-            <a href="kids.html" class="navItems">KIDS</a>
+      </div>
+      <div class="navItem">
+        <a class="navLink" id="WDrop" onclick="WDrop(),CMDrop(),CTDrop(),CKDrop()" href="#">WOMEN</a>
+        <div class="sideDrop">
+          <div class="overline"></div>
+          <div class=""><a href="teens.html">New Now</a></div>
+          <div class=""><a href="teens.html">Clothing</a></div>
+          <div class=""><a href="teens.html">Accesories</a></div>
         </div>
-        <div class="navIcons">
-            <a href="#" class="fa fa-heart navIc" id="wish"></a> 
-            <div class="cartsssSize">
-                <a href="#" class="fa fa-shopping-bag navIc" onclick="letMeDownSlowly()"></a>
-                <span class="cartsValll" id="increaseValue">0</span>
-            </div>
-            <a href="#" class="fa fa-user navIc"></a>
+      </div>
+      <div class="navItem">
+        <a class="navLink" id="TDrop" onclick="TDrop(),CWDrop(),CMDrop(),CKDrop()" href="#">TEEN</a>
+        <div class="sideDrop">
+          <div class="overline"></div>
+          <div class=""><a href="teens.html">Teen Boys</a></div>
+          <div class=""><a href="teens.html">Teen Girls</a></div>
         </div>
-    </nav> -->
-    <div class="navvSideNav" id="navvvv">
-        <i class="fa fa-times closeIcon" style="font-size:24px" onclick="closeNavbarr()"></i>
-        <p class="navItemss">MEN</p>
-        <p class="navItemss">WOMEN</p>
-        <p class="navItemss"><a href="kids.html">TEENS</a></p>
-        <p class="navItemss"><a href="kids.html">KIDS</a></p>
+      </div>
+      <div class="navItem">
+        <a class="navLink" id="KDrop" onclick="KDrop(),CWDrop(),CMDrop(),CTDrop()" href="#">KIDS</a>
+        <div class="sideDrop">
+          <div class="overline"></div>
+          <div class=""><a href="teens.html">Girls</a></div>
+          <div class=""><a href="teens.html">Boys</a></div>
+          <div class=""><a href="teens.html">New Born</a></div>
+        </div>
+      </div>
+      <div class="underline"></div>
+      <div class="sidebtn">
+        <a href="#">LogIn/SignUp</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="sideLogo"><a href="index.html" class="logo">LOGO</a></div>
     </div>
 
-    <!-- Cart products view -->
-    <div class="mainCarts" id="dddddd">
-        <section class="cartsViewwContainer" id="ohmggod">
-            <!-- <div class="cartsssContainer"  id="toAddeHero" >
-            <div class="imgCartContainer">
-                <img class="imggggggfff" src="./images/pumaTwo.jpeg" alt="pumaTwo" />
-            </div>
-            <div class="rightContentContainer">
-                <p class="cartContentTitle">PUMA</p>
-                <p class="cartContentDescription"><span>96</span> reviews</p>
-                <p class="cartContentPrice">₹  2,399</p>
-                <p class="cartContentSize">Size <small>8</small></p>
-                <button class="cartBuyButton" type="button">BUY NOW</button>
-                <button class="cartDeleteButton" type="button">DELETE</button>
-            </div>
-        </div> -->
-
-        </section>
-    </div>
     <main class="productsMain" style="padding-top: .6rem;">
 
         <section class="imageSlider">
@@ -1102,7 +1071,7 @@
       document.getElementById("user").style.display = "inline-block";
     });
 
-    document.querySelector("#searchbox").addEventListener("click", function () {
+    document.querySelector("#search").addEventListener("click", function () {
       document.getElementById("searching").classList.add("min-search");
       document.getElementById("search").style.display = "none";
       document.getElementById("wish").style.display = "none";
