@@ -84,7 +84,7 @@ input[type="search" i]{
     appearance: none;
 }
 
-.search input{
+.searchbox input{
     box-sizing: border-box;
     border: 2px solid black;
     width: 200px;
@@ -113,10 +113,10 @@ input[type="search" i]{
         display: none;
     }
 }
-/*.min-search{
+.min-search{
     margin-right:-100px;
     display: inline-block;
-}*/
+}
 
 .navLogo{
   display: flex;

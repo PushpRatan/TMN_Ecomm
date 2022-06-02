@@ -37,13 +37,12 @@
 
 
       <div class="right-elements" id="right">
-        <!-- <a href="#" class="searchbox" id="searchbox"> -->
-          <div class="search" id="searchbox">
-            <input type="search" placeholder="search" />
-            <!-- <label for="search" class="fa fa-search"></label> -->
+        <a href="#" class="searchbox" id="searchbox">
+          <div class="search" id="searching">
+              <input id = "searchbox" type="search" placeholder="search"/>
           </div>
-          <!-- <i class="fa fa-search" id="search"></i> -->
-          <!-- </a> -->
+          <i class="fa fa-search search-icon" id="search"></i>
+      </a>
           <a href="#" class="wishlist">
             <i class="fa-solid fa-heart" id="wish"></i>
           </a>
@@ -284,38 +283,38 @@
 
     <div class="sideNav" id="toggleBar">
       <div class="navItem">
-        <a class="navLink" id="MDrop" onclick="MDrop()" onblur="CMDrop()" href="#">MEN</a>
+        <a class="navLink" id="MDrop" onclick="MDrop(),CWDrop(),CTDrop(),CKDrop()" href="#">MEN</a>
         <div class="sideDrop">
           <div class="overline"></div>
-          <div class=""><a href="#">New Now</a></div>
-          <div class=""><a href="#">Clothing</a></div>
-          <div class=""><a href="#">Accesories</a></div>
+          <div class=""><a href="teens.html">New Now</a></div>
+          <div class=""><a href="teens.html">Clothing</a></div>
+          <div class=""><a href="teens.html">Accesories</a></div>
         </div>
       </div>
       <div class="navItem">
-        <a class="navLink" id="WDrop" onclick="WDrop()" onblur="CWDrop()" href="#">WOMEN</a>
+        <a class="navLink" id="WDrop" onclick="WDrop(),CMDrop(),CTDrop(),CKDrop()" href="#">WOMEN</a>
         <div class="sideDrop">
           <div class="overline"></div>
-          <div class=""><a href="#">New Now</a></div>
-          <div class=""><a href="#">Clothing</a></div>
-          <div class=""><a href="#">Accesories</a></div>
+          <div class=""><a href="teens.html">New Now</a></div>
+          <div class=""><a href="teens.html">Clothing</a></div>
+          <div class=""><a href="teens.html">Accesories</a></div>
         </div>
       </div>
       <div class="navItem">
-        <a class="navLink" id="TDrop" onclick="TDrop()" onblur="CTDrop()" href="#">TEEN</a>
+        <a class="navLink" id="TDrop" onclick="TDrop(),CWDrop(),CMDrop(),CKDrop()" href="#">TEEN</a>
         <div class="sideDrop">
           <div class="overline"></div>
-          <div class=""><a href="#">Teen Boys</a></div>
-          <div class=""><a href="#">Teen Girls</a></div>
+          <div class=""><a href="teens.html">Teen Boys</a></div>
+          <div class=""><a href="teens.html">Teen Girls</a></div>
         </div>
       </div>
       <div class="navItem">
-        <a class="navLink" id="KDrop" onclick="KDrop()" onblur="CKDrop()" href="#">KIDS</a>
+        <a class="navLink" id="KDrop" onclick="KDrop(),CWDrop(),CMDrop(),CTDrop()" href="#">KIDS</a>
         <div class="sideDrop">
           <div class="overline"></div>
-          <div class=""><a href="#">Girls</a></div>
-          <div class=""><a href="#">Boys</a></div>
-          <div class=""><a href="#">New Born</a></div>
+          <div class=""><a href="teens.html">Girls</a></div>
+          <div class=""><a href="teens.html">Boys</a></div>
+          <div class=""><a href="teens.html">New Born</a></div>
         </div>
       </div>
       <div class="underline"></div>
@@ -323,7 +322,7 @@
         <a href="#">LogIn/SignUp</a>
         <a href="#">About Us</a>
       </div>
-      <div class="sideLogo"><a href="#" class="logo">LOGO</a></div>
+      <div class="sideLogo"><a href="index.html" class="logo">LOGO</a></div>
     </div>
     
     <div class="carousel">
@@ -606,7 +605,7 @@
       document.getElementById("user").style.display = "inline-block";
     });
 
-    document.querySelector("#searchbox").addEventListener("click", function () {
+    document.querySelector("#search").addEventListener("click", function () {
       document.getElementById("searching").classList.add("min-search");
       document.getElementById("search").style.display = "none";
       document.getElementById("wish").style.display = "none";
