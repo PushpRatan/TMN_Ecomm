@@ -6,7 +6,7 @@
 
 2. Atmagyan Singh - Cart, Login Page, Signup Page
 
-3. Chukka Keerthi - Slider
+3. Chukka Keerthi - Slider, Home page
 
 4. Ananya - Home Page
 
